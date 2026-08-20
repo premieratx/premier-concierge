@@ -1,6 +1,6 @@
 import { dimsOf } from '../dimensions';
-import type { AccommodationFeature, Container, Decor } from '../types';
-import { type GeneratorResult, gid, merge } from './common';
+import type { AccommodationFeature, Container, Decor, ModelLayer } from '../types';
+import { type GeneratorResult, gid, merge, withLayer } from './common';
 
 export interface AccommodationResult extends GeneratorResult {
   features: AccommodationFeature[];
@@ -12,6 +12,10 @@ function asLodging(result: GeneratorResult): GeneratorResult {
     containers: result.containers,
     decor: result.decor.map((d) => ({ ...d, zone: 'lodging' as const })),
   };
+}
+
+function tag(result: GeneratorResult, layer: ModelLayer): GeneratorResult {
+  return withLayer(result, layer);
 }
 
 const D40 = dimsOf('40HC');
@@ -194,6 +198,19 @@ export const DEFAULT_ACCOMMODATIONS: AccommodationsSpec = {
   towerSuites: 8,
 };
 
+/** Where each cabin's porch furniture goes: the middle of its deck. */
+export function cabinPorchPoints(
+  spec: AccommodationsSpec = DEFAULT_ACCOMMODATIONS,
+): { x: number; y: number; z: number }[] {
+  const points: { x: number; y: number; z: number }[] = [];
+  for (const x of spec.cabinRowsX) {
+    for (const z of spec.cabinRowZ) {
+      points.push({ x: x - 5, y: 1.5, z: z + D40.length / 2 });
+    }
+  }
+  return points;
+}
+
 /**
  * The lodging build-out. Cabins and the bunkhouse are real containers and go
  * into the takeoff under the `lodging` zone; glamping platforms and tower
@@ -208,7 +225,7 @@ export function generateAccommodations(
   let cabinIndex = 0;
   for (const x of spec.cabinRowsX) {
     for (const z of spec.cabinRowZ) {
-      parts.push(cabin(x, z, cabinIndex));
+      parts.push(tag(cabin(x, z, cabinIndex), 'cabins'));
       cabinIndex += 1;
     }
   }
@@ -226,11 +243,14 @@ export function generateAccommodations(
   });
 
   parts.push(
-    bunkhouse(
-      spec.bunkhouseAt.x,
-      spec.bunkhouseAt.z,
-      spec.bunkhouseBays,
-      spec.bunkhouseLevels,
+    tag(
+      bunkhouse(
+        spec.bunkhouseAt.x,
+        spec.bunkhouseAt.z,
+        spec.bunkhouseBays,
+        spec.bunkhouseLevels,
+      ),
+      'bunkhouse',
     ),
   );
   const bunkUnits = spec.bunkhouseBays * spec.bunkhouseLevels;
@@ -246,7 +266,7 @@ export function generateAccommodations(
     name: 'Bunkhouse',
   });
 
-  spec.glampingAt.forEach((p, i) => parts.push(glampingPlatform(p.x, p.z, i)));
+  spec.glampingAt.forEach((p, i) => parts.push(tag(glampingPlatform(p.x, p.z, i), 'glamping')));
   features.push({
     id: 'lodging-glamping',
     kind: 'accommodation',

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Scene } from './scene/Scene';
+import { CapacityPanel } from './ui/CapacityPanel';
 import { CostPanel } from './ui/CostPanel';
 import { Inspector } from './ui/Inspector';
 import { LayersPanel } from './ui/LayersPanel';
@@ -10,7 +11,7 @@ import { useKeyboardShortcuts } from './ui/useKeyboardShortcuts';
 import { runAllChecks } from './rules';
 import { useLayoutStore } from './store/useLayoutStore';
 
-const TABS = ['Cost', 'Checks', 'Marina', 'View', 'Inspect'] as const;
+const TABS = ['Cost', 'Checks', 'Capacity', 'Marina', 'View', 'Inspect'] as const;
 type Tab = (typeof TABS)[number];
 
 export function App() {
@@ -49,6 +50,7 @@ export function App() {
           <div className="min-h-0 flex-1 overflow-y-auto p-4">
             {tab === 'Cost' && <CostPanel />}
             {tab === 'Checks' && <WarningsPanel />}
+            {tab === 'Capacity' && <CapacityPanel />}
             {tab === 'Marina' && <RevenuePanel />}
             {tab === 'View' && <LayersPanel />}
             {tab === 'Inspect' && <Inspector />}

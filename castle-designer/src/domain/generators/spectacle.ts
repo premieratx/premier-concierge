@@ -23,21 +23,29 @@ export interface DragonSpec {
 }
 
 /**
- * The dragon: a 150-foot welded steel sculpture, reared over the arrival
- * lawn with its head above the gatehouse, breathing fire on a timer.
+ * The dragon: a scrap-metal beast on the arrival lawn.
  *
- * This is an original beast — a long-necked, four-limbed wyvern with a
- * membrane wing — not a reproduction of any particular film or television
- * creature. It is built from plate and pipe on a braced internal frame, which
- * is why it is a site feature with its own cost line rather than anything the
- * container rules have an opinion about.
+ * Not a fabricated sculpture — a junkyard build. Car hoods and doors for the
+ * wing membrane, wheel rims at the joints, leaf springs for ribs and legs,
+ * exhaust pipe for the neck, brake discs for the feet, headlights for the
+ * eyes, chain for teeth, all cut and welded onto a used-pipe spine and
+ * left in whatever faded paint the donor cars arrived in.
+ *
+ * Forty-eight feet nose to tail is what a $20,000 parts-and-rigging budget
+ * actually buys with the labour donated. It still stands three storeys at the
+ * head and throws fire out over the water; it just is not a hundred and fifty
+ * feet of anything, and pretending otherwise would put the budget out by more
+ * than a factor of two.
+ *
+ * It is an original beast — a long-necked, four-limbed wyvern — not a
+ * reproduction of any particular film or television creature.
  */
 export const DEFAULT_DRAGON: DragonSpec = {
-  position: { x: 0, y: 0, z: 232 },
-  rotationY: Math.PI,
-  lengthFt: 150,
-  wingspanFt: 186,
-  shoulderHeightFt: 52,
+  position: { x: 0, y: 0, z: 248 },
+  rotationY: 0,
+  lengthFt: 48,
+  wingspanFt: 58,
+  shoulderHeightFt: 14,
   breathingFire: true,
   burstPeriodS: 9,
 };
@@ -53,7 +61,7 @@ export function generateDragon(spec: DragonSpec = DEFAULT_DRAGON): DragonFeature
     shoulderHeightFt: spec.shoulderHeightFt,
     breathingFire: spec.breathingFire,
     burstPeriodS: spec.burstPeriodS,
-    label: 'Steel dragon',
+    label: 'Scrap dragon',
   };
 }
 

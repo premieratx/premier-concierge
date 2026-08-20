@@ -35,9 +35,9 @@ export const CAMERA_PRESETS: CameraPreset[] = [
   {
     key: 'dragon',
     label: 'Dragon',
-    position: [-120, 80, 400],
-    target: [0, 55, 250],
-    hint: 'Close on the sculpture and the fire',
+    position: [-52, 26, 318],
+    target: [0, 15, 250],
+    hint: 'Close on the scrap build and the fire',
   },
   {
     key: 'marina',

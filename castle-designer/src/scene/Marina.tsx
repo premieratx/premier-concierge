@@ -1,7 +1,16 @@
 import { useMemo } from 'react';
 import * as THREE from 'three';
 import { featuresOfKind } from '../domain/types';
-import type { BoatKind, DockFeature, Layout, PatioBarFeature, SlipFeature } from '../domain/types';
+import type {
+  BoatKind,
+  DockFeature,
+  Layout,
+  ModelLayer,
+  PatioBarFeature,
+  SlipFeature,
+} from '../domain/types';
+
+export type LayerFlags = Record<ModelLayer, boolean>;
 
 const DECK_COLOR = '#8a7452';
 const PILE_COLOR = '#4c4238';
@@ -134,7 +143,15 @@ function Boat({ kind, m }: { kind: BoatKind; m: Materials }) {
  * commodity; a berth with a deck, a roof, furniture, a bar and somewhere to
  * jump from is a different thing being sold at a different price.
  */
-function PremierPatio({ slip, m }: { slip: SlipFeature; m: Materials }) {
+function PremierPatio({
+  slip,
+  m,
+  layers,
+}: {
+  slip: SlipFeature;
+  m: Materials;
+  layers: LayerFlags;
+}) {
   const w = slip.widthFt;
   const l = slip.lengthFt;
   const deckY = 3.2;
@@ -159,7 +176,7 @@ function PremierPatio({ slip, m }: { slip: SlipFeature; m: Materials }) {
         ),
       )}
 
-      {slip.bar && (
+      {slip.bar && layers.bars && (
         <group position={[l * 0.34, deckY + 0.3, 0]}>
           <mesh position={[0, 1.9, 0]} material={m.bar} castShadow>
             <boxGeometry args={[3, 3.6, w - 3]} />
@@ -172,7 +189,7 @@ function PremierPatio({ slip, m }: { slip: SlipFeature; m: Materials }) {
         </group>
       )}
 
-      {slip.ropeSwing && (
+      {slip.ropeSwing && layers.swimToys && (
         <group position={[-l * 0.4, 0, 0]}>
           <mesh position={[0, canopyY + 2.5, 0]} material={m.pile} castShadow>
             <boxGeometry args={[7, 0.5, 0.5]} />
@@ -186,7 +203,7 @@ function PremierPatio({ slip, m }: { slip: SlipFeature; m: Materials }) {
         </group>
       )}
 
-      {slip.jumpPlatform && (
+      {slip.jumpPlatform && layers.swimToys && (
         <group position={[l * 0.5, 0, 0]}>
           <mesh position={[0, 9, 0]} material={m.deck} castShadow>
             <boxGeometry args={[6, 0.6, 6]} />
@@ -236,7 +253,7 @@ function Bar({ bar, m }: { bar: PatioBarFeature; m: Materials }) {
   );
 }
 
-export function Marina({ layout }: { layout: Layout }) {
+export function Marina({ layout, layers }: { layout: Layout; layers: LayerFlags }) {
   const m = useMarinaMaterials();
   const docks = featuresOfKind(layout.features, 'dock');
   const slips = featuresOfKind(layout.features, 'slip');
@@ -244,22 +261,22 @@ export function Marina({ layout }: { layout: Layout }) {
 
   return (
     <group>
-      {docks.map((d) => (
-        <Dock key={d.id} dock={d} m={m} />
-      ))}
-      {slips.map((slip) => (
-        <group
-          key={slip.id}
-          position={[slip.position.x, slip.position.y, slip.position.z]}
-          rotation={[0, slip.rotationY, 0]}
-        >
-          {slip.patio && <PremierPatio slip={slip} m={m} />}
-          <Boat kind={slip.boat} m={m} />
-        </group>
-      ))}
-      {bars.map((b) => (
-        <Bar key={b.id} bar={b} m={m} />
-      ))}
+      {layers.docks && docks.map((d) => <Dock key={d.id} dock={d} m={m} />)}
+      {slips.map((slip) => {
+        const tierOn = slip.tier === 'premier' ? layers.slipsPremier : layers.slipsStandard;
+        if (!tierOn) return null;
+        return (
+          <group
+            key={slip.id}
+            position={[slip.position.x, slip.position.y, slip.position.z]}
+            rotation={[0, slip.rotationY, 0]}
+          >
+            {slip.patio && layers.patios && <PremierPatio slip={slip} m={m} layers={layers} />}
+            {layers.boats && <Boat kind={slip.boat} m={m} />}
+          </group>
+        );
+      })}
+      {layers.bars && bars.map((b) => <Bar key={b.id} bar={b} m={m} />)}
     </group>
   );
 }

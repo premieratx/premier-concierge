@@ -77,6 +77,7 @@ export function generateBawn(
           role,
           finish,
           openings: [],
+          layer: 'curtainWall',
           label: `Bawn ${side} L${level + 1} bay ${bay + 1}`,
         });
       }
@@ -163,6 +164,7 @@ export function generateBawn(
           z: (r.from.z + r.to.z) / 2 + (alongX ? inboard * 1.6 : 0),
         },
         size: alongX ? { x: run, y: 0.5, z: 4.8 } : { x: 4.8, y: 0.5, z: run },
+        layer: 'wallWalk',
       });
     }
   }

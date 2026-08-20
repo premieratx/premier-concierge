@@ -8,6 +8,7 @@ import {
   REFERENCE_QUANTITIES,
   REFERENCE_TARGET_PER_SQ_FT,
   REFERENCE_TARGET_TOTAL,
+  dragonBudget,
 } from './estimate';
 import { RATES } from './rates';
 import { takeoff } from './takeoff';
@@ -103,9 +104,32 @@ describe('the generated property', () => {
     expect(lodging.openAirSqFt).toBeLessThan(8000);
   });
 
-  it('prices the dragon as the single largest site item', () => {
-    const site = estimateSite(layout);
-    expect(site.byGroup[0]?.group).toBe('Dragon');
+  it('builds the dragon inside its $20,000 cap', () => {
+    const budget = dragonBudget(layout);
+    expect(budget.cost).toBe(20_000);
+    expect(budget.withinCap).toBe(true);
+  });
+
+  it('drops the burner cost when the dragon is not breathing fire', () => {
+    const cold = {
+      ...layout,
+      features: layout.features.map((f) =>
+        f.kind === 'dragon' ? { ...f, breathingFire: false } : f,
+      ),
+    };
+    expect(dragonBudget(cold).cost).toBe(16_500);
+  });
+
+  it('scales the material lines with the beast and blows the cap if it grows', () => {
+    const huge = {
+      ...layout,
+      features: layout.features.map((f) =>
+        f.kind === 'dragon' ? { ...f, lengthFt: 300 } : f,
+      ),
+    };
+    const budget = dragonBudget(huge);
+    expect(budget.withinCap).toBe(false);
+    expect(budget.overBy).toBeGreaterThan(0);
   });
 
   it('costs more with the enhanced marina than with the existing one', () => {

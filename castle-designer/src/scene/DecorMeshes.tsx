@@ -20,6 +20,13 @@ const DECOR_COLOR: Record<DecorKind, string> = {
   post: '#5b4c3a',
   tent: '#d8cfbc',
   pergola: '#6a5a45',
+  table: '#8a6f4d',
+  chair: '#6d5a44',
+  lounger: '#c9bda4',
+  umbrella: '#b8564e',
+  poleLight: '#3f434a',
+  bollard: '#4a4e55',
+  uplight: '#33373d',
 };
 
 const ROUGHNESS: Partial<Record<DecorKind, number>> = {
@@ -49,6 +56,12 @@ const BOX_KINDS: DecorKind[] = [
   'post',
   'pergola',
   'batter',
+  'table',
+  'chair',
+  'lounger',
+  'bollard',
+  'poleLight',
+  'uplight',
 ];
 
 function materialFor(kind: DecorKind): THREE.MeshStandardMaterial {
@@ -160,6 +173,26 @@ function TentKind({ items }: { items: Decor[] }) {
   );
 }
 
+/** A shade umbrella: a pole and a cone, at the size the feature asks for. */
+function UmbrellaKind({ items }: { items: Decor[] }) {
+  const canopy = useMemo(() => materialFor('umbrella'), []);
+  const pole = useMemo(() => materialFor('post'), []);
+  return (
+    <group>
+      {items.map((d) => (
+        <group key={d.id} position={[d.center.x, d.center.y, d.center.z]}>
+          <mesh material={pole}>
+            <cylinderGeometry args={[0.14, 0.14, d.size.y, 6]} />
+          </mesh>
+          <mesh position={[0, d.size.y / 2, 0]} material={canopy} castShadow>
+            <coneGeometry args={[d.size.x / 2, d.size.y * 0.28, 8]} />
+          </mesh>
+        </group>
+      ))}
+    </group>
+  );
+}
+
 export function DecorMeshes({ decor }: { decor: Decor[] }) {
   const byKind = useMemo(() => {
     const map = new Map<DecorKind, Decor[]>();
@@ -179,6 +212,7 @@ export function DecorMeshes({ decor }: { decor: Decor[] }) {
       <CylinderKind items={byKind.get('bartizan') ?? []} />
       <ConeKind items={byKind.get('conicalRoof') ?? []} />
       <TentKind items={byKind.get('tent') ?? []} />
+      <UmbrellaKind items={byKind.get('umbrella') ?? []} />
     </group>
   );
 }

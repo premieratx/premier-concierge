@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import * as THREE from 'three';
 import { featuresOfKind } from '../domain/types';
-import type { Layout, StageRoof } from '../domain/types';
+import type { Layout, ModelLayer, StageRoof } from '../domain/types';
 
 function useStageMaterials() {
   return useMemo(
@@ -113,14 +113,22 @@ function StageBody({ widthFt, depthFt, heightFt, roof, m, night }: StageBodyProp
   );
 }
 
-export function Stages({ layout, night }: { layout: Layout; night: boolean }) {
+export function Stages({
+  layout,
+  night,
+  layers,
+}: {
+  layout: Layout;
+  night: boolean;
+  layers: Record<ModelLayer, boolean>;
+}) {
   const m = useStageMaterials();
   const stages = featuresOfKind(layout.features, 'stage');
   const overwater = featuresOfKind(layout.features, 'overwaterStage');
 
   return (
     <group>
-      {stages.map((s) => (
+      {layers.stages && stages.map((s) => (
         <group key={s.id} position={[s.position.x, s.position.y, s.position.z]} rotation={[0, s.rotationY, 0]}>
           <StageBody
             widthFt={s.widthFt}
@@ -133,7 +141,7 @@ export function Stages({ layout, night }: { layout: Layout; night: boolean }) {
         </group>
       ))}
 
-      {overwater.map((s) => (
+      {layers.overwaterStage && overwater.map((s) => (
         <group key={s.id} position={[s.position.x, s.position.y, s.position.z]} rotation={[0, s.rotationY, 0]}>
           {/* Pilings, because this one is standing in the lake. */}
           {[

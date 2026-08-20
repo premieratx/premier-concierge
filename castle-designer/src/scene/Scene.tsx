@@ -4,9 +4,11 @@ import { useEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib';
 import { runAllChecks } from '../rules';
-import { useLayoutStore } from '../store/useLayoutStore';
+import { useLayoutStore, type TimeOfDay } from '../store/useLayoutStore';
 import { CAMERA_PRESETS, DEFAULT_PRESET } from './cameraPresets';
+import { CapacityLabels } from './CapacityLabels';
 import { DecorMeshes } from './DecorMeshes';
+import { SceneEnvironment } from './Environment';
 import { Dragon } from './Dragon';
 import { FirePits } from './FirePits';
 import { InstancedContainers } from './InstancedContainers';
@@ -15,7 +17,7 @@ import { Marina } from './Marina';
 import { Stages } from './Stages';
 import { StringLightsMesh } from './StringLightsMesh';
 import { Terrain } from './Ground';
-import { featuresOfKind } from '../domain/types';
+import { featuresOfKind, layerOfContainer, layerOfDecor } from '../domain/types';
 
 /** Set by the canvas so the toolbar can grab a frame without a context. */
 let capture: (() => string | null) | null = null;
@@ -91,7 +93,6 @@ function CameraRig({ presetKey }: { presetKey: string }) {
 function PropertyModel() {
   const layout = useLayoutStore((s) => s.layout);
   const selectedIds = useLayoutStore((s) => s.selectedIds);
-  const showEdges = useLayoutStore((s) => s.showEdges);
   const layers = useLayoutStore((s) => s.layers);
   const timeOfDay = useLayoutStore((s) => s.timeOfDay);
   const select = useLayoutStore((s) => s.select);
@@ -101,13 +102,13 @@ function PropertyModel() {
   const checks = useMemo(() => runAllChecks(layout), [layout]);
 
   const visibleContainers = useMemo(
-    () =>
-      layout.containers.filter((c) => {
-        const zone = c.zone ?? 'castle';
-        if (zone === 'lodging') return layers.lodging;
-        return layers.castle;
-      }),
-    [layout.containers, layers.castle, layers.lodging],
+    () => layout.containers.filter((c) => layers[layerOfContainer(c)]),
+    [layout.containers, layers],
+  );
+
+  const visibleDecor = useMemo(
+    () => layout.decor.filter((d) => layers[layerOfDecor(d)]),
+    [layout.decor, layers],
   );
 
   const dragons = featuresOfKind(layout.features, 'dragon');
@@ -125,20 +126,33 @@ function PropertyModel() {
         containers={visibleContainers}
         selectedIds={selectedIds}
         flaggedIds={checks.errorContainerIds}
-        showEdges={showEdges}
+        showEdges={layers.edges}
         onSelect={(id, additive) => select(id, additive)}
       />
 
-      {layers.decor && <DecorMeshes decor={layout.decor} />}
-      {layers.marina && <Marina layout={layout} />}
-      {layers.stages && <Stages layout={layout} night={night} />}
-      {layers.fire && <FirePits layout={layout} night={night} />}
-      {layers.lights && <StringLightsMesh layout={layout} night={night} />}
+      <DecorMeshes decor={visibleDecor} />
+      <Marina layout={layout} layers={layers} />
+      <Stages layout={layout} night={night} layers={layers} />
+      {layers.firePits && <FirePits layout={layout} night={night} />}
+      {layers.stringLights && <StringLightsMesh layout={layout} night={night} />}
       {layers.dragon &&
-        dragons.map((d) => <Dragon key={d.id} feature={d} night={night} />)}
+        dragons.map((d) => (
+          <Dragon key={d.id} feature={d} night={night} showFire={layers.dragonFire} />
+        ))}
+      {layers.capacity && <CapacityLabels layout={layout} layers={layers} />}
     </group>
   );
 }
+
+/**
+ * How much the procedural environment contributes at each time of day. Metals
+ * need something to reflect even at night, or they go black.
+ */
+const ENVIRONMENT_INTENSITY: Record<TimeOfDay, number> = {
+  day: 0.55,
+  dusk: 0.32,
+  night: 0.16,
+};
 
 export function Scene() {
   const select = useLayoutStore((s) => s.select);
@@ -154,6 +168,7 @@ export function Scene() {
       onPointerMissed={() => select(null)}
     >
       <ScreenshotBridge />
+      <SceneEnvironment intensity={ENVIRONMENT_INTENSITY[timeOfDay]} />
       <Lighting timeOfDay={timeOfDay} />
       <PropertyModel />
       <OrbitControls

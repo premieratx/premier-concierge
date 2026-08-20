@@ -27,9 +27,9 @@ interface Preset {
 const PRESETS: Record<TimeOfDay, Preset> = {
   day: {
     sun: [420, 520, 180],
-    sunIntensity: 2.6,
+    sunIntensity: 2.2,
     sunColor: '#fff6e6',
-    ambient: 0.35,
+    ambient: 0.18,
     ambientColor: '#ffffff',
     hemiSky: '#cfe3ff',
     hemiGround: '#4a4636',
@@ -41,9 +41,9 @@ const PRESETS: Record<TimeOfDay, Preset> = {
   },
   dusk: {
     sun: [-620, 90, -160],
-    sunIntensity: 2.0,
+    sunIntensity: 1.7,
     sunColor: '#ffb078',
-    ambient: 0.5,
+    ambient: 0.34,
     ambientColor: '#9db4d6',
     hemiSky: '#6c82b4',
     hemiGround: '#3a3225',

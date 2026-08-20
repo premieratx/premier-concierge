@@ -87,6 +87,8 @@ export interface Container {
   label?: string;
   /** Defaults to `castle` when absent. */
   zone?: ContainerZone;
+  /** Display layer. Falls back to `layerOfContainer` when absent. */
+  layer?: ModelLayer;
 }
 
 export interface Layout {
@@ -161,7 +163,67 @@ export type DecorKind =
   /** Canvas glamping tent. */
   | 'tent'
   /** Open shade structure. */
-  | 'pergola';
+  | 'pergola'
+  /** Dining or cocktail table. */
+  | 'table'
+  /** Seat. */
+  | 'chair'
+  /** Sun lounger. */
+  | 'lounger'
+  /** Table umbrella or shade sail. */
+  | 'umbrella'
+  /** Area light on a pole. */
+  | 'poleLight'
+  /** Path bollard. */
+  | 'bollard'
+  /** Ground-mounted uplight washing a wall. */
+  | 'uplight';
+
+/**
+ * Display layers.
+ *
+ * These are a property of the model, not of the viewer: a generator knows that
+ * the deck it just emitted belongs to the bunkhouse and not to the glamping
+ * platforms, and nothing downstream can work that out from geometry alone.
+ * The viewer just toggles them.
+ */
+export type ModelLayer =
+  // Castle
+  | 'curtainWall'
+  | 'towers'
+  | 'greatHall'
+  | 'keep'
+  | 'crenellation'
+  | 'wallWalk'
+  | 'bartizans'
+  | 'batter'
+  | 'gate'
+  // Lodging
+  | 'cabins'
+  | 'bunkhouse'
+  | 'glamping'
+  // Marina
+  | 'docks'
+  | 'slipsStandard'
+  | 'slipsPremier'
+  | 'patios'
+  | 'boats'
+  | 'swimToys'
+  // Programme
+  | 'bars'
+  | 'furniture'
+  | 'stages'
+  | 'overwaterStage'
+  | 'firePits'
+  | 'dragon'
+  | 'dragonFire'
+  // Site
+  | 'stringLights'
+  | 'areaLighting'
+  | 'water'
+  | 'grid'
+  | 'capacity'
+  | 'edges';
 
 export interface Decor {
   id: string;
@@ -181,6 +243,8 @@ export interface Decor {
   color?: string;
   /** Which programme this trim belongs to. Defaults to `castle`. */
   zone?: ContainerZone;
+  /** Display layer. Falls back to `layerOfDecor` when absent. */
+  layer?: ModelLayer;
 }
 
 /* ------------------------------------------------------------------ *
@@ -390,4 +454,56 @@ export function featuresOfKind<K extends SiteFeature['kind']>(
   kind: K,
 ): Extract<SiteFeature, { kind: K }>[] {
   return features.filter((f): f is Extract<SiteFeature, { kind: K }> => f.kind === kind);
+}
+
+/* ------------------------------------------------------------------ *
+ * Layer resolution
+ *
+ * Generators set `layer` explicitly wherever the answer is not obvious from
+ * the geometry. These fallbacks cover everything else, so a hand-written or
+ * imported layout still lands on a sensible layer.
+ * ------------------------------------------------------------------ */
+
+const DECOR_LAYER: Record<DecorKind, ModelLayer> = {
+  merlon: 'crenellation',
+  parapet: 'crenellation',
+  banner: 'crenellation',
+  bartizan: 'bartizans',
+  conicalRoof: 'bartizans',
+  batter: 'batter',
+  truss: 'greatHall',
+  walkway: 'wallWalk',
+  archStone: 'gate',
+  gate: 'gate',
+  deck: 'cabins',
+  shedRoof: 'cabins',
+  post: 'cabins',
+  tent: 'glamping',
+  pergola: 'patios',
+  table: 'furniture',
+  chair: 'furniture',
+  lounger: 'furniture',
+  umbrella: 'furniture',
+  poleLight: 'areaLighting',
+  bollard: 'areaLighting',
+  uplight: 'areaLighting',
+};
+
+export function layerOfDecor(decor: Decor): ModelLayer {
+  return decor.layer ?? DECOR_LAYER[decor.kind];
+}
+
+export function layerOfContainer(container: Container): ModelLayer {
+  if (container.layer) return container.layer;
+  if (container.zone === 'lodging') return 'cabins';
+  switch (container.role) {
+    case 'tower':
+      return 'towers';
+    case 'wall':
+      return 'greatHall';
+    case 'sealed':
+      return 'keep';
+    default:
+      return 'curtainWall';
+  }
 }

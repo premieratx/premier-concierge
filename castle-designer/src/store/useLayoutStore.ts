@@ -3,48 +3,102 @@ import { snapPosition } from '../domain/geometry';
 import { makeId } from '../domain/ids';
 import { generateProperty } from '../domain/property';
 import { SEED_LAYOUT } from '../domain/seedLayout';
-import type { Container, Layout, MarinaPhase, Opening, Rotation, Vec3 } from '../domain/types';
+import type {
+  Container,
+  Layout,
+  MarinaPhase,
+  ModelLayer,
+  Opening,
+  Rotation,
+  Vec3,
+} from '../domain/types';
 import type { PricingStrategy } from '../revenue/slips';
 
 export type TimeOfDay = 'day' | 'dusk' | 'night';
 
-export type LayerKey =
-  | 'castle'
-  | 'lodging'
-  | 'decor'
-  | 'marina'
-  | 'stages'
-  | 'dragon'
-  | 'fire'
-  | 'lights'
-  | 'water'
-  | 'grid';
+/** Re-exported so panels do not have to reach into the domain for the type. */
+export type LayerKey = ModelLayer;
 
-export const LAYER_LABELS: Record<LayerKey, string> = {
-  castle: 'Castle containers',
-  lodging: 'Lodging containers',
-  decor: 'Castle trim',
-  marina: 'Marina',
-  stages: 'Stages',
+export const LAYER_LABELS: Record<ModelLayer, string> = {
+  curtainWall: 'Curtain wall',
+  towers: 'Towers',
+  greatHall: 'Great hall',
+  keep: 'Keep',
+  crenellation: 'Crenellation',
+  wallWalk: 'Wall walk',
+  bartizans: 'Bartizans',
+  batter: 'Battered plinth',
+  gate: 'Gatehouse',
+  cabins: 'Lake cabins',
+  bunkhouse: 'Bunkhouse',
+  glamping: 'Canvas platforms',
+  docks: 'Docks and fingers',
+  slipsStandard: 'Standard slips',
+  slipsPremier: 'Premier slips',
+  patios: 'Over-slip patios',
+  boats: 'Boats',
+  swimToys: 'Swings and jump platforms',
+  bars: 'Bars',
+  furniture: 'Furniture',
+  stages: 'Land stages',
+  overwaterStage: 'Overwater stage',
+  firePits: 'Fire pits',
   dragon: 'Dragon',
-  fire: 'Fire pits',
-  lights: 'Party lights',
+  dragonFire: 'Dragon fire',
+  stringLights: 'Party lights',
+  areaLighting: 'Area lighting',
   water: 'Water',
   grid: 'Grid',
+  capacity: 'Capacity labels',
+  edges: 'Edge outlines',
 };
 
-const ALL_LAYERS_ON: Record<LayerKey, boolean> = {
-  castle: true,
-  lodging: true,
-  decor: true,
-  marina: true,
-  stages: true,
-  dragon: true,
-  fire: true,
-  lights: true,
-  water: true,
-  grid: false,
-};
+export interface LayerGroup {
+  title: string;
+  layers: ModelLayer[];
+}
+
+/** Layer toggles, grouped the way somebody actually thinks about the site. */
+export const LAYER_GROUPS: LayerGroup[] = [
+  {
+    title: 'Castle',
+    layers: ['curtainWall', 'towers', 'greatHall', 'keep', 'gate'],
+  },
+  {
+    title: 'Castle trim',
+    layers: ['crenellation', 'wallWalk', 'bartizans', 'batter'],
+  },
+  {
+    title: 'Accommodations',
+    layers: ['cabins', 'bunkhouse', 'glamping'],
+  },
+  {
+    title: 'Marina',
+    layers: ['docks', 'slipsStandard', 'slipsPremier', 'patios', 'boats', 'swimToys'],
+  },
+  {
+    title: 'Programme',
+    layers: ['stages', 'overwaterStage', 'bars', 'furniture'],
+  },
+  {
+    title: 'Fire and light',
+    layers: ['firePits', 'dragon', 'dragonFire', 'stringLights', 'areaLighting'],
+  },
+  {
+    title: 'Site and overlays',
+    layers: ['water', 'grid', 'capacity', 'edges'],
+  },
+];
+
+export const ALL_LAYERS: ModelLayer[] = LAYER_GROUPS.flatMap((g) => g.layers);
+
+function defaultLayers(): Record<ModelLayer, boolean> {
+  const out = {} as Record<ModelLayer, boolean>;
+  for (const layer of ALL_LAYERS) out[layer] = true;
+  // The grid is a drafting aid, not part of the model.
+  out.grid = false;
+  return out;
+}
 
 const HISTORY_LIMIT = 60;
 
@@ -53,18 +107,17 @@ export interface LayoutState {
   past: Layout[];
   future: Layout[];
   selectedIds: string[];
-  showEdges: boolean;
   timeOfDay: TimeOfDay;
-  layers: Record<LayerKey, boolean>;
+  layers: Record<ModelLayer, boolean>;
   pricingStrategy: PricingStrategy;
   cameraPreset: string;
 
   setCameraPreset(key: string): void;
   select(id: string | null, additive?: boolean): void;
   selectMany(ids: string[]): void;
-  setShowEdges(show: boolean): void;
   setTimeOfDay(time: TimeOfDay): void;
-  toggleLayer(layer: LayerKey): void;
+  toggleLayer(layer: ModelLayer): void;
+  setLayers(layers: ModelLayer[], on: boolean): void;
   setPricingStrategy(strategy: PricingStrategy): void;
 
   setMarinaPhase(phase: MarinaPhase): void;
@@ -133,9 +186,8 @@ export const useLayoutStore = create<LayoutState>((set, get) => {
     past: [],
     future: [],
     selectedIds: [],
-    showEdges: true,
     timeOfDay: 'dusk',
-    layers: { ...ALL_LAYERS_ON },
+    layers: defaultLayers(),
     pricingStrategy: 'bundled',
     cameraPreset: 'property',
 
@@ -152,11 +204,17 @@ export const useLayoutStore = create<LayoutState>((set, get) => {
 
     selectMany: (ids) => set({ selectedIds: [...ids] }),
 
-    setShowEdges: (showEdges) => set({ showEdges }),
     setTimeOfDay: (timeOfDay) => set({ timeOfDay }),
     setPricingStrategy: (pricingStrategy) => set({ pricingStrategy }),
     toggleLayer: (layer) =>
       set((state) => ({ layers: { ...state.layers, [layer]: !state.layers[layer] } })),
+
+    setLayers: (layers, on) =>
+      set((state) => {
+        const next = { ...state.layers };
+        for (const layer of layers) next[layer] = on;
+        return { layers: next };
+      }),
 
     setMarinaPhase: (phase) => get().loadProperty(phase),
 

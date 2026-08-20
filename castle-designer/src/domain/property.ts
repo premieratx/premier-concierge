@@ -1,5 +1,5 @@
 import { dimsOf } from './dimensions';
-import { generateAccommodations } from './generators/accommodations';
+import { cabinPorchPoints, generateAccommodations } from './generators/accommodations';
 import { generateBatter } from './generators/batter';
 import { generateBawn } from './generators/bawn';
 import { type GeneratorResult, type Rect, gid, merge, resetGeneratorIds } from './generators/common';
@@ -11,6 +11,8 @@ import {
   generateLandStages,
   generateLawnLights,
 } from './generators/spectacle';
+import { generateFurnishings, type BanquetSpec } from './generators/furnishings';
+import { generateSiteLighting } from './generators/siteLighting';
 import { generateTower } from './generators/tower';
 import type { Container, Layout, MarinaPhase, SiteFeature, SiteDefinition } from './types';
 
@@ -63,6 +65,7 @@ function curtainUpperCourse(perimeter: Rect, gateBays: number): GeneratorResult 
       finish: 'stone',
       openings: [],
       zone: 'castle',
+      layer: 'curtainWall',
       label: `Water curtain L2 bay ${bay + 1}`,
     });
   }
@@ -109,6 +112,7 @@ function keep(): GeneratorResult {
                   },
                 ],
           zone: 'castle',
+          layer: 'keep',
           label: `Keep L${level + 1}`,
         });
       }
@@ -197,12 +201,12 @@ export function generateLawn(): SiteFeature[] {
 
   features.push(
     generateDragon({
-      position: { x: 0, y: 0, z: 244 },
+      position: { x: 0, y: 0, z: 248 },
       // Facing the water, so the fire goes out over the lake, not the gate.
       rotationY: 0,
-      lengthFt: 150,
-      wingspanFt: 186,
-      shoulderHeightFt: 52,
+      lengthFt: 48,
+      wingspanFt: 58,
+      shoulderHeightFt: 14,
       breathingFire: true,
       burstPeriodS: 9,
     }),
@@ -265,10 +269,30 @@ export function generateLawn(): SiteFeature[] {
   return features;
 }
 
+/**
+ * The banquet in the great hall: two rows of trestles flanking the stage,
+ * which is what turns the clear span into a seated capacity rather than an
+ * abstract number of square feet.
+ */
+export const HALL_BANQUET: BanquetSpec = {
+  center: { x: 0, z: 78 },
+  y: 0,
+  rowZ: [68, 88],
+  tablesPerRow: 8,
+  tableLengthFt: 8,
+  tableWidthFt: 2.5,
+  runFt: 152,
+};
+
+/** The arrival lawn between the gate and the bank. */
+export const LAWN = { x: -380, z: 216, sizeX: 760, sizeZ: 84 };
+
 export interface PropertyOptions {
   marinaPhase?: MarinaPhase;
   includeLodging?: boolean;
   includeLawn?: boolean;
+  /** Furniture and site lighting. On by default. */
+  includeFurnishings?: boolean;
 }
 
 /**
@@ -291,6 +315,25 @@ export function generateProperty(options: PropertyOptions = {}): Layout {
     waterLevelFt: SITE.waterLevelFt,
   });
 
+  const features = [...lawn, ...lodging.features, ...marina.features];
+
+  const furnishings =
+    options.includeFurnishings === false
+      ? []
+      : [
+          ...generateFurnishings({
+            features,
+            cabinPorches: options.includeLodging === false ? [] : cabinPorchPoints(),
+            hall: HALL_BANQUET,
+          }),
+          ...generateSiteLighting({
+            compound: BAWN,
+            gateToDock: { from: { x: 0, z: 222 }, to: { x: 0, z: 300 } },
+            lawn: LAWN,
+            drive: { from: { x: -560, z: 250 }, to: { x: -230, z: 250 } },
+          }),
+        ];
+
   return {
     version: 1,
     id: `hcyc-${marinaPhase}`,
@@ -298,8 +341,8 @@ export function generateProperty(options: PropertyOptions = {}): Layout {
     units: 'ft',
     site: { ...SITE, marinaPhase },
     containers: [...castle.containers, ...lodging.containers],
-    decor: [...castle.decor, ...lodging.decor],
-    features: [...lawn, ...lodging.features, ...marina.features],
+    decor: [...castle.decor, ...lodging.decor, ...furnishings],
+    features,
     notes:
       'Parametric build-out. Castle containers carry zone "castle"; lodging ' +
       'containers carry zone "lodging" so the reference cost validation is ' +

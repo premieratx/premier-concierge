@@ -49,18 +49,39 @@ export const RATES = {
  * spectacle muddying it.
  */
 export const SITE_RATES = {
+  /**
+   * The dragon is a scrap build on a $20,000 budget, not a commissioned
+   * sculpture.
+   *
+   * Nothing about it is a custom fabricated component: it is donor car parts
+   * and yard steel — hoods and doors for the wing membrane, wheel rims for the
+   * joints, leaf springs for the ribs and legs, exhaust pipe for the neck,
+   * brake discs for the feet, headlights for the eyes — cut and welded onto a
+   * used-pipe spine. The parts cost what scrap costs. The labour is donated,
+   * and that is the only reason this number works.
+   *
+   * Parts, consumables and rigging scale with length; the plinth and the
+   * burner train do not. At the reference length the lines below sum to
+   * exactly the cap.
+   */
   dragon: {
-    /** Fabricated, galvanised, erected art-grade steel armature. */
-    armatureTonsPerLengthFt: 0.22,
-    armaturePerTon: 28000,
-    /** Formed and welded plate skin, finished. */
-    skinPerSqFt: 95,
-    /** LP supply, burners, ignition, flame safety interlocks, controls. */
-    fireSystemLumpSum: 185000,
-    /** Drilled piers and grade beam for an object this tall in Texas wind. */
-    foundationLumpSum: 145000,
-    /** Structural PE, wind analysis, and the artist's fee. */
-    engineeringLumpSum: 160000,
+    budgetCap: 20000,
+    /** Length the lump sums below are quoted at, in feet. */
+    referenceLengthFt: 48,
+    /** Donor hoods, doors, rims, springs, exhaust and discs, hauled. */
+    donorPartsLumpSum: 4800,
+    /** Used pipe and beam for the spine and the internal frame. */
+    structuralCoreLumpSum: 2600,
+    /** Wire, gas, cutting discs, grinding discs, primer. */
+    weldingConsumablesLumpSum: 2100,
+    /** Fasteners, chain and hardware. */
+    hardwareLumpSum: 900,
+    /** Telehandler and rigging, two days. */
+    riggingLumpSum: 3400,
+    /** Concrete plinth, anchor bolts and the embed plate. */
+    plinthAndAnchorsLumpSum: 2700,
+    /** Propane train, burner, ignition and the flame safety interlock. */
+    fireSystemLumpSum: 3500,
   },
   firePit: {
     /** Burner, pan, media, stone surround, valve train. */

@@ -23,6 +23,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn north L1 bay 1"
     },
     {
@@ -37,6 +38,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn north L1 bay 2"
     },
     {
@@ -51,6 +53,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn north L1 bay 3"
     },
     {
@@ -65,6 +68,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn north L1 bay 4"
     },
     {
@@ -79,6 +83,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn north L1 bay 5"
     },
     {
@@ -93,6 +98,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn north L1 bay 6"
     },
     {
@@ -107,6 +113,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn north L1 bay 7"
     },
     {
@@ -121,6 +128,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn north L1 bay 8"
     },
     {
@@ -135,6 +143,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn north L1 bay 9"
     },
     {
@@ -149,6 +158,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn north L1 bay 10"
     },
     {
@@ -163,6 +173,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn south L1 bay 1"
     },
     {
@@ -177,6 +188,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn south L1 bay 2"
     },
     {
@@ -191,6 +203,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn south L1 bay 3"
     },
     {
@@ -205,6 +218,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn south L1 bay 4"
     },
     {
@@ -219,6 +233,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn south L1 bay 7"
     },
     {
@@ -233,6 +248,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn south L1 bay 8"
     },
     {
@@ -247,6 +263,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn south L1 bay 9"
     },
     {
@@ -261,6 +278,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn south L1 bay 10"
     },
     {
@@ -275,6 +293,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn west L1 bay 1"
     },
     {
@@ -289,6 +308,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn west L1 bay 2"
     },
     {
@@ -303,6 +323,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn west L1 bay 3"
     },
     {
@@ -317,6 +338,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn west L1 bay 4"
     },
     {
@@ -331,6 +353,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn east L1 bay 1"
     },
     {
@@ -345,6 +368,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn east L1 bay 2"
     },
     {
@@ -359,6 +383,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn east L1 bay 3"
     },
     {
@@ -373,6 +398,7 @@
       "role": "structural",
       "finish": "stone",
       "openings": [],
+      "layer": "curtainWall",
       "label": "Bawn east L1 bay 4"
     },
     {
@@ -388,6 +414,7 @@
       "finish": "stone",
       "openings": [],
       "zone": "castle",
+      "layer": "curtainWall",
       "label": "Water curtain L2 bay 1"
     },
     {
@@ -403,6 +430,7 @@
       "finish": "stone",
       "openings": [],
       "zone": "castle",
+      "layer": "curtainWall",
       "label": "Water curtain L2 bay 2"
     },
     {
@@ -418,6 +446,7 @@
       "finish": "stone",
       "openings": [],
       "zone": "castle",
+      "layer": "curtainWall",
       "label": "Water curtain L2 bay 3"
     },
     {
@@ -433,6 +462,7 @@
       "finish": "stone",
       "openings": [],
       "zone": "castle",
+      "layer": "curtainWall",
       "label": "Water curtain L2 bay 4"
     },
     {
@@ -448,6 +478,7 @@
       "finish": "stone",
       "openings": [],
       "zone": "castle",
+      "layer": "curtainWall",
       "label": "Water curtain L2 bay 7"
     },
     {
@@ -463,6 +494,7 @@
       "finish": "stone",
       "openings": [],
       "zone": "castle",
+      "layer": "curtainWall",
       "label": "Water curtain L2 bay 8"
     },
     {
@@ -478,6 +510,7 @@
       "finish": "stone",
       "openings": [],
       "zone": "castle",
+      "layer": "curtainWall",
       "label": "Water curtain L2 bay 9"
     },
     {
@@ -493,6 +526,7 @@
       "finish": "stone",
       "openings": [],
       "zone": "castle",
+      "layer": "curtainWall",
       "label": "Water curtain L2 bay 10"
     },
     {
@@ -507,6 +541,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-nw L1"
     },
     {
@@ -521,6 +556,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-nw L1"
     },
     {
@@ -535,6 +571,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-nw L2"
     },
     {
@@ -549,6 +586,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-nw L2"
     },
     {
@@ -563,6 +601,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-nw L3"
     },
     {
@@ -577,6 +616,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-nw L3"
     },
     {
@@ -591,6 +631,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-ne L1"
     },
     {
@@ -605,6 +646,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-ne L1"
     },
     {
@@ -619,6 +661,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-ne L2"
     },
     {
@@ -633,6 +676,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-ne L2"
     },
     {
@@ -647,6 +691,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-ne L3"
     },
     {
@@ -661,6 +706,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-ne L3"
     },
     {
@@ -675,6 +721,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-se L1"
     },
     {
@@ -689,6 +736,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-se L1"
     },
     {
@@ -703,6 +751,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-se L2"
     },
     {
@@ -717,6 +766,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-se L2"
     },
     {
@@ -731,6 +781,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-se L3"
     },
     {
@@ -745,6 +796,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-se L3"
     },
     {
@@ -759,6 +811,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-sw L1"
     },
     {
@@ -773,6 +826,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-sw L1"
     },
     {
@@ -787,6 +841,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-sw L2"
     },
     {
@@ -801,6 +856,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-sw L2"
     },
     {
@@ -815,6 +871,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-sw L3"
     },
     {
@@ -829,6 +886,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-sw L3"
     },
     {
@@ -843,6 +901,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-sw L4"
     },
     {
@@ -857,6 +916,7 @@
       "role": "tower",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "tower-sw L4"
     },
     {
@@ -871,6 +931,7 @@
       "role": "sealed",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "gatetower-0 L1"
     },
     {
@@ -885,6 +946,7 @@
       "role": "sealed",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "gatetower-0 L1"
     },
     {
@@ -899,6 +961,7 @@
       "role": "sealed",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "gatetower-0 L2"
     },
     {
@@ -913,6 +976,7 @@
       "role": "sealed",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "gatetower-0 L2"
     },
     {
@@ -927,6 +991,7 @@
       "role": "sealed",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "gatetower-1 L1"
     },
     {
@@ -941,6 +1006,7 @@
       "role": "sealed",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "gatetower-1 L1"
     },
     {
@@ -955,6 +1021,7 @@
       "role": "sealed",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "gatetower-1 L2"
     },
     {
@@ -969,6 +1036,7 @@
       "role": "sealed",
       "finish": "stone",
       "openings": [],
+      "layer": "towers",
       "label": "gatetower-1 L2"
     },
     {
@@ -983,6 +1051,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall W L1 bay 1"
     },
     {
@@ -997,6 +1066,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall W L1 bay 2"
     },
     {
@@ -1011,6 +1081,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall W L1 bay 3"
     },
     {
@@ -1025,6 +1096,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall W L1 bay 4"
     },
     {
@@ -1039,6 +1111,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall W L2 bay 1"
     },
     {
@@ -1053,6 +1126,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall W L2 bay 2"
     },
     {
@@ -1067,6 +1141,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall W L2 bay 3"
     },
     {
@@ -1081,6 +1156,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall W L2 bay 4"
     },
     {
@@ -1095,6 +1171,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall E L1 bay 1"
     },
     {
@@ -1109,6 +1186,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall E L1 bay 2"
     },
     {
@@ -1123,6 +1201,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall E L1 bay 3"
     },
     {
@@ -1137,6 +1216,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall E L1 bay 4"
     },
     {
@@ -1151,6 +1231,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall E L2 bay 1"
     },
     {
@@ -1165,6 +1246,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall E L2 bay 2"
     },
     {
@@ -1179,6 +1261,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall E L2 bay 3"
     },
     {
@@ -1193,6 +1276,7 @@
       "role": "wall",
       "finish": "stone",
       "openings": [],
+      "layer": "greatHall",
       "label": "Hall wall E L2 bay 4"
     },
     {
@@ -1217,6 +1301,7 @@
         }
       ],
       "zone": "castle",
+      "layer": "keep",
       "label": "Keep L1"
     },
     {
@@ -1242,6 +1327,7 @@
         }
       ],
       "zone": "castle",
+      "layer": "keep",
       "label": "Keep L1"
     },
     {
@@ -1266,6 +1352,7 @@
         }
       ],
       "zone": "castle",
+      "layer": "keep",
       "label": "Keep L1"
     },
     {
@@ -1291,6 +1378,7 @@
         }
       ],
       "zone": "castle",
+      "layer": "keep",
       "label": "Keep L1"
     },
     {
@@ -1315,6 +1403,7 @@
         }
       ],
       "zone": "castle",
+      "layer": "keep",
       "label": "Keep L2"
     },
     {
@@ -1339,6 +1428,7 @@
         }
       ],
       "zone": "castle",
+      "layer": "keep",
       "label": "Keep L2"
     },
     {
@@ -1363,6 +1453,7 @@
         }
       ],
       "zone": "castle",
+      "layer": "keep",
       "label": "Keep L2"
     },
     {
@@ -1387,6 +1478,7 @@
         }
       ],
       "zone": "castle",
+      "layer": "keep",
       "label": "Keep L2"
     },
     {
@@ -1411,6 +1503,7 @@
         }
       ],
       "zone": "castle",
+      "layer": "keep",
       "label": "Keep L3"
     },
     {
@@ -1435,6 +1528,7 @@
         }
       ],
       "zone": "castle",
+      "layer": "keep",
       "label": "Keep L3"
     },
     {
@@ -1459,6 +1553,7 @@
         }
       ],
       "zone": "castle",
+      "layer": "keep",
       "label": "Keep L3"
     },
     {
@@ -1483,6 +1578,7 @@
         }
       ],
       "zone": "castle",
+      "layer": "keep",
       "label": "Keep L3"
     }
   ],
@@ -1499,7 +1595,8 @@
         "x": 400,
         "y": 0.5,
         "z": 4.8
-      }
+      },
+      "layer": "wallWalk"
     },
     {
       "id": "bawn-south-walk-164",
@@ -1513,7 +1610,8 @@
         "x": 400,
         "y": 0.5,
         "z": 4.8
-      }
+      },
+      "layer": "wallWalk"
     },
     {
       "id": "bawn-west-walk-193",
@@ -1527,7 +1625,8 @@
         "x": 4.8,
         "y": 0.5,
         "z": 160
-      }
+      },
+      "layer": "wallWalk"
     },
     {
       "id": "bawn-east-walk-222",
@@ -1541,7 +1640,8 @@
         "x": 4.8,
         "y": 0.5,
         "z": 160
-      }
+      },
+      "layer": "wallWalk"
     },
     {
       "id": "bawn-gate-223",
@@ -7382,6 +7482,4851 @@
       "rotationY": 1.5707963267948966,
       "slope": 0.16514867741462683,
       "finish": "stone"
+    },
+    {
+      "id": "banquet-0-0-582",
+      "kind": "table",
+      "center": {
+        "x": -66.5,
+        "y": 1.25,
+        "z": 68
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-0--1-0-583",
+      "kind": "chair",
+      "center": {
+        "x": -69.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-0--1-1-584",
+      "kind": "chair",
+      "center": {
+        "x": -67.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-0--1-2-585",
+      "kind": "chair",
+      "center": {
+        "x": -65.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-0--1-3-586",
+      "kind": "chair",
+      "center": {
+        "x": -63.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-0-1-0-587",
+      "kind": "chair",
+      "center": {
+        "x": -69.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-0-1-1-588",
+      "kind": "chair",
+      "center": {
+        "x": -67.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-0-1-2-589",
+      "kind": "chair",
+      "center": {
+        "x": -65.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-0-1-3-590",
+      "kind": "chair",
+      "center": {
+        "x": -63.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-1-591",
+      "kind": "table",
+      "center": {
+        "x": -47.5,
+        "y": 1.25,
+        "z": 68
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-1--1-0-592",
+      "kind": "chair",
+      "center": {
+        "x": -50.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-1--1-1-593",
+      "kind": "chair",
+      "center": {
+        "x": -48.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-1--1-2-594",
+      "kind": "chair",
+      "center": {
+        "x": -46.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-1--1-3-595",
+      "kind": "chair",
+      "center": {
+        "x": -44.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-1-1-0-596",
+      "kind": "chair",
+      "center": {
+        "x": -50.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-1-1-1-597",
+      "kind": "chair",
+      "center": {
+        "x": -48.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-1-1-2-598",
+      "kind": "chair",
+      "center": {
+        "x": -46.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-1-1-3-599",
+      "kind": "chair",
+      "center": {
+        "x": -44.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-2-600",
+      "kind": "table",
+      "center": {
+        "x": -28.5,
+        "y": 1.25,
+        "z": 68
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-2--1-0-601",
+      "kind": "chair",
+      "center": {
+        "x": -31.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-2--1-1-602",
+      "kind": "chair",
+      "center": {
+        "x": -29.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-2--1-2-603",
+      "kind": "chair",
+      "center": {
+        "x": -27.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-2--1-3-604",
+      "kind": "chair",
+      "center": {
+        "x": -25.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-2-1-0-605",
+      "kind": "chair",
+      "center": {
+        "x": -31.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-2-1-1-606",
+      "kind": "chair",
+      "center": {
+        "x": -29.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-2-1-2-607",
+      "kind": "chair",
+      "center": {
+        "x": -27.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-2-1-3-608",
+      "kind": "chair",
+      "center": {
+        "x": -25.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-3-609",
+      "kind": "table",
+      "center": {
+        "x": -9.5,
+        "y": 1.25,
+        "z": 68
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-3--1-0-610",
+      "kind": "chair",
+      "center": {
+        "x": -12.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-3--1-1-611",
+      "kind": "chair",
+      "center": {
+        "x": -10.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-3--1-2-612",
+      "kind": "chair",
+      "center": {
+        "x": -8.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-3--1-3-613",
+      "kind": "chair",
+      "center": {
+        "x": -6.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-3-1-0-614",
+      "kind": "chair",
+      "center": {
+        "x": -12.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-3-1-1-615",
+      "kind": "chair",
+      "center": {
+        "x": -10.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-3-1-2-616",
+      "kind": "chair",
+      "center": {
+        "x": -8.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-3-1-3-617",
+      "kind": "chair",
+      "center": {
+        "x": -6.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-4-618",
+      "kind": "table",
+      "center": {
+        "x": 9.5,
+        "y": 1.25,
+        "z": 68
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-4--1-0-619",
+      "kind": "chair",
+      "center": {
+        "x": 6.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-4--1-1-620",
+      "kind": "chair",
+      "center": {
+        "x": 8.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-4--1-2-621",
+      "kind": "chair",
+      "center": {
+        "x": 10.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-4--1-3-622",
+      "kind": "chair",
+      "center": {
+        "x": 12.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-4-1-0-623",
+      "kind": "chair",
+      "center": {
+        "x": 6.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-4-1-1-624",
+      "kind": "chair",
+      "center": {
+        "x": 8.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-4-1-2-625",
+      "kind": "chair",
+      "center": {
+        "x": 10.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-4-1-3-626",
+      "kind": "chair",
+      "center": {
+        "x": 12.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-5-627",
+      "kind": "table",
+      "center": {
+        "x": 28.5,
+        "y": 1.25,
+        "z": 68
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-5--1-0-628",
+      "kind": "chair",
+      "center": {
+        "x": 25.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-5--1-1-629",
+      "kind": "chair",
+      "center": {
+        "x": 27.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-5--1-2-630",
+      "kind": "chair",
+      "center": {
+        "x": 29.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-5--1-3-631",
+      "kind": "chair",
+      "center": {
+        "x": 31.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-5-1-0-632",
+      "kind": "chair",
+      "center": {
+        "x": 25.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-5-1-1-633",
+      "kind": "chair",
+      "center": {
+        "x": 27.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-5-1-2-634",
+      "kind": "chair",
+      "center": {
+        "x": 29.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-5-1-3-635",
+      "kind": "chair",
+      "center": {
+        "x": 31.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-6-636",
+      "kind": "table",
+      "center": {
+        "x": 47.5,
+        "y": 1.25,
+        "z": 68
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-6--1-0-637",
+      "kind": "chair",
+      "center": {
+        "x": 44.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-6--1-1-638",
+      "kind": "chair",
+      "center": {
+        "x": 46.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-6--1-2-639",
+      "kind": "chair",
+      "center": {
+        "x": 48.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-6--1-3-640",
+      "kind": "chair",
+      "center": {
+        "x": 50.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-6-1-0-641",
+      "kind": "chair",
+      "center": {
+        "x": 44.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-6-1-1-642",
+      "kind": "chair",
+      "center": {
+        "x": 46.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-6-1-2-643",
+      "kind": "chair",
+      "center": {
+        "x": 48.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-6-1-3-644",
+      "kind": "chair",
+      "center": {
+        "x": 50.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-7-645",
+      "kind": "table",
+      "center": {
+        "x": 66.5,
+        "y": 1.25,
+        "z": 68
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-7--1-0-646",
+      "kind": "chair",
+      "center": {
+        "x": 63.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-7--1-1-647",
+      "kind": "chair",
+      "center": {
+        "x": 65.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-7--1-2-648",
+      "kind": "chair",
+      "center": {
+        "x": 67.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-7--1-3-649",
+      "kind": "chair",
+      "center": {
+        "x": 69.5,
+        "y": 0.8,
+        "z": 65.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-7-1-0-650",
+      "kind": "chair",
+      "center": {
+        "x": 63.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-7-1-1-651",
+      "kind": "chair",
+      "center": {
+        "x": 65.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-7-1-2-652",
+      "kind": "chair",
+      "center": {
+        "x": 67.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-0-7-1-3-653",
+      "kind": "chair",
+      "center": {
+        "x": 69.5,
+        "y": 0.8,
+        "z": 70.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-0-654",
+      "kind": "table",
+      "center": {
+        "x": -66.5,
+        "y": 1.25,
+        "z": 88
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-0--1-0-655",
+      "kind": "chair",
+      "center": {
+        "x": -69.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-0--1-1-656",
+      "kind": "chair",
+      "center": {
+        "x": -67.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-0--1-2-657",
+      "kind": "chair",
+      "center": {
+        "x": -65.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-0--1-3-658",
+      "kind": "chair",
+      "center": {
+        "x": -63.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-0-1-0-659",
+      "kind": "chair",
+      "center": {
+        "x": -69.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-0-1-1-660",
+      "kind": "chair",
+      "center": {
+        "x": -67.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-0-1-2-661",
+      "kind": "chair",
+      "center": {
+        "x": -65.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-0-1-3-662",
+      "kind": "chair",
+      "center": {
+        "x": -63.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-1-663",
+      "kind": "table",
+      "center": {
+        "x": -47.5,
+        "y": 1.25,
+        "z": 88
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-1--1-0-664",
+      "kind": "chair",
+      "center": {
+        "x": -50.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-1--1-1-665",
+      "kind": "chair",
+      "center": {
+        "x": -48.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-1--1-2-666",
+      "kind": "chair",
+      "center": {
+        "x": -46.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-1--1-3-667",
+      "kind": "chair",
+      "center": {
+        "x": -44.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-1-1-0-668",
+      "kind": "chair",
+      "center": {
+        "x": -50.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-1-1-1-669",
+      "kind": "chair",
+      "center": {
+        "x": -48.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-1-1-2-670",
+      "kind": "chair",
+      "center": {
+        "x": -46.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-1-1-3-671",
+      "kind": "chair",
+      "center": {
+        "x": -44.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-2-672",
+      "kind": "table",
+      "center": {
+        "x": -28.5,
+        "y": 1.25,
+        "z": 88
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-2--1-0-673",
+      "kind": "chair",
+      "center": {
+        "x": -31.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-2--1-1-674",
+      "kind": "chair",
+      "center": {
+        "x": -29.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-2--1-2-675",
+      "kind": "chair",
+      "center": {
+        "x": -27.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-2--1-3-676",
+      "kind": "chair",
+      "center": {
+        "x": -25.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-2-1-0-677",
+      "kind": "chair",
+      "center": {
+        "x": -31.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-2-1-1-678",
+      "kind": "chair",
+      "center": {
+        "x": -29.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-2-1-2-679",
+      "kind": "chair",
+      "center": {
+        "x": -27.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-2-1-3-680",
+      "kind": "chair",
+      "center": {
+        "x": -25.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-3-681",
+      "kind": "table",
+      "center": {
+        "x": -9.5,
+        "y": 1.25,
+        "z": 88
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-3--1-0-682",
+      "kind": "chair",
+      "center": {
+        "x": -12.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-3--1-1-683",
+      "kind": "chair",
+      "center": {
+        "x": -10.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-3--1-2-684",
+      "kind": "chair",
+      "center": {
+        "x": -8.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-3--1-3-685",
+      "kind": "chair",
+      "center": {
+        "x": -6.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-3-1-0-686",
+      "kind": "chair",
+      "center": {
+        "x": -12.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-3-1-1-687",
+      "kind": "chair",
+      "center": {
+        "x": -10.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-3-1-2-688",
+      "kind": "chair",
+      "center": {
+        "x": -8.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-3-1-3-689",
+      "kind": "chair",
+      "center": {
+        "x": -6.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-4-690",
+      "kind": "table",
+      "center": {
+        "x": 9.5,
+        "y": 1.25,
+        "z": 88
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-4--1-0-691",
+      "kind": "chair",
+      "center": {
+        "x": 6.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-4--1-1-692",
+      "kind": "chair",
+      "center": {
+        "x": 8.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-4--1-2-693",
+      "kind": "chair",
+      "center": {
+        "x": 10.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-4--1-3-694",
+      "kind": "chair",
+      "center": {
+        "x": 12.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-4-1-0-695",
+      "kind": "chair",
+      "center": {
+        "x": 6.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-4-1-1-696",
+      "kind": "chair",
+      "center": {
+        "x": 8.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-4-1-2-697",
+      "kind": "chair",
+      "center": {
+        "x": 10.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-4-1-3-698",
+      "kind": "chair",
+      "center": {
+        "x": 12.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-5-699",
+      "kind": "table",
+      "center": {
+        "x": 28.5,
+        "y": 1.25,
+        "z": 88
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-5--1-0-700",
+      "kind": "chair",
+      "center": {
+        "x": 25.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-5--1-1-701",
+      "kind": "chair",
+      "center": {
+        "x": 27.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-5--1-2-702",
+      "kind": "chair",
+      "center": {
+        "x": 29.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-5--1-3-703",
+      "kind": "chair",
+      "center": {
+        "x": 31.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-5-1-0-704",
+      "kind": "chair",
+      "center": {
+        "x": 25.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-5-1-1-705",
+      "kind": "chair",
+      "center": {
+        "x": 27.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-5-1-2-706",
+      "kind": "chair",
+      "center": {
+        "x": 29.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-5-1-3-707",
+      "kind": "chair",
+      "center": {
+        "x": 31.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-6-708",
+      "kind": "table",
+      "center": {
+        "x": 47.5,
+        "y": 1.25,
+        "z": 88
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-6--1-0-709",
+      "kind": "chair",
+      "center": {
+        "x": 44.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-6--1-1-710",
+      "kind": "chair",
+      "center": {
+        "x": 46.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-6--1-2-711",
+      "kind": "chair",
+      "center": {
+        "x": 48.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-6--1-3-712",
+      "kind": "chair",
+      "center": {
+        "x": 50.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-6-1-0-713",
+      "kind": "chair",
+      "center": {
+        "x": 44.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-6-1-1-714",
+      "kind": "chair",
+      "center": {
+        "x": 46.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-6-1-2-715",
+      "kind": "chair",
+      "center": {
+        "x": 48.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-6-1-3-716",
+      "kind": "chair",
+      "center": {
+        "x": 50.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-7-717",
+      "kind": "table",
+      "center": {
+        "x": 66.5,
+        "y": 1.25,
+        "z": 88
+      },
+      "size": {
+        "x": 8,
+        "y": 2.5,
+        "z": 2.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-7--1-0-718",
+      "kind": "chair",
+      "center": {
+        "x": 63.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-7--1-1-719",
+      "kind": "chair",
+      "center": {
+        "x": 65.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-7--1-2-720",
+      "kind": "chair",
+      "center": {
+        "x": 67.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-7--1-3-721",
+      "kind": "chair",
+      "center": {
+        "x": 69.5,
+        "y": 0.8,
+        "z": 85.35
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-7-1-0-722",
+      "kind": "chair",
+      "center": {
+        "x": 63.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-7-1-1-723",
+      "kind": "chair",
+      "center": {
+        "x": 65.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-7-1-2-724",
+      "kind": "chair",
+      "center": {
+        "x": 67.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "banquet-1-7-1-3-725",
+      "kind": "chair",
+      "center": {
+        "x": 69.5,
+        "y": 0.8,
+        "z": 90.65
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip--1-8-527-0-726",
+      "kind": "lounger",
+      "center": {
+        "x": -16.04,
+        "y": -1.7,
+        "z": 461.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip--1-8-527-1-727",
+      "kind": "lounger",
+      "center": {
+        "x": -16.04,
+        "y": -1.7,
+        "z": 468.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiotable-marina-slip--1-8-527-728",
+      "kind": "table",
+      "center": {
+        "x": -8.04,
+        "y": -1.25,
+        "z": 465
+      },
+      "size": {
+        "x": 3.5,
+        "y": 2.5,
+        "z": 3.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-8-527-0-729",
+      "kind": "chair",
+      "center": {
+        "x": -11.04,
+        "y": -1.7,
+        "z": 465
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-8-527-1-730",
+      "kind": "chair",
+      "center": {
+        "x": -5.039999999999999,
+        "y": -1.7,
+        "z": 465
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-8-527-2-731",
+      "kind": "chair",
+      "center": {
+        "x": -8.04,
+        "y": -1.7,
+        "z": 462
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-8-527-3-732",
+      "kind": "chair",
+      "center": {
+        "x": -8.04,
+        "y": -1.7,
+        "z": 468
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "umbrella-marina-slip--1-8-527-733",
+      "kind": "umbrella",
+      "center": {
+        "x": -8.04,
+        "y": 1.5,
+        "z": 465
+      },
+      "size": {
+        "x": 9,
+        "y": 8,
+        "z": 9
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip--1-9-529-0-734",
+      "kind": "lounger",
+      "center": {
+        "x": -16.04,
+        "y": -1.7,
+        "z": 479.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip--1-9-529-1-735",
+      "kind": "lounger",
+      "center": {
+        "x": -16.04,
+        "y": -1.7,
+        "z": 486.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiotable-marina-slip--1-9-529-736",
+      "kind": "table",
+      "center": {
+        "x": -8.04,
+        "y": -1.25,
+        "z": 483
+      },
+      "size": {
+        "x": 3.5,
+        "y": 2.5,
+        "z": 3.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-9-529-0-737",
+      "kind": "chair",
+      "center": {
+        "x": -11.04,
+        "y": -1.7,
+        "z": 483
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-9-529-1-738",
+      "kind": "chair",
+      "center": {
+        "x": -5.039999999999999,
+        "y": -1.7,
+        "z": 483
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-9-529-2-739",
+      "kind": "chair",
+      "center": {
+        "x": -8.04,
+        "y": -1.7,
+        "z": 480
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-9-529-3-740",
+      "kind": "chair",
+      "center": {
+        "x": -8.04,
+        "y": -1.7,
+        "z": 486
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "umbrella-marina-slip--1-9-529-741",
+      "kind": "umbrella",
+      "center": {
+        "x": -8.04,
+        "y": 1.5,
+        "z": 483
+      },
+      "size": {
+        "x": 9,
+        "y": 8,
+        "z": 9
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip--1-10-531-0-742",
+      "kind": "lounger",
+      "center": {
+        "x": -16.04,
+        "y": -1.7,
+        "z": 497.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip--1-10-531-1-743",
+      "kind": "lounger",
+      "center": {
+        "x": -16.04,
+        "y": -1.7,
+        "z": 504.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiotable-marina-slip--1-10-531-744",
+      "kind": "table",
+      "center": {
+        "x": -8.04,
+        "y": -1.25,
+        "z": 501
+      },
+      "size": {
+        "x": 3.5,
+        "y": 2.5,
+        "z": 3.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-10-531-0-745",
+      "kind": "chair",
+      "center": {
+        "x": -11.04,
+        "y": -1.7,
+        "z": 501
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-10-531-1-746",
+      "kind": "chair",
+      "center": {
+        "x": -5.039999999999999,
+        "y": -1.7,
+        "z": 501
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-10-531-2-747",
+      "kind": "chair",
+      "center": {
+        "x": -8.04,
+        "y": -1.7,
+        "z": 498
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-10-531-3-748",
+      "kind": "chair",
+      "center": {
+        "x": -8.04,
+        "y": -1.7,
+        "z": 504
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "umbrella-marina-slip--1-10-531-749",
+      "kind": "umbrella",
+      "center": {
+        "x": -8.04,
+        "y": 1.5,
+        "z": 501
+      },
+      "size": {
+        "x": 9,
+        "y": 8,
+        "z": 9
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip--1-11-533-0-750",
+      "kind": "lounger",
+      "center": {
+        "x": -16.04,
+        "y": -1.7,
+        "z": 515.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip--1-11-533-1-751",
+      "kind": "lounger",
+      "center": {
+        "x": -16.04,
+        "y": -1.7,
+        "z": 522.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiotable-marina-slip--1-11-533-752",
+      "kind": "table",
+      "center": {
+        "x": -8.04,
+        "y": -1.25,
+        "z": 519
+      },
+      "size": {
+        "x": 3.5,
+        "y": 2.5,
+        "z": 3.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-11-533-0-753",
+      "kind": "chair",
+      "center": {
+        "x": -11.04,
+        "y": -1.7,
+        "z": 519
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-11-533-1-754",
+      "kind": "chair",
+      "center": {
+        "x": -5.039999999999999,
+        "y": -1.7,
+        "z": 519
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-11-533-2-755",
+      "kind": "chair",
+      "center": {
+        "x": -8.04,
+        "y": -1.7,
+        "z": 516
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-11-533-3-756",
+      "kind": "chair",
+      "center": {
+        "x": -8.04,
+        "y": -1.7,
+        "z": 522
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "umbrella-marina-slip--1-11-533-757",
+      "kind": "umbrella",
+      "center": {
+        "x": -8.04,
+        "y": 1.5,
+        "z": 519
+      },
+      "size": {
+        "x": 9,
+        "y": 8,
+        "z": 9
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip--1-12-535-0-758",
+      "kind": "lounger",
+      "center": {
+        "x": -16.04,
+        "y": -1.7,
+        "z": 533.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip--1-12-535-1-759",
+      "kind": "lounger",
+      "center": {
+        "x": -16.04,
+        "y": -1.7,
+        "z": 540.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiotable-marina-slip--1-12-535-760",
+      "kind": "table",
+      "center": {
+        "x": -8.04,
+        "y": -1.25,
+        "z": 537
+      },
+      "size": {
+        "x": 3.5,
+        "y": 2.5,
+        "z": 3.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-12-535-0-761",
+      "kind": "chair",
+      "center": {
+        "x": -11.04,
+        "y": -1.7,
+        "z": 537
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-12-535-1-762",
+      "kind": "chair",
+      "center": {
+        "x": -5.039999999999999,
+        "y": -1.7,
+        "z": 537
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-12-535-2-763",
+      "kind": "chair",
+      "center": {
+        "x": -8.04,
+        "y": -1.7,
+        "z": 534
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip--1-12-535-3-764",
+      "kind": "chair",
+      "center": {
+        "x": -8.04,
+        "y": -1.7,
+        "z": 540
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "umbrella-marina-slip--1-12-535-765",
+      "kind": "umbrella",
+      "center": {
+        "x": -8.04,
+        "y": 1.5,
+        "z": 537
+      },
+      "size": {
+        "x": 9,
+        "y": 8,
+        "z": 9
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip-1-8-559-0-766",
+      "kind": "lounger",
+      "center": {
+        "x": 25.96,
+        "y": -1.7,
+        "z": 461.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip-1-8-559-1-767",
+      "kind": "lounger",
+      "center": {
+        "x": 25.96,
+        "y": -1.7,
+        "z": 468.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiotable-marina-slip-1-8-559-768",
+      "kind": "table",
+      "center": {
+        "x": 33.96,
+        "y": -1.25,
+        "z": 465
+      },
+      "size": {
+        "x": 3.5,
+        "y": 2.5,
+        "z": 3.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-8-559-0-769",
+      "kind": "chair",
+      "center": {
+        "x": 30.96,
+        "y": -1.7,
+        "z": 465
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-8-559-1-770",
+      "kind": "chair",
+      "center": {
+        "x": 36.96,
+        "y": -1.7,
+        "z": 465
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-8-559-2-771",
+      "kind": "chair",
+      "center": {
+        "x": 33.96,
+        "y": -1.7,
+        "z": 462
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-8-559-3-772",
+      "kind": "chair",
+      "center": {
+        "x": 33.96,
+        "y": -1.7,
+        "z": 468
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "umbrella-marina-slip-1-8-559-773",
+      "kind": "umbrella",
+      "center": {
+        "x": 33.96,
+        "y": 1.5,
+        "z": 465
+      },
+      "size": {
+        "x": 9,
+        "y": 8,
+        "z": 9
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip-1-9-561-0-774",
+      "kind": "lounger",
+      "center": {
+        "x": 25.96,
+        "y": -1.7,
+        "z": 479.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip-1-9-561-1-775",
+      "kind": "lounger",
+      "center": {
+        "x": 25.96,
+        "y": -1.7,
+        "z": 486.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiotable-marina-slip-1-9-561-776",
+      "kind": "table",
+      "center": {
+        "x": 33.96,
+        "y": -1.25,
+        "z": 483
+      },
+      "size": {
+        "x": 3.5,
+        "y": 2.5,
+        "z": 3.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-9-561-0-777",
+      "kind": "chair",
+      "center": {
+        "x": 30.96,
+        "y": -1.7,
+        "z": 483
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-9-561-1-778",
+      "kind": "chair",
+      "center": {
+        "x": 36.96,
+        "y": -1.7,
+        "z": 483
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-9-561-2-779",
+      "kind": "chair",
+      "center": {
+        "x": 33.96,
+        "y": -1.7,
+        "z": 480
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-9-561-3-780",
+      "kind": "chair",
+      "center": {
+        "x": 33.96,
+        "y": -1.7,
+        "z": 486
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "umbrella-marina-slip-1-9-561-781",
+      "kind": "umbrella",
+      "center": {
+        "x": 33.96,
+        "y": 1.5,
+        "z": 483
+      },
+      "size": {
+        "x": 9,
+        "y": 8,
+        "z": 9
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip-1-10-563-0-782",
+      "kind": "lounger",
+      "center": {
+        "x": 25.96,
+        "y": -1.7,
+        "z": 497.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip-1-10-563-1-783",
+      "kind": "lounger",
+      "center": {
+        "x": 25.96,
+        "y": -1.7,
+        "z": 504.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiotable-marina-slip-1-10-563-784",
+      "kind": "table",
+      "center": {
+        "x": 33.96,
+        "y": -1.25,
+        "z": 501
+      },
+      "size": {
+        "x": 3.5,
+        "y": 2.5,
+        "z": 3.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-10-563-0-785",
+      "kind": "chair",
+      "center": {
+        "x": 30.96,
+        "y": -1.7,
+        "z": 501
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-10-563-1-786",
+      "kind": "chair",
+      "center": {
+        "x": 36.96,
+        "y": -1.7,
+        "z": 501
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-10-563-2-787",
+      "kind": "chair",
+      "center": {
+        "x": 33.96,
+        "y": -1.7,
+        "z": 498
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-10-563-3-788",
+      "kind": "chair",
+      "center": {
+        "x": 33.96,
+        "y": -1.7,
+        "z": 504
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "umbrella-marina-slip-1-10-563-789",
+      "kind": "umbrella",
+      "center": {
+        "x": 33.96,
+        "y": 1.5,
+        "z": 501
+      },
+      "size": {
+        "x": 9,
+        "y": 8,
+        "z": 9
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip-1-11-565-0-790",
+      "kind": "lounger",
+      "center": {
+        "x": 25.96,
+        "y": -1.7,
+        "z": 515.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip-1-11-565-1-791",
+      "kind": "lounger",
+      "center": {
+        "x": 25.96,
+        "y": -1.7,
+        "z": 522.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiotable-marina-slip-1-11-565-792",
+      "kind": "table",
+      "center": {
+        "x": 33.96,
+        "y": -1.25,
+        "z": 519
+      },
+      "size": {
+        "x": 3.5,
+        "y": 2.5,
+        "z": 3.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-11-565-0-793",
+      "kind": "chair",
+      "center": {
+        "x": 30.96,
+        "y": -1.7,
+        "z": 519
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-11-565-1-794",
+      "kind": "chair",
+      "center": {
+        "x": 36.96,
+        "y": -1.7,
+        "z": 519
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-11-565-2-795",
+      "kind": "chair",
+      "center": {
+        "x": 33.96,
+        "y": -1.7,
+        "z": 516
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-11-565-3-796",
+      "kind": "chair",
+      "center": {
+        "x": 33.96,
+        "y": -1.7,
+        "z": 522
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "umbrella-marina-slip-1-11-565-797",
+      "kind": "umbrella",
+      "center": {
+        "x": 33.96,
+        "y": 1.5,
+        "z": 519
+      },
+      "size": {
+        "x": 9,
+        "y": 8,
+        "z": 9
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip-1-12-567-0-798",
+      "kind": "lounger",
+      "center": {
+        "x": 25.96,
+        "y": -1.7,
+        "z": 533.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "lounger-marina-slip-1-12-567-1-799",
+      "kind": "lounger",
+      "center": {
+        "x": 25.96,
+        "y": -1.7,
+        "z": 540.5
+      },
+      "size": {
+        "x": 6.2,
+        "y": 1.5,
+        "z": 2.4
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiotable-marina-slip-1-12-567-800",
+      "kind": "table",
+      "center": {
+        "x": 33.96,
+        "y": -1.25,
+        "z": 537
+      },
+      "size": {
+        "x": 3.5,
+        "y": 2.5,
+        "z": 3.5
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-12-567-0-801",
+      "kind": "chair",
+      "center": {
+        "x": 30.96,
+        "y": -1.7,
+        "z": 537
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-12-567-1-802",
+      "kind": "chair",
+      "center": {
+        "x": 36.96,
+        "y": -1.7,
+        "z": 537
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-12-567-2-803",
+      "kind": "chair",
+      "center": {
+        "x": 33.96,
+        "y": -1.7,
+        "z": 534
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "patiochair-marina-slip-1-12-567-3-804",
+      "kind": "chair",
+      "center": {
+        "x": 33.96,
+        "y": -1.7,
+        "z": 540
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "umbrella-marina-slip-1-12-567-805",
+      "kind": "umbrella",
+      "center": {
+        "x": 33.96,
+        "y": 1.5,
+        "z": 537
+      },
+      "size": {
+        "x": 9,
+        "y": 8,
+        "z": 9
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "decktable-marina-head-platform-569-0-806",
+      "kind": "table",
+      "center": {
+        "x": -14.666666666666668,
+        "y": -2.8499999999999996,
+        "z": 579
+      },
+      "size": {
+        "x": 3,
+        "y": 2.5,
+        "z": 3
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "deckchair-marina-head-platform-569-0-0-807",
+      "kind": "chair",
+      "center": {
+        "x": -17.26666666666667,
+        "y": -3.3,
+        "z": 579
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "deckchair-marina-head-platform-569-0-1-808",
+      "kind": "chair",
+      "center": {
+        "x": -12.066666666666668,
+        "y": -3.3,
+        "z": 579
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "decktable-marina-head-platform-569-1-809",
+      "kind": "table",
+      "center": {
+        "x": 0,
+        "y": -2.8499999999999996,
+        "z": 579
+      },
+      "size": {
+        "x": 3,
+        "y": 2.5,
+        "z": 3
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "deckchair-marina-head-platform-569-1-0-810",
+      "kind": "chair",
+      "center": {
+        "x": -2.6,
+        "y": -3.3,
+        "z": 579
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "deckchair-marina-head-platform-569-1-1-811",
+      "kind": "chair",
+      "center": {
+        "x": 2.6,
+        "y": -3.3,
+        "z": 579
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "decktable-marina-head-platform-569-2-812",
+      "kind": "table",
+      "center": {
+        "x": 14.666666666666664,
+        "y": -2.8499999999999996,
+        "z": 579
+      },
+      "size": {
+        "x": 3,
+        "y": 2.5,
+        "z": 3
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "deckchair-marina-head-platform-569-2-0-813",
+      "kind": "chair",
+      "center": {
+        "x": 12.066666666666665,
+        "y": -3.3,
+        "z": 579
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "deckchair-marina-head-platform-569-2-1-814",
+      "kind": "chair",
+      "center": {
+        "x": 17.266666666666666,
+        "y": -3.3,
+        "z": 579
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "decktable-marina-head-platform-569-3-815",
+      "kind": "table",
+      "center": {
+        "x": -14.666666666666668,
+        "y": -2.8499999999999996,
+        "z": 589
+      },
+      "size": {
+        "x": 3,
+        "y": 2.5,
+        "z": 3
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "deckchair-marina-head-platform-569-3-0-816",
+      "kind": "chair",
+      "center": {
+        "x": -17.26666666666667,
+        "y": -3.3,
+        "z": 589
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "deckchair-marina-head-platform-569-3-1-817",
+      "kind": "chair",
+      "center": {
+        "x": -12.066666666666668,
+        "y": -3.3,
+        "z": 589
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "decktable-marina-head-platform-569-4-818",
+      "kind": "table",
+      "center": {
+        "x": 0,
+        "y": -2.8499999999999996,
+        "z": 589
+      },
+      "size": {
+        "x": 3,
+        "y": 2.5,
+        "z": 3
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "deckchair-marina-head-platform-569-4-0-819",
+      "kind": "chair",
+      "center": {
+        "x": -2.6,
+        "y": -3.3,
+        "z": 589
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "deckchair-marina-head-platform-569-4-1-820",
+      "kind": "chair",
+      "center": {
+        "x": 2.6,
+        "y": -3.3,
+        "z": 589
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "decktable-marina-head-platform-569-5-821",
+      "kind": "table",
+      "center": {
+        "x": 14.666666666666664,
+        "y": -2.8499999999999996,
+        "z": 589
+      },
+      "size": {
+        "x": 3,
+        "y": 2.5,
+        "z": 3
+      },
+      "layer": "furniture"
+    },
+    {
+      "id": "deckchair-marina-head-platform-569-5-0-822",
+      "kind": "chair",
+      "center": {
+        "x": 12.066666666666665,
+        "y": -3.3,
+        "z": 589
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "deckchair-marina-head-platform-569-5-1-823",
+      "kind": "chair",
+      "center": {
+        "x": 17.266666666666666,
+        "y": -3.3,
+        "z": 589
+      },
+      "size": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 1.6
+      },
+      "rotationY": 0,
+      "layer": "furniture"
+    },
+    {
+      "id": "pole-lawn-n-0-824",
+      "kind": "poleLight",
+      "center": {
+        "x": -380,
+        "y": 11,
+        "z": 216
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-n-1-825",
+      "kind": "poleLight",
+      "center": {
+        "x": -310.9090909090909,
+        "y": 11,
+        "z": 216
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-n-2-826",
+      "kind": "poleLight",
+      "center": {
+        "x": -241.8181818181818,
+        "y": 11,
+        "z": 216
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-n-3-827",
+      "kind": "poleLight",
+      "center": {
+        "x": -172.72727272727275,
+        "y": 11,
+        "z": 216
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-n-4-828",
+      "kind": "poleLight",
+      "center": {
+        "x": -103.63636363636363,
+        "y": 11,
+        "z": 216
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-n-5-829",
+      "kind": "poleLight",
+      "center": {
+        "x": -34.54545454545456,
+        "y": 11,
+        "z": 216
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-n-6-830",
+      "kind": "poleLight",
+      "center": {
+        "x": 34.545454545454504,
+        "y": 11,
+        "z": 216
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-n-7-831",
+      "kind": "poleLight",
+      "center": {
+        "x": 103.63636363636363,
+        "y": 11,
+        "z": 216
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-n-8-832",
+      "kind": "poleLight",
+      "center": {
+        "x": 172.72727272727275,
+        "y": 11,
+        "z": 216
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-n-9-833",
+      "kind": "poleLight",
+      "center": {
+        "x": 241.81818181818187,
+        "y": 11,
+        "z": 216
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-n-10-834",
+      "kind": "poleLight",
+      "center": {
+        "x": 310.9090909090909,
+        "y": 11,
+        "z": 216
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-n-11-835",
+      "kind": "poleLight",
+      "center": {
+        "x": 380,
+        "y": 11,
+        "z": 216
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-s-0-836",
+      "kind": "poleLight",
+      "center": {
+        "x": -380,
+        "y": 11,
+        "z": 300
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-s-1-837",
+      "kind": "poleLight",
+      "center": {
+        "x": -310.9090909090909,
+        "y": 11,
+        "z": 300
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-s-2-838",
+      "kind": "poleLight",
+      "center": {
+        "x": -241.8181818181818,
+        "y": 11,
+        "z": 300
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-s-3-839",
+      "kind": "poleLight",
+      "center": {
+        "x": -172.72727272727275,
+        "y": 11,
+        "z": 300
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-s-4-840",
+      "kind": "poleLight",
+      "center": {
+        "x": -103.63636363636363,
+        "y": 11,
+        "z": 300
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-s-5-841",
+      "kind": "poleLight",
+      "center": {
+        "x": -34.54545454545456,
+        "y": 11,
+        "z": 300
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-s-6-842",
+      "kind": "poleLight",
+      "center": {
+        "x": 34.545454545454504,
+        "y": 11,
+        "z": 300
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-s-7-843",
+      "kind": "poleLight",
+      "center": {
+        "x": 103.63636363636363,
+        "y": 11,
+        "z": 300
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-s-8-844",
+      "kind": "poleLight",
+      "center": {
+        "x": 172.72727272727275,
+        "y": 11,
+        "z": 300
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-s-9-845",
+      "kind": "poleLight",
+      "center": {
+        "x": 241.81818181818187,
+        "y": 11,
+        "z": 300
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-s-10-846",
+      "kind": "poleLight",
+      "center": {
+        "x": 310.9090909090909,
+        "y": 11,
+        "z": 300
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-lawn-s-11-847",
+      "kind": "poleLight",
+      "center": {
+        "x": 380,
+        "y": 11,
+        "z": 300
+      },
+      "size": {
+        "x": 0.45,
+        "y": 22,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-drive-0-848",
+      "kind": "poleLight",
+      "center": {
+        "x": -560,
+        "y": 10,
+        "z": 250
+      },
+      "size": {
+        "x": 0.45,
+        "y": 20,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-drive-1-849",
+      "kind": "poleLight",
+      "center": {
+        "x": -477.5,
+        "y": 10,
+        "z": 250
+      },
+      "size": {
+        "x": 0.45,
+        "y": 20,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-drive-2-850",
+      "kind": "poleLight",
+      "center": {
+        "x": -395,
+        "y": 10,
+        "z": 250
+      },
+      "size": {
+        "x": 0.45,
+        "y": 20,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-drive-3-851",
+      "kind": "poleLight",
+      "center": {
+        "x": -312.5,
+        "y": 10,
+        "z": 250
+      },
+      "size": {
+        "x": 0.45,
+        "y": 20,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "pole-drive-4-852",
+      "kind": "poleLight",
+      "center": {
+        "x": -230,
+        "y": 10,
+        "z": 250
+      },
+      "size": {
+        "x": 0.45,
+        "y": 20,
+        "z": 0.45
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "bollard-walk-0-0-853",
+      "kind": "bollard",
+      "center": {
+        "x": -7,
+        "y": 1.6,
+        "z": 222
+      },
+      "size": {
+        "x": 0.7,
+        "y": 3.2,
+        "z": 0.7
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "bollard-walk-0-1-854",
+      "kind": "bollard",
+      "center": {
+        "x": -7,
+        "y": 1.6,
+        "z": 241.5
+      },
+      "size": {
+        "x": 0.7,
+        "y": 3.2,
+        "z": 0.7
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "bollard-walk-0-2-855",
+      "kind": "bollard",
+      "center": {
+        "x": -7,
+        "y": 1.6,
+        "z": 261
+      },
+      "size": {
+        "x": 0.7,
+        "y": 3.2,
+        "z": 0.7
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "bollard-walk-0-3-856",
+      "kind": "bollard",
+      "center": {
+        "x": -7,
+        "y": 1.6,
+        "z": 280.5
+      },
+      "size": {
+        "x": 0.7,
+        "y": 3.2,
+        "z": 0.7
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "bollard-walk-0-4-857",
+      "kind": "bollard",
+      "center": {
+        "x": -7,
+        "y": 1.6,
+        "z": 300
+      },
+      "size": {
+        "x": 0.7,
+        "y": 3.2,
+        "z": 0.7
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "bollard-walk-1-0-858",
+      "kind": "bollard",
+      "center": {
+        "x": 7,
+        "y": 1.6,
+        "z": 222
+      },
+      "size": {
+        "x": 0.7,
+        "y": 3.2,
+        "z": 0.7
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "bollard-walk-1-1-859",
+      "kind": "bollard",
+      "center": {
+        "x": 7,
+        "y": 1.6,
+        "z": 241.5
+      },
+      "size": {
+        "x": 0.7,
+        "y": 3.2,
+        "z": 0.7
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "bollard-walk-1-2-860",
+      "kind": "bollard",
+      "center": {
+        "x": 7,
+        "y": 1.6,
+        "z": 261
+      },
+      "size": {
+        "x": 0.7,
+        "y": 3.2,
+        "z": 0.7
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "bollard-walk-1-3-861",
+      "kind": "bollard",
+      "center": {
+        "x": 7,
+        "y": 1.6,
+        "z": 280.5
+      },
+      "size": {
+        "x": 0.7,
+        "y": 3.2,
+        "z": 0.7
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "bollard-walk-1-4-862",
+      "kind": "bollard",
+      "center": {
+        "x": 7,
+        "y": 1.6,
+        "z": 300
+      },
+      "size": {
+        "x": 0.7,
+        "y": 3.2,
+        "z": 0.7
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-0-863",
+      "kind": "uplight",
+      "center": {
+        "x": -200,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-1-864",
+      "kind": "uplight",
+      "center": {
+        "x": -173.33333333333334,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-2-865",
+      "kind": "uplight",
+      "center": {
+        "x": -146.66666666666666,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-3-866",
+      "kind": "uplight",
+      "center": {
+        "x": -120,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-4-867",
+      "kind": "uplight",
+      "center": {
+        "x": -93.33333333333333,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-5-868",
+      "kind": "uplight",
+      "center": {
+        "x": -66.66666666666669,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-6-869",
+      "kind": "uplight",
+      "center": {
+        "x": -40,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-7-870",
+      "kind": "uplight",
+      "center": {
+        "x": -13.333333333333343,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-8-871",
+      "kind": "uplight",
+      "center": {
+        "x": 13.333333333333343,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-9-872",
+      "kind": "uplight",
+      "center": {
+        "x": 40,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-10-873",
+      "kind": "uplight",
+      "center": {
+        "x": 66.66666666666663,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-11-874",
+      "kind": "uplight",
+      "center": {
+        "x": 93.33333333333331,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-12-875",
+      "kind": "uplight",
+      "center": {
+        "x": 120,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-13-876",
+      "kind": "uplight",
+      "center": {
+        "x": 146.66666666666669,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-14-877",
+      "kind": "uplight",
+      "center": {
+        "x": 173.33333333333331,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-curtain-15-878",
+      "kind": "uplight",
+      "center": {
+        "x": 200,
+        "y": 0.5,
+        "z": 206
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-west-0-879",
+      "kind": "uplight",
+      "center": {
+        "x": -206,
+        "y": 0.5,
+        "z": 0
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-west-1-880",
+      "kind": "uplight",
+      "center": {
+        "x": -206,
+        "y": 0.5,
+        "z": 33.33333333333333
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-west-2-881",
+      "kind": "uplight",
+      "center": {
+        "x": -206,
+        "y": 0.5,
+        "z": 66.66666666666666
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-west-3-882",
+      "kind": "uplight",
+      "center": {
+        "x": -206,
+        "y": 0.5,
+        "z": 100
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-west-4-883",
+      "kind": "uplight",
+      "center": {
+        "x": -206,
+        "y": 0.5,
+        "z": 133.33333333333331
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-west-5-884",
+      "kind": "uplight",
+      "center": {
+        "x": -206,
+        "y": 0.5,
+        "z": 166.66666666666669
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-west-6-885",
+      "kind": "uplight",
+      "center": {
+        "x": -206,
+        "y": 0.5,
+        "z": 200
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-east-0-886",
+      "kind": "uplight",
+      "center": {
+        "x": 206,
+        "y": 0.5,
+        "z": 0
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-east-1-887",
+      "kind": "uplight",
+      "center": {
+        "x": 206,
+        "y": 0.5,
+        "z": 33.33333333333333
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-east-2-888",
+      "kind": "uplight",
+      "center": {
+        "x": 206,
+        "y": 0.5,
+        "z": 66.66666666666666
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-east-3-889",
+      "kind": "uplight",
+      "center": {
+        "x": 206,
+        "y": 0.5,
+        "z": 100
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-east-4-890",
+      "kind": "uplight",
+      "center": {
+        "x": 206,
+        "y": 0.5,
+        "z": 133.33333333333331
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-east-5-891",
+      "kind": "uplight",
+      "center": {
+        "x": 206,
+        "y": 0.5,
+        "z": 166.66666666666669
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
+    },
+    {
+      "id": "uplight-east-6-892",
+      "kind": "uplight",
+      "center": {
+        "x": 206,
+        "y": 0.5,
+        "z": 200
+      },
+      "size": {
+        "x": 1.2,
+        "y": 1,
+        "z": 1.2
+      },
+      "layer": "areaLighting"
     }
   ],
   "features": [

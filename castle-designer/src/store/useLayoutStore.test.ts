@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { SEED_LAYOUT } from '../domain/seedLayout';
 import type { Container } from '../domain/types';
-import { useLayoutStore } from './useLayoutStore';
+import { ALL_LAYERS, useLayoutStore } from './useLayoutStore';
 
 const newContainer: Omit<Container, 'id'> = {
   type: '20ST',
@@ -16,6 +16,9 @@ describe('useLayoutStore', () => {
   beforeEach(() => {
     useLayoutStore.setState({ past: [], future: [], selectedIds: [] });
     useLayoutStore.getState().loadSeed();
+    // Layer state is deliberately outside the undo history, so it has to be
+    // reset by hand between tests.
+    useLayoutStore.getState().setLayers(ALL_LAYERS, true);
     useLayoutStore.setState({ past: [], future: [] });
   });
 
@@ -100,11 +103,20 @@ describe('useLayoutStore', () => {
     ).toHaveLength(0);
   });
 
+  it('switches a whole group at once', () => {
+    const store = useLayoutStore.getState();
+    store.setLayers(['docks', 'slipsStandard', 'slipsPremier'], false);
+    const after = useLayoutStore.getState().layers;
+    expect(after.docks).toBe(false);
+    expect(after.slipsPremier).toBe(false);
+    expect(after.greatHall).toBe(true);
+  });
+
   it('toggles layers independently', () => {
     const store = useLayoutStore.getState();
     expect(store.layers.dragon).toBe(true);
     store.toggleLayer('dragon');
     expect(useLayoutStore.getState().layers.dragon).toBe(false);
-    expect(useLayoutStore.getState().layers.marina).toBe(true);
+    expect(useLayoutStore.getState().layers.docks).toBe(true);
   });
 });

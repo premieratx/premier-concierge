@@ -66,9 +66,10 @@ describe('the generated property', () => {
     expect(featuresOfKind(layout.features, 'stage')).toHaveLength(3);
   });
 
-  it('sizes the dragon at 150 feet and points it away from the castle', () => {
+  it('sizes the dragon to its budget and points it away from the castle', () => {
     const dragon = featuresOfKind(layout.features, 'dragon')[0]!;
-    expect(dragon.lengthFt).toBe(150);
+    // Forty-eight feet is what $20,000 of donor parts and rigging buys.
+    expect(dragon.lengthFt).toBe(48);
     expect(dragon.breathingFire).toBe(true);
     // Facing +Z, which is the water. The jet goes over the lake.
     expect(dragon.rotationY).toBe(0);

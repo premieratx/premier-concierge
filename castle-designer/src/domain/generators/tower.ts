@@ -55,6 +55,7 @@ export function generateTower(
         role: options.role ?? 'tower',
         finish: options.finish ?? 'stone',
         openings: [],
+        layer: 'towers',
         label: `${prefix} L${level + 1}`,
       });
     }

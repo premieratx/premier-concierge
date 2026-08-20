@@ -1,8 +1,24 @@
-import type { Container, Decor, Finish } from '../types';
+import type { Container, Decor, Finish, ModelLayer } from '../types';
 
 export interface GeneratorResult {
   containers: Container[];
   decor: Decor[];
+}
+
+/** Stamp a display layer onto everything a generator produced. */
+export function withLayer(result: GeneratorResult, layer: ModelLayer): GeneratorResult {
+  return {
+    containers: result.containers.map((c) => ({ ...c, layer })),
+    decor: result.decor.map((d) => ({ ...d, layer })),
+  };
+}
+
+/** Stamp a layer onto the decor only, leaving containers as they are. */
+export function withDecorLayer(result: GeneratorResult, layer: ModelLayer): GeneratorResult {
+  return {
+    containers: result.containers,
+    decor: result.decor.map((d) => ({ ...d, layer })),
+  };
 }
 
 export function merge(...results: GeneratorResult[]): GeneratorResult {

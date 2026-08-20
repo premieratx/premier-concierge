@@ -1,38 +1,25 @@
 import { CONTAINER_TYPES, dimsOf } from '../domain/dimensions';
-import { featuresOfKind } from '../domain/types';
 import { CAMERA_PRESETS } from '../scene/cameraPresets';
-import { LAYER_LABELS, useLayoutStore, type LayerKey } from '../store/useLayoutStore';
-import { Button, Row, Section, num } from './primitives';
-
-const LAYER_ORDER: LayerKey[] = [
-  'castle',
-  'decor',
-  'lodging',
-  'marina',
-  'stages',
-  'dragon',
-  'fire',
-  'lights',
-  'water',
-  'grid',
-];
+import {
+  ALL_LAYERS,
+  LAYER_GROUPS,
+  LAYER_LABELS,
+  useLayoutStore,
+} from '../store/useLayoutStore';
+import { Button, Section } from './primitives';
 
 /** Layer toggles, the container palette, and the named viewpoints. */
 export function LayersPanel() {
   const layers = useLayoutStore((s) => s.layers);
   const toggleLayer = useLayoutStore((s) => s.toggleLayer);
-  const showEdges = useLayoutStore((s) => s.showEdges);
-  const setShowEdges = useLayoutStore((s) => s.setShowEdges);
+  const setLayers = useLayoutStore((s) => s.setLayers);
   const cameraPreset = useLayoutStore((s) => s.cameraPreset);
   const setCameraPreset = useLayoutStore((s) => s.setCameraPreset);
   const addContainer = useLayoutStore((s) => s.addContainer);
   const loadProperty = useLayoutStore((s) => s.loadProperty);
   const loadSeed = useLayoutStore((s) => s.loadSeed);
-  const layout = useLayoutStore((s) => s.layout);
 
-  const lodging = featuresOfKind(layout.features, 'accommodation');
-  const keys = lodging.reduce((a, l) => a + l.units, 0);
-  const sleeps = lodging.reduce((a, l) => a + l.sleeps, 0);
+  const onCount = ALL_LAYERS.filter((l) => layers[l]).length;
 
   return (
     <div className="space-y-6">
@@ -51,30 +38,50 @@ export function LayersPanel() {
         </div>
       </Section>
 
-      <Section title="Layers">
-        {LAYER_ORDER.map((key) => (
-          <label key={key} className="flex items-center gap-2 text-sm text-slate-300">
-            <input
-              type="checkbox"
-              checked={layers[key]}
-              onChange={() => toggleLayer(key)}
-              className="size-3.5 accent-sky-500"
-            />
-            {LAYER_LABELS[key]}
-          </label>
-        ))}
-        <label className="flex items-center gap-2 pt-1 text-sm text-slate-300">
-          <input
-            type="checkbox"
-            checked={showEdges}
-            onChange={(e) => setShowEdges(e.target.checked)}
-            className="size-3.5 accent-sky-500"
-          />
-          Edge outlines
-        </label>
+      <Section
+        title={`Layers — ${onCount} of ${ALL_LAYERS.length} on`}
+        subtitle="Everything in the model is on one of these"
+      >
+        <div className="flex gap-2 pb-1">
+          <Button onClick={() => setLayers(ALL_LAYERS, true)}>All on</Button>
+          <Button onClick={() => setLayers(ALL_LAYERS, false)}>All off</Button>
+        </div>
+        {LAYER_GROUPS.map((group) => {
+          const allOn = group.layers.every((l) => layers[l]);
+          return (
+            <div key={group.title} className="pt-2">
+              <div className="mb-1 flex items-center justify-between">
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">
+                  {group.title}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setLayers(group.layers, !allOn)}
+                  className="text-[11px] text-slate-500 hover:text-sky-400"
+                >
+                  {allOn ? 'none' : 'all'}
+                </button>
+              </div>
+              {group.layers.map((key) => (
+                <label
+                  key={key}
+                  className="flex cursor-pointer items-center gap-2 py-0.5 text-sm text-slate-300"
+                >
+                  <input
+                    type="checkbox"
+                    checked={layers[key]}
+                    onChange={() => toggleLayer(key)}
+                    className="size-3.5 accent-sky-500"
+                  />
+                  {LAYER_LABELS[key]}
+                </label>
+              ))}
+            </div>
+          );
+        })}
       </Section>
 
-      <Section title="Palette" subtitle="Drops a container at the origin, selected">
+      <Section title="Palette" subtitle="Drops a container on the lawn, selected">
         <div className="flex gap-2">
           {CONTAINER_TYPES.map((type) => (
             <Button
@@ -88,6 +95,7 @@ export function LayersPanel() {
                   finish: 'painted',
                   openings: [],
                   zone: 'castle',
+                  layer: 'curtainWall',
                   label: `New ${type}`,
                 })
               }
@@ -105,15 +113,6 @@ export function LayersPanel() {
             Six-container fragment
           </Button>
         </div>
-      </Section>
-
-      <Section title="Lodging programme">
-        {lodging.map((l) => (
-          <Row key={l.id} label={l.name} value={`${num(l.units)} keys · sleeps ${num(l.sleeps)}`} />
-        ))}
-        <div className="my-2 h-px bg-slate-800" />
-        <Row label="Total keys" value={num(keys)} emphasis />
-        <Row label="Heads in beds" value={num(sleeps)} />
       </Section>
     </div>
   );

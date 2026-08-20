@@ -63,6 +63,7 @@ export function generateGreatHall(
           role: 'wall',
           finish: options.finish ?? 'stone',
           openings: [],
+          layer: 'greatHall',
           label: `Hall wall ${wallIndex === 0 ? 'W' : 'E'} L${level + 1} bay ${bay + 1}`,
         });
       }

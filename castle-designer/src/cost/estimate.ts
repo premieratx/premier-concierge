@@ -202,19 +202,19 @@ export function estimateSite(layout: Layout): SiteEstimate {
   const R = SITE_RATES;
 
   for (const dragon of featuresOfKind(layout.features, 'dragon')) {
-    const tons = dragon.lengthFt * R.dragon.armatureTonsPerLengthFt;
-    // Skin area scales with the wing membrane plus the body flank.
-    const skinSqFt =
-      dragon.wingspanFt * dragon.lengthFt * 0.18 +
-      dragon.lengthFt * dragon.shoulderHeightFt * 0.5;
+    // Parts, consumables and rigging scale with the beast; the plinth and the
+    // burner train do not care how long it is.
+    const scale = dragon.lengthFt / R.dragon.referenceLengthFt;
     lines.push(
-      line('Dragon', 'Steel armature, fabricated and erected', tons, 'ton', R.dragon.armaturePerTon),
-      line('Dragon', 'Formed plate skin', skinSqFt, 'sf', R.dragon.skinPerSqFt),
-      line('Dragon', 'Foundation', 1, 'ls', R.dragon.foundationLumpSum),
-      line('Dragon', 'Engineering and design', 1, 'ls', R.dragon.engineeringLumpSum),
+      line('Dragon', 'Donor car parts and yard scrap, hauled', scale, 'ls', R.dragon.donorPartsLumpSum),
+      line('Dragon', 'Used pipe and beam for the spine', scale, 'ls', R.dragon.structuralCoreLumpSum),
+      line('Dragon', 'Welding consumables and abrasives', scale, 'ls', R.dragon.weldingConsumablesLumpSum),
+      line('Dragon', 'Fasteners, chain and hardware', scale, 'ls', R.dragon.hardwareLumpSum),
+      line('Dragon', 'Telehandler and rigging', scale, 'ls', R.dragon.riggingLumpSum),
+      line('Dragon', 'Plinth, anchors and embed plate', 1, 'ls', R.dragon.plinthAndAnchorsLumpSum),
     );
     if (dragon.breathingFire) {
-      lines.push(line('Dragon', 'Fire system and controls', 1, 'ls', R.dragon.fireSystemLumpSum));
+      lines.push(line('Dragon', 'Burner, ignition and flame safety', 1, 'ls', R.dragon.fireSystemLumpSum));
     }
   }
 
@@ -329,6 +329,28 @@ export function estimateSite(layout: Layout): SiteEstimate {
 
   const estimate = assemble(lines, 0, 0);
   return { ...estimate, byGroup: groupTotals(lines) };
+}
+
+export interface DragonBudget {
+  cost: number;
+  cap: number;
+  /** Dollars past the cap. Zero or negative when it fits. */
+  overBy: number;
+  withinCap: boolean;
+}
+
+/**
+ * The dragon against its own budget.
+ *
+ * The cap is an owner decision, not a market rate, so it gets its own readout
+ * rather than being buried in the site total.
+ */
+export function dragonBudget(layout: Layout): DragonBudget {
+  const cost = estimateSite(layout)
+    .lines.filter((l) => l.group === 'Dragon')
+    .reduce((a, l) => a + l.amount, 0);
+  const cap = SITE_RATES.dragon.budgetCap;
+  return { cost, cap, overBy: cost - cap, withinCap: cost <= cap };
 }
 
 export interface PropertyEstimate {
