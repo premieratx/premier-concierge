@@ -24,10 +24,13 @@ export function CapacityLabels({
     <group>
       {areas
         .filter((a) => layers[a.layer])
-        .map((a) => (
+        .map((a, i) => (
           <Html
             key={a.id}
-            position={[a.anchor.x, a.anchor.y, a.anchor.z]}
+            // Chips are screen-space, so a dozen anchors at similar heights
+            // pile up on top of each other from most angles. Fanning them out
+            // vertically by index separates them without moving the areas.
+            position={[a.anchor.x, a.anchor.y + (i % 6) * 13, a.anchor.z]}
             center
             zIndexRange={[40, 0]}
             style={{ pointerEvents: 'none', userSelect: 'none' }}
@@ -36,22 +39,22 @@ export function CapacityLabels({
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: 6,
+                gap: 5,
                 whiteSpace: 'nowrap',
-                padding: '3px 8px',
+                padding: '2px 7px',
                 borderRadius: 999,
                 background: 'rgba(8,12,18,0.82)',
                 border: `1px solid ${USE_COLOR[a.use]}`,
                 color: '#e6edf5',
-                font: '600 11px/1.1 ui-sans-serif, system-ui, sans-serif',
+                font: '600 10px/1.1 ui-sans-serif, system-ui, sans-serif',
                 letterSpacing: '0.01em',
                 boxShadow: '0 2px 10px rgba(0,0,0,0.45)',
               }}
             >
               <span
                 style={{
-                  width: 7,
-                  height: 7,
+                  width: 6,
+                  height: 6,
                   borderRadius: 999,
                   background: USE_COLOR[a.use],
                   flex: '0 0 auto',

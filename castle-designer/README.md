@@ -13,14 +13,20 @@ npm test               # 143 tests
 npm run typecheck
 npm run build
 npm run export:layouts # regenerate layouts/*.json
+npm run build:artifact # fold the whole app into one self-contained HTML file
 ```
+
+`build:artifact` inlines the bundle and the stylesheet into a single page with
+no outbound requests, for publishing somewhere with a strict content security
+policy. That build hides the export, import and screenshot controls, because a
+sandboxed page cannot hand the viewer a file.
 
 ## What is in the model
 
 | Piece | What it is |
 |---|---|
 | **Castle** | 96 containers: a bawn curtain wall with a two-course water elevation, four corner towers, two gate towers, a 44′ × 160′ great hall and a three-level keep — all crenellated, on a battered plinth |
-| **Dragon** | A 150-foot welded steel sculpture on the arrival lawn, 186-foot wingspan, breathing fire on a nine-second cycle |
+| **Dragon** | A 48-foot scrap-metal beast on the arrival lawn — donor car hoods for wing membrane, wheel rims at the joints, leaf springs for legs, headlights for eyes — breathing fire on a nine-second cycle |
 | **Fire** | Seven rainbow gas pits in two clusters flanking the dragon, each drifting through the spectrum on its own clock |
 | **Stages** | Three land stages — great hall, fire ring, grove — plus an overwater stage at the head of the dock |
 | **Marina** | Existing and enhanced schemes, switchable. Enhanced runs a 260′ spine, 26 berths, and ten premier berths with over-slip patios, shade, bars, rope swings, jump platforms and festoon lighting |
@@ -40,6 +46,34 @@ spends the money on a truss instead, which is bought rather than welded on site.
 
 The welding meter sits at the top of the cost panel for exactly this reason.
 Cut a hole in the inspector and watch it climb.
+
+## Layers and capacity
+
+Thirty-one display layers, grouped: curtain wall, towers, great hall, keep and
+gatehouse; crenellation, wall walk, bartizans and plinth; cabins, bunkhouse and
+canvas platforms; docks, slips by tier, over-slip patios, boats and swim toys;
+stages, bars and furniture; fire pits, dragon, dragon fire, party lights and
+area lighting; water, grid, capacity chips and edge outlines.
+
+Layers belong to the model, not the viewer. A generator knows the deck it just
+emitted is the bunkhouse gallery and not a glamping platform, and nothing
+downstream could work that out from geometry alone.
+
+Capacity is occupant load per IBC Table 1004.5, measured off the model where
+the geometry can answer — the hall from its truss bays, the docks from their
+decks, the lodging from its bed count — and off stated assumptions where it
+cannot, with the assumption written next to the number. It is a check on the
+programme, not an egress design: door widths, travel distances, parking, water
+and septic are unmodelled, and one of them will cap this site long before the
+floor area does.
+
+## The dragon
+
+Twenty thousand dollars, which buys a scrap build and not a sculpture: donor
+car parts and yard steel welded onto a used-pipe spine, left in whatever faded
+paint the donors arrived in. Parts, consumables and rigging scale with length;
+the plinth and the burner do not. At forty-eight feet the lines sum to exactly
+the cap, and the estimator will show you what a hundred and fifty would cost.
 
 ## Domain model
 

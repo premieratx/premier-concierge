@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { IS_ARTIFACT } from '../config';
 import { deserializeLayout, downloadLayout } from '../io/serialize';
 import { captureScreenshot } from '../scene/Scene';
 import { useLayoutStore, type TimeOfDay } from '../store/useLayoutStore';
@@ -45,7 +46,9 @@ export function Toolbar() {
           Hill Country Yacht Club — container castle
         </h1>
         <p className="text-[11px] text-slate-500">
-          Parametric property model · 1 world unit = 1 foot
+          {IS_ARTIFACT
+            ? 'Drag to orbit · scroll to zoom · click a container to inspect it'
+            : 'Parametric property model · 1 world unit = 1 foot'}
         </p>
       </div>
 
@@ -75,9 +78,13 @@ export function Toolbar() {
         <Button onClick={redo} disabled={future === 0} title="Ctrl+Shift+Z">
           Redo
         </Button>
-        <Button onClick={() => downloadLayout(layout)}>Export JSON</Button>
-        <Button onClick={() => fileInput.current?.click()}>Import</Button>
-        <Button onClick={onScreenshot}>Screenshot</Button>
+        {!IS_ARTIFACT && (
+          <>
+            <Button onClick={() => downloadLayout(layout)}>Export JSON</Button>
+            <Button onClick={() => fileInput.current?.click()}>Import</Button>
+            <Button onClick={onScreenshot}>Screenshot</Button>
+          </>
+        )}
         <input
           ref={fileInput}
           type="file"

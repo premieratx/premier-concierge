@@ -10,7 +10,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc -b --noEmit",
-    "export:layouts": "jiti scripts/export-layouts.ts"
+    "export:layouts": "jiti scripts/export-layouts.ts",
+    "build:artifact": "VITE_ARTIFACT=1 vite build --outDir dist-artifact && jiti scripts/build-artifact.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.8",
