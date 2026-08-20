@@ -36,7 +36,7 @@ const PRESETS: Record<TimeOfDay, Preset> = {
     hemiIntensity: 0.7,
     turbidity: 4,
     rayleigh: 1.2,
-    fog: ['#b9cbdd', 1800, 4600],
+    fog: ['#b9cbdd', 1500, 4000],
     stars: false,
   },
   dusk: {
@@ -50,7 +50,7 @@ const PRESETS: Record<TimeOfDay, Preset> = {
     hemiIntensity: 0.95,
     turbidity: 9,
     rayleigh: 3.2,
-    fog: ['#4a5a78', 1600, 4200],
+    fog: ['#8e9aae', 1200, 3400],
     stars: true,
   },
   night: {
@@ -64,7 +64,7 @@ const PRESETS: Record<TimeOfDay, Preset> = {
     hemiIntensity: 0.5,
     turbidity: 12,
     rayleigh: 0.35,
-    fog: ['#131f33', 1400, 3800],
+    fog: ['#1b2942', 1000, 3000],
     stars: true,
   },
 };
@@ -77,7 +77,7 @@ export function Lighting({ timeOfDay }: { timeOfDay: TimeOfDay }) {
     <>
       <fog attach="fog" args={[p.fog[0], p.fog[1], p.fog[2]]} />
       <Sky
-        distance={8000}
+        distance={40000}
         sunPosition={sun}
         turbidity={p.turbidity}
         rayleigh={p.rayleigh}

@@ -22,8 +22,8 @@ const WATER_COLOR: Record<TimeOfDay, string> = {
 function Bank({ site }: { site: SiteDefinition }) {
   const geometry = useMemo(() => {
     const g = new THREE.BufferGeometry();
-    const x0 = -site.sizeX * 2.5;
-    const x1 = site.sizeX * 2.5;
+    const x0 = -20000;
+    const x1 = 20000;
     const z0 = site.shorelineZ;
     const z1 = site.shorelineZ + 12;
     const y1 = site.waterLevelFt - 1;
@@ -58,10 +58,12 @@ export interface TerrainProps {
  * the water.
  */
 export function Terrain({ site, timeOfDay, showWater, showGrid }: TerrainProps) {
-  // Grade runs well past the site boundary so the ground meets the fog rather
-  // than ending in mid-air at the edge of the survey — but stays inside the
-  // sky dome, or the terrain pokes out through the horizon.
-  const landDepth = site.sizeZ * 3.4;
+  // Grade runs miles past the site boundary. Fog hides everything beyond a
+  // few thousand feet anyway, but a flat plane's far edge always draws a line
+  // in perspective: the further away it is, the closer that line sits to the
+  // true horizon and the more it reads as one rather than as the edge of the
+  // survey. Two triangles, so the size costs nothing.
+  const landDepth = 30000;
   const landCentreZ = site.shorelineZ - landDepth / 2;
 
   return (
@@ -71,7 +73,7 @@ export function Terrain({ site, timeOfDay, showWater, showGrid }: TerrainProps) 
         position={[0, -0.03, landCentreZ]}
         receiveShadow
       >
-        <planeGeometry args={[site.sizeX * 5, landDepth]} />
+        <planeGeometry args={[40000, landDepth]} />
         <meshStandardMaterial color={LAND_COLOR} roughness={1} />
       </mesh>
 
@@ -86,10 +88,10 @@ export function Terrain({ site, timeOfDay, showWater, showGrid }: TerrainProps) 
       {showWater && (
         <mesh
           rotation={[-Math.PI / 2, 0, 0]}
-          position={[0, site.waterLevelFt, site.shorelineZ + 12 + 1700]}
+          position={[0, site.waterLevelFt, site.shorelineZ + 12 + 15000]}
           receiveShadow
         >
-          <planeGeometry args={[5600, 3400]} />
+          <planeGeometry args={[40000, 30000]} />
           <MeshReflectorMaterial
             color={WATER_COLOR[timeOfDay]}
             resolution={512}

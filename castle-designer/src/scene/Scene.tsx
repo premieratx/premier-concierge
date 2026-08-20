@@ -150,7 +150,7 @@ export function Scene() {
       shadows
       dpr={[1, 1.75]}
       gl={{ antialias: true, preserveDrawingBuffer: false }}
-      camera={{ position: DEFAULT_PRESET.position, fov: 48, near: 1, far: 12000 }}
+      camera={{ position: DEFAULT_PRESET.position, fov: 48, near: 1, far: 60000 }}
       onPointerMissed={() => select(null)}
     >
       <ScreenshotBridge />
