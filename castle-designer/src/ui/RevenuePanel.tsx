@@ -35,6 +35,13 @@ export function RevenuePanel() {
   const active = strategy === 'bundled' ? bundled : unbundled;
   const slips = featuresOfKind(layout.features, 'slip');
   const premier = slips.filter((s) => s.tier === 'premier');
+  // In the hexagonal scheme the amenities live on the roof decks, not on the
+  // berths, so they are counted from the hexagons rather than from the slips.
+  const hexDocks = featuresOfKind(layout.features, 'hexDock');
+  const walkways = featuresOfKind(layout.features, 'walkway');
+  const roofSqFt = hexDocks.reduce((a, d) => a + d.roofSqFt, 0);
+  const amenity = (pick: (d: (typeof hexDocks)[number]) => boolean) =>
+    hexDocks.filter(pick).length || 0;
 
   return (
     <div className="space-y-6">
@@ -42,10 +49,23 @@ export function RevenuePanel() {
         <Row label="Slips, total" value={num(slips.length)} />
         <Row label="Premier" value={num(premier.length)} />
         <Row label="Standard" value={num(slips.length - premier.length)} />
-        <Row label="Over-slip patios" value={num(slips.filter((s) => s.patio).length)} />
-        <Row label="Rope swings" value={num(slips.filter((s) => s.ropeSwing).length)} />
-        <Row label="Jump platforms" value={num(slips.filter((s) => s.jumpPlatform).length)} />
-        <Row label="Patio bars" value={num(slips.filter((s) => s.bar).length)} />
+        {hexDocks.length > 0 ? (
+          <>
+            <Row label="Hexagons" value={`${hexDocks.length} · 1 hub, ${hexDocks.length - 1} docks`} />
+            <Row label="Retractable walkways" value={num(walkways.length)} />
+            <Row label="Roof deck" value={`${num(roofSqFt)} sf`} />
+            <Row label="Roof bars" value={num(amenity((d) => d.amenities.bar))} />
+            <Row label="Jump platforms" value={num(amenity((d) => d.amenities.jumpPlatform))} />
+            <Row label="Rope swings" value={num(amenity((d) => d.amenities.ropeSwing))} />
+          </>
+        ) : (
+          <>
+            <Row label="Over-slip patios" value={num(slips.filter((s) => s.patio).length)} />
+            <Row label="Rope swings" value={num(slips.filter((s) => s.ropeSwing).length)} />
+            <Row label="Jump platforms" value={num(slips.filter((s) => s.jumpPlatform).length)} />
+            <Row label="Patio bars" value={num(slips.filter((s) => s.bar).length)} />
+          </>
+        )}
       </Section>
 
       <Section
