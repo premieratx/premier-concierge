@@ -29,6 +29,7 @@ describe('occupancy factors', () => {
       'dock',
       'business',
       'lodging',
+      'swim',
     ];
     for (const use of uses) {
       expect(USE_LABEL[use], use).toBeTruthy();
@@ -113,7 +114,7 @@ describe('capacity summary', () => {
   });
 
   it('counts each area exactly once', () => {
-    const total = summary.assembly + summary.beds + summary.dock + summary.business;
+    const total = summary.assembly + summary.beds + summary.dock + summary.swim + summary.business;
     expect(total).toBe(areas.reduce((a, x) => a + x.capacity, 0));
   });
 });

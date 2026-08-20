@@ -19,7 +19,8 @@ export type OccupancyUse =
   | 'assemblyConcentrated'
   | 'dock'
   | 'business'
-  | 'lodging';
+  | 'lodging'
+  | 'swim';
 
 /** Square feet per person. */
 export const LOAD_FACTOR_SQFT: Record<OccupancyUse, number> = {
@@ -29,6 +30,10 @@ export const LOAD_FACTOR_SQFT: Record<OccupancyUse, number> = {
   dock: 50,
   business: 150,
   lodging: 200,
+  // Not an IBC figure. Open water is not an occupant load at all; this is the
+  // density a supervised swim area is actually run at, and it is here so the
+  // lagoons appear in the same key as everything else rather than silently.
+  swim: 40,
 };
 
 export const USE_LABEL: Record<OccupancyUse, string> = {
@@ -38,6 +43,7 @@ export const USE_LABEL: Record<OccupancyUse, string> = {
   dock: 'Dock and pier',
   business: 'Business',
   lodging: 'Lodging',
+  swim: 'Swim water (not IBC)',
 };
 
 /** Key colours, shared by the 3D labels and the panel. */
@@ -48,6 +54,7 @@ export const USE_COLOR: Record<OccupancyUse, string> = {
   dock: '#34d399',
   business: '#94a3b8',
   lodging: '#fbbf24',
+  swim: '#22d3ee',
 };
 
 export interface Area {
@@ -379,6 +386,24 @@ export function propertyAreas(layout: Layout): Area[] {
       );
     }
 
+    const swimSqFt = satellites.reduce((a, d) => a + d.swimSqFt, 0);
+    if (swimSqFt > 0) {
+      areas.push(
+        area({
+          id: 'area-hex-lagoons',
+          name: `Swim lagoons (${satellites.length})`,
+          use: 'swim',
+          anchor: { x: centre.x, y: 14, z: centre.z },
+          sqFt: swimSqFt,
+          usableFraction: 1,
+          groundY: satellites[0]!.position.y - 1,
+          spreadFt: 190,
+          layer: 'docks',
+          note: `Netted ${satellites[0]!.netDepthFt}′ down and skirted to the surface`,
+        }),
+      );
+    }
+
     if (satellites.length > 0) {
       const roofSqFt = satellites.reduce((a, d) => a + d.roofSqFt, 0);
       areas.push(
@@ -460,6 +485,8 @@ export interface CapacitySummary {
   dock: number;
   /** Staff and back of house. */
   business: number;
+  /** Swimmers the netted lagoons allow. Not an occupant load. */
+  swim: number;
   totalSqFt: number;
 }
 
@@ -471,6 +498,7 @@ export function capacitySummary(areas: Area[]): CapacitySummary {
     beds: sum((a) => a.use === 'lodging'),
     dock: sum((a) => a.use === 'dock'),
     business: sum((a) => a.use === 'business'),
+    swim: sum((a) => a.use === 'swim'),
     totalSqFt: areas.reduce((a, x) => a + x.sqFt, 0),
   };
 }

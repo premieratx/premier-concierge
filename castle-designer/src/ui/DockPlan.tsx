@@ -44,7 +44,14 @@ const COLORS = {
   dim: '#c2452f',
   note: '#5a6675',
   walkway: '#b9a279',
+  lagoon: '#bfe0e6',
 };
+
+function polyPath(points: Point2[]): string {
+  return `${points
+    .map((v, i) => `${i === 0 ? 'M' : 'L'}${v.x.toFixed(2)},${v.z.toFixed(2)}`)
+    .join(' ')} Z`;
+}
 
 function hexPath(centre: Point2, radius: number, rotation: number): string {
   return `${hexVertices(centre, radius, rotation)
@@ -200,82 +207,173 @@ function Dimension({
   );
 }
 
-/** Section through a satellite: floats, deck, columns, array, clear deck. */
+/**
+ * Section through a satellite: floats, deck, columns, array, clear deck — and
+ * the lagoon and its net, which is the half of this design you cannot see in
+ * plan.
+ */
 function Section({ plan }: { plan: HexMarinaPlan }) {
   const spec = plan.spec;
-  const width = spec.sideFt * 2 * (Math.sqrt(3) / 2) + 40;
+  const a = apothem(spec.sideFt);
+  const lagoonHalf = a - spec.perimeterWalkFt;
+  const deckOuter = a;
+  const berthOuter = a + spec.slipLengthFt;
+  const width = (berthOuter + 24) * 2;
   const half = width / 2;
   const deckY = 0;
   const roofY = -spec.roofHeightFt;
+  const waterY = spec.freeboardFt;
+  const netY = waterY + spec.swimNetDepthFt;
 
   return (
     <svg
-      viewBox={`${-half} ${roofY - 26} ${width} ${spec.roofHeightFt + 44}`}
+      viewBox={`${-half} ${roofY - 26} ${width} ${spec.roofHeightFt + 26 + netY + 16}`}
       className="h-full w-full"
       role="img"
       aria-label="Section through one dock hexagon"
     >
+      <rect x={-half} y={waterY} width={width} height={netY + 22} fill={COLORS.water} />
+      <line x1={-half} y1={waterY} x2={half} y2={waterY} stroke="#5f89a6" strokeWidth={0.6} />
+
+      {/* The lagoon: the same lake, but inside the ring and inside the net. */}
       <rect
-        x={-half}
-        y={deckY + 2.2}
-        width={width}
-        height={40}
-        fill={COLORS.water}
+        x={-lagoonHalf}
+        y={waterY}
+        width={lagoonHalf * 2}
+        height={netY - waterY}
+        fill="#c2e0e6"
       />
       <line
-        x1={-half}
-        y1={deckY + 2.2}
-        x2={half}
-        y2={deckY + 2.2}
-        stroke="#5f89a6"
-        strokeWidth={0.6}
+        x1={-lagoonHalf}
+        y1={netY}
+        x2={lagoonHalf}
+        y2={netY}
+        stroke="#3f7f8c"
+        strokeWidth={0.7}
+        strokeDasharray="2 1.4"
       />
+      {[-1, 1].map((side) => (
+        <line
+          key={side}
+          x1={side * lagoonHalf}
+          y1={waterY}
+          x2={side * lagoonHalf}
+          y2={netY}
+          stroke="#3f7f8c"
+          strokeWidth={0.7}
+          strokeDasharray="2 1.4"
+        />
+      ))}
 
-      {/* Floats and deck, one run either side of the turning basin. */}
+      {/* Deck, floats, berth and roof, one run either side of the lagoon. */}
       {[-1, 1].map((side) => {
-        const x = side * (half - 26);
+        const inner = side * lagoonHalf;
+        const outer = side * deckOuter;
+        const x = Math.min(inner, outer);
+        const berthFrom = Math.min(side * deckOuter, side * berthOuter);
         return (
           <g key={side}>
-            <rect x={x - 12} y={deckY} width={24} height={2.67} fill="#41474f" />
-            <rect x={x - 13} y={deckY - 1.2} width={26} height={1.2} fill={COLORS.deck} stroke={COLORS.deckLine} strokeWidth={0.3} />
-            <rect x={x - 0.8} y={roofY} width={1.6} height={spec.roofHeightFt - 1.2} fill="#8d949c" />
+            <rect x={x} y={deckY} width={spec.perimeterWalkFt} height={2.67} fill="#41474f" />
+            <rect
+              x={x - 0.4}
+              y={deckY - 1.2}
+              width={spec.perimeterWalkFt + 0.8}
+              height={1.2}
+              fill={COLORS.deck}
+              stroke={COLORS.deckLine}
+              strokeWidth={0.3}
+            />
+            {/* Column on the ring, and the outboard column on its pile. */}
+            <rect x={side * (lagoonHalf + 6) - 0.8} y={roofY} width={1.6} height={spec.roofHeightFt - 1.2} fill="#8d949c" />
+            <rect x={side * (berthOuter - 2) - 0.8} y={roofY} width={1.6} height={spec.roofHeightFt + netY + 6} fill="#8d949c" />
+
+            {/* A boat in the berth, which is what the overhang is for. */}
+            <path
+              d={`M${berthFrom + 3},${waterY - 1} L${berthFrom + spec.slipLengthFt - 4},${waterY - 1} L${berthFrom + spec.slipLengthFt - 7},${waterY + 2.4} L${berthFrom + 5},${waterY + 2.4} Z`}
+              fill="#eef4f8"
+              stroke={COLORS.berthLine}
+              strokeWidth={0.4}
+            />
+
+            {/* Roof: array under clear structural decking, rail on top. */}
+            <rect
+              x={Math.min(inner, side * berthOuter)}
+              y={roofY - 1.4}
+              width={berthOuter - lagoonHalf}
+              height={1.4}
+              fill={COLORS.roof}
+              opacity={0.55}
+            />
+            <rect
+              x={Math.min(inner, side * berthOuter) + 2}
+              y={roofY - 0.2}
+              width={berthOuter - lagoonHalf - 4}
+              height={1.1}
+              fill={COLORS.solar}
+            />
+            <line x1={inner} y1={roofY - 5} x2={inner} y2={roofY - 1.4} stroke="#5c6068" strokeWidth={0.5} />
+            <line
+              x1={side * berthOuter}
+              y1={roofY - 5}
+              x2={side * berthOuter}
+              y2={roofY - 1.4}
+              stroke="#5c6068"
+              strokeWidth={0.5}
+            />
+            <line
+              x1={inner}
+              y1={roofY - 5}
+              x2={side * berthOuter}
+              y2={roofY - 5}
+              stroke="#5c6068"
+              strokeWidth={0.5}
+            />
           </g>
         );
       })}
 
-      {/* Roof: array under a clear structural deck, rail on top. */}
-      <rect x={-half + 8} y={roofY - 1.4} width={width - 16} height={1.4} fill={COLORS.roof} opacity={0.55} />
-      <rect x={-half + 10} y={roofY - 0.2} width={width - 20} height={1.1} fill={COLORS.solar} />
-      <line x1={-half + 8} y1={roofY - 5} x2={-half + 8} y2={roofY - 1.4} stroke="#5c6068" strokeWidth={0.5} />
-      <line x1={half - 8} y1={roofY - 5} x2={half - 8} y2={roofY - 1.4} stroke="#5c6068" strokeWidth={0.5} />
-      <line x1={-half + 8} y1={roofY - 5} x2={half - 8} y2={roofY - 5} stroke="#5c6068" strokeWidth={0.5} />
-
       <Dimension
-        from={{ x: half - 26, z: roofY }}
-        to={{ x: half - 26, z: deckY }}
-        label={`${spec.roofHeightFt}′ clear`}
-        offset={-14}
+        from={{ x: -lagoonHalf, z: netY + 6 }}
+        to={{ x: lagoonHalf, z: netY + 6 }}
+        label={`${num(plan.lagoonWidthFt, 0)}′ swim lagoon`}
+        fontSize={4}
+      />
+      <Dimension
+        from={{ x: lagoonHalf - 4, z: waterY }}
+        to={{ x: lagoonHalf - 4, z: netY }}
+        label={`${spec.swimNetDepthFt}′ net`}
+        offset={-11}
         fontSize={3.4}
       />
       <Dimension
-        from={{ x: -half + 4, z: deckY + 2.67 }}
-        to={{ x: -half + 4, z: deckY }}
+        from={{ x: deckOuter, z: roofY }}
+        to={{ x: deckOuter, z: deckY }}
+        label={`${spec.roofHeightFt}′ clear`}
+        offset={-13}
+        fontSize={3.4}
+      />
+      <Dimension
+        from={{ x: -berthOuter, z: deckY + 2.67 }}
+        to={{ x: -berthOuter, z: deckY }}
         label={`${FLOAT.depthIn}″ float`}
         offset={-9}
         fontSize={3.4}
       />
+      <Dimension
+        from={{ x: deckOuter, z: roofY - 8 }}
+        to={{ x: berthOuter, z: roofY - 8 }}
+        label={`${spec.slipLengthFt}′ berth, covered`}
+        fontSize={3.4}
+      />
 
-      <text x={-half + 5} y={roofY - 8} fontSize={3.4} fill={COLORS.note} fontFamily="ui-sans-serif, system-ui">
-        Clear structural decking over photovoltaic
+      <text x={-half + 5} y={roofY - 14} fontSize={3.6} fill={COLORS.note} fontFamily="ui-sans-serif, system-ui">
+        Clear structural decking over photovoltaic — the roof is the array,
       </text>
-      <text x={-half + 5} y={roofY - 3.6} fontSize={3.4} fill={COLORS.note} fontFamily="ui-sans-serif, system-ui">
-        The roof is the array, and the array is the shade
+      <text x={-half + 5} y={roofY - 9.6} fontSize={3.6} fill={COLORS.note} fontFamily="ui-sans-serif, system-ui">
+        the array is the shade, and the shade reaches out over every berth
       </text>
-      <text x={-half + 5} y={deckY + 11} fontSize={3.4} fill={COLORS.note} fontFamily="ui-sans-serif, system-ui">
-        {`${num(plan.turningBasinFt, 0)}′ turning basin between the berths`}
-      </text>
-      <text x={-half + 5} y={deckY + 15.6} fontSize={3.4} fill={COLORS.note} fontFamily="ui-sans-serif, system-ui">
-        {`Berths ${spec.slipWidthFt}′ × ${spec.slipLengthFt}′ off both inner faces`}
+      <text x={-half + 5} y={netY + 14} fontSize={3.6} fill={COLORS.note} fontFamily="ui-sans-serif, system-ui">
+        {`Net hung ${spec.swimNetDepthFt}′ down and skirted to the surface: nothing dropped in leaves the lagoon`}
       </text>
     </svg>
   );
@@ -463,12 +561,26 @@ export function DockPlan() {
             {/* Hexagons. */}
             {plan.modules.map((module) => (
               <g key={module.id}>
+                {/* The roof: it reaches out over the berths and stops at the
+                    lagoon, so it is bigger in plan than anything under it. */}
+                {module.role === 'satellite' && (
+                  <path
+                    d={polyPath(module.roofOutline)}
+                    fill={COLORS.roof}
+                    fillOpacity={0.22}
+                    stroke={COLORS.roof}
+                    strokeWidth={0.6}
+                    strokeDasharray="6 3"
+                  />
+                )}
                 <path
                   d={hexPath(module.centre, spec.sideFt, spec.rotation)}
                   fill={COLORS.deck}
                   stroke={COLORS.deckLine}
                   strokeWidth={0.8}
                 />
+                {/* Inboard of the walkway: the swim lagoon on a satellite, and
+                    on the hub, more deck, because the store stands on it. */}
                 <path
                   d={hexPath(
                     module.centre,
@@ -477,42 +589,50 @@ export function DockPlan() {
                     (apothem(spec.sideFt) - spec.perimeterWalkFt) / (Math.sqrt(3) / 2),
                     spec.rotation,
                   )}
-                  fill={module.role === 'hub' ? COLORS.deck : COLORS.water}
+                  fill={module.role === 'hub' ? COLORS.deck : COLORS.lagoon}
                   stroke={COLORS.deckLine}
                   strokeWidth={0.5}
                   strokeDasharray="3 2"
                 />
 
-                {/* Entrances: break the ring and mark the way in. */}
-                {module.entranceEdges.map((e) => {
-                  const a = module.vertices[e]!;
-                  const b = module.vertices[(e + 1) % 6]!;
-                  const mid = { x: (a.x + b.x) / 2, z: (a.z + b.z) / 2 };
-                  const deg = (Math.atan2(b.z - a.z, b.x - a.x) * 180) / Math.PI;
-                  return (
-                    <g key={e} transform={`translate(${mid.x} ${mid.z}) rotate(${deg})`}>
-                      <rect
-                        x={-spec.entranceWidthFt / 2}
-                        y={-spec.perimeterWalkFt / 2 - 1}
-                        width={spec.entranceWidthFt}
-                        height={spec.perimeterWalkFt + 2}
-                        fill={COLORS.water}
-                      />
-                      {showDimensions && (
-                        <text
-                          x={0}
-                          y={9}
-                          fontSize={5}
-                          textAnchor="middle"
-                          fill={COLORS.dim}
-                          fontFamily="ui-monospace, monospace"
-                        >
-                          {`${spec.entranceWidthFt}′`}
-                        </text>
-                      )}
-                    </g>
-                  );
-                })}
+                {module.role === 'satellite' && showDimensions && (
+                  <>
+                    <text
+                      x={module.centre.x}
+                      y={module.centre.z - 1}
+                      fontSize={7}
+                      textAnchor="middle"
+                      fill="#31606b"
+                      fontFamily="ui-sans-serif, system-ui"
+                      fontWeight={600}
+                    >
+                      SWIM LAGOON
+                    </text>
+                    <text
+                      x={module.centre.x}
+                      y={module.centre.z + 8}
+                      fontSize={5.4}
+                      textAnchor="middle"
+                      fill="#31606b"
+                      fontFamily="ui-monospace, monospace"
+                    >
+                      {`${num(plan.lagoonWidthFt, 0)}′ · net ${spec.swimNetDepthFt}′ down`}
+                    </text>
+                  </>
+                )}
+
+                {/* The landing: the corner the walkway arrives on, kept clear
+                    of berths on both of its edges. */}
+                {module.role === 'satellite' && (
+                  <circle
+                    cx={module.vertices[module.walkwayVertex]!.x}
+                    cy={module.vertices[module.walkwayVertex]!.z}
+                    r={3.2}
+                    fill="none"
+                    stroke={COLORS.dim}
+                    strokeWidth={0.6}
+                  />
+                )}
 
                 {module.slips.map((slip) => (
                   <Berth key={slip.id} slip={slip} showNumber={showNumbers} />
@@ -628,14 +748,25 @@ export function DockPlan() {
             </p>
             <p>
               <span className="font-semibold text-slate-200">Berths.</span>{' '}
-              {num(plan.slipCount)} at {spec.slipWidthFt}′ × {spec.slipLengthFt}′, off the inner
-              faces of six satellites. Three edges of each are left open at {spec.entranceWidthFt}′
-              clear, and what is left in the middle is a {num(plan.turningBasinFt, 0)}′ turning
-              basin — about one and a half boat lengths.
+              {num(plan.slipCount)} at {spec.slipWidthFt}′ × {spec.slipLengthFt}′, hung off the{' '}
+              <em>outside</em> of six satellites — {spec.walkwayClearBerths * 2} left out at the
+              corner each walkway lands on. Turning the hexagon inside out costs nothing in berth
+              count, because the outer perimeter is longer than the inner one, and every boat
+              backs straight into open lake instead of a shared basin.
+            </p>
+            <p>
+              <span className="font-semibold text-slate-200">Swim lagoon.</span>{' '}
+              {num(plan.swimSqFt)} sf of sheltered water inside the six rings,{' '}
+              {num(plan.lagoonWidthFt, 0)}′ across the flats. A net is hung{' '}
+              {spec.swimNetDepthFt}′ down and skirted up to the surface all the way round: nobody
+              gets deeper than {spec.swimNetDepthFt}′, and a phone that goes in comes back.
+              That is {num(plan.netSqFt)} sf of netting to buy and to inspect.
             </p>
             <p>
               <span className="font-semibold text-slate-200">Roof.</span> {num(plan.roofSqFt)} sf
-              of clear structural decking at {spec.roofHeightFt}′, with{' '}
+              of clear structural decking at {spec.roofHeightFt}′ — a ring that covers the walkway
+              and every berth and leaves the lagoon open to the sky, clearing its neighbour by{' '}
+              {num(plan.roofClearanceFt, 1)}′. Under it,{' '}
               {num(plan.solarSqFt)} sf of photovoltaic beneath it —{' '}
               {num(plan.solarKwDc)} kW, which is both the shade over every berth and the largest
               single revenue line the marina has that is not a lease.

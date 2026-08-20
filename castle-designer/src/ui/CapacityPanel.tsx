@@ -17,6 +17,7 @@ const USE_ORDER: OccupancyUse[] = [
   'dock',
   'business',
   'lodging',
+  'swim',
 ];
 
 function Swatch({ use }: { use: OccupancyUse }) {
@@ -60,6 +61,7 @@ export function CapacityPanel() {
         <Row label="Heads in beds" value={num(summary.beds)} />
         <Row label="On the docks" value={num(summary.dock)} />
         <Row label="Back of house" value={num(summary.business)} />
+        <Row label="In the lagoons" value={num(summary.swim)} />
         <Row label="Areas measured" value={`${areas.length} · ${num(summary.totalSqFt)} sf`} />
       </Section>
 

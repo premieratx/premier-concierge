@@ -388,8 +388,11 @@ export interface SlipFeature {
 
 /**
  * One hexagon of the marina: a floating ring of dock, sixty feet a side,
- * roofed at sixteen feet with a clear deck over photovoltaic. The hub carries
- * the ship store and the roof stage; the satellites carry the berths.
+ * roofed at sixteen feet with a clear deck over photovoltaic.
+ *
+ * Berths hang off the outside; the middle is left open as a swimming lagoon
+ * with a safety net below it. The hub carries the ship store and the roof
+ * stage instead of berths and water.
  */
 export interface HexDockFeature {
   id: string;
@@ -404,13 +407,19 @@ export interface HexDockFeature {
   role: 'hub' | 'satellite';
   /** Height of the roof deck above the dock deck. */
   roofHeightFt: number;
+  /** How far the roof reaches past the hexagon to cover the berths. */
+  roofOffsetFt: number;
   /** Floating deck area, in square feet. */
   deckSqFt: number;
   roofSqFt: number;
   /** Roof area carrying panels under the clear decking. */
   solarSqFt: number;
-  /** Edge indices left open for boats to enter. */
-  entranceEdges: number[];
+  /** Open swimming water inside the ring, in square feet. */
+  swimSqFt: number;
+  /** Depth of the safety net below the lagoon surface, in feet. */
+  netDepthFt: number;
+  /** Which corner the walkway lands on, by vertex index. */
+  walkwayVertex: number;
   /** What is on the roof deck. */
   amenities: { bar: boolean; jumpPlatform: boolean; ropeSwing: boolean };
   label?: string;
