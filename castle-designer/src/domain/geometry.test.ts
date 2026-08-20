@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { D20ST, D40HC, INTERIOR_WIDTH_FT } from './dimensions';
+import { CORNER_CASTING_COUNT, D20ST, D40HC, INTERIOR_WIDTH_FT } from './dimensions';
 import {
   boxOf,
   centerOf,
@@ -68,7 +68,7 @@ describe('boxOf / centerOf', () => {
 describe('cornerCastings', () => {
   it('produces the eight rated load points', () => {
     const corners = cornerCastings(box('a'));
-    expect(corners).toHaveLength(8);
+    expect(corners).toHaveLength(CORNER_CASTING_COUNT);
     const unique = new Set(corners.map((c) => `${c.x},${c.y},${c.z}`));
     expect(unique.size).toBe(8);
   });
@@ -106,7 +106,9 @@ describe('intersects', () => {
 describe('snapping', () => {
   it('snaps to arbitrary steps', () => {
     expect(snapTo(37, 8)).toBe(40);
-    expect(snapTo(-3, 8)).toBe(-0);
+    expect(snapTo(-3, 8)).toBe(0);
+    // Negative zero is collapsed so a snapped position round-trips through JSON.
+    expect(Object.is(snapTo(-3, 8), -0)).toBe(false);
   });
 
   it('snaps 8 feet across the box and a full length along it', () => {

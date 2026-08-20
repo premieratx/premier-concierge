@@ -6,8 +6,8 @@ import type { ContainerRole } from '../domain/types';
  */
 export const ROLE_COLOR: Record<ContainerRole, string> = {
   structural: '#8a8f98',
-  sealed: '#b08324',
-  wall: '#6d7684',
+  sealed: '#9c8a5e',
+  wall: '#79808c',
   tower: '#7b6a57',
 };
 

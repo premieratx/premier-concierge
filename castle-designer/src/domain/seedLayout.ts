@@ -17,6 +17,15 @@ export const SEED_LAYOUT: Layout = {
   notes:
     'Phase 1 test layout: two 40HC wall stacks bracketing a 40-foot open span, ' +
     'plus a two-level 20ST corner tower.',
+  decor: [],
+  features: [],
+  site: {
+    sizeX: 400,
+    sizeZ: 400,
+    shorelineZ: 300,
+    waterLevelFt: -6,
+    marinaPhase: 'existing',
+  },
   containers: [
     {
       id: 'wall-w-l1',

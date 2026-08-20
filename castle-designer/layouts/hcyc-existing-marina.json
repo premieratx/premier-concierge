@@ -1,0 +1,9653 @@
+{
+  "version": 1,
+  "id": "hcyc-existing",
+  "name": "Hill Country Yacht Club — castle + existing marina",
+  "units": "ft",
+  "site": {
+    "sizeX": 800,
+    "sizeZ": 1000,
+    "shorelineZ": 300,
+    "waterLevelFt": -6,
+    "marinaPhase": "existing"
+  },
+  "containers": [
+    {
+      "id": "bawn-north-l-0-b-0-1",
+      "type": "40HC",
+      "position": {
+        "x": -200,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn north L1 bay 1"
+    },
+    {
+      "id": "bawn-north-l-0-b-1-2",
+      "type": "40HC",
+      "position": {
+        "x": -160,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn north L1 bay 2"
+    },
+    {
+      "id": "bawn-north-l-0-b-2-3",
+      "type": "40HC",
+      "position": {
+        "x": -120,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn north L1 bay 3"
+    },
+    {
+      "id": "bawn-north-l-0-b-3-4",
+      "type": "40HC",
+      "position": {
+        "x": -80,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn north L1 bay 4"
+    },
+    {
+      "id": "bawn-north-l-0-b-4-5",
+      "type": "40HC",
+      "position": {
+        "x": -40,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn north L1 bay 5"
+    },
+    {
+      "id": "bawn-north-l-0-b-5-6",
+      "type": "40HC",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn north L1 bay 6"
+    },
+    {
+      "id": "bawn-north-l-0-b-6-7",
+      "type": "40HC",
+      "position": {
+        "x": 40,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn north L1 bay 7"
+    },
+    {
+      "id": "bawn-north-l-0-b-7-8",
+      "type": "40HC",
+      "position": {
+        "x": 80,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn north L1 bay 8"
+    },
+    {
+      "id": "bawn-north-l-0-b-8-9",
+      "type": "40HC",
+      "position": {
+        "x": 120,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn north L1 bay 9"
+    },
+    {
+      "id": "bawn-north-l-0-b-9-10",
+      "type": "40HC",
+      "position": {
+        "x": 160,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn north L1 bay 10"
+    },
+    {
+      "id": "bawn-south-l-0-b-0-11",
+      "type": "40HC",
+      "position": {
+        "x": -200,
+        "y": 0,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn south L1 bay 1"
+    },
+    {
+      "id": "bawn-south-l-0-b-1-12",
+      "type": "40HC",
+      "position": {
+        "x": -160,
+        "y": 0,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn south L1 bay 2"
+    },
+    {
+      "id": "bawn-south-l-0-b-2-13",
+      "type": "40HC",
+      "position": {
+        "x": -120,
+        "y": 0,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn south L1 bay 3"
+    },
+    {
+      "id": "bawn-south-l-0-b-3-14",
+      "type": "40HC",
+      "position": {
+        "x": -80,
+        "y": 0,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn south L1 bay 4"
+    },
+    {
+      "id": "bawn-south-l-0-b-6-15",
+      "type": "40HC",
+      "position": {
+        "x": 40,
+        "y": 0,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn south L1 bay 7"
+    },
+    {
+      "id": "bawn-south-l-0-b-7-16",
+      "type": "40HC",
+      "position": {
+        "x": 80,
+        "y": 0,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn south L1 bay 8"
+    },
+    {
+      "id": "bawn-south-l-0-b-8-17",
+      "type": "40HC",
+      "position": {
+        "x": 120,
+        "y": 0,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn south L1 bay 9"
+    },
+    {
+      "id": "bawn-south-l-0-b-9-18",
+      "type": "40HC",
+      "position": {
+        "x": 160,
+        "y": 0,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn south L1 bay 10"
+    },
+    {
+      "id": "bawn-west-l-0-b-0-19",
+      "type": "40HC",
+      "position": {
+        "x": -200,
+        "y": 0,
+        "z": 8
+      },
+      "rotation": 90,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn west L1 bay 1"
+    },
+    {
+      "id": "bawn-west-l-0-b-1-20",
+      "type": "40HC",
+      "position": {
+        "x": -200,
+        "y": 0,
+        "z": 48
+      },
+      "rotation": 90,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn west L1 bay 2"
+    },
+    {
+      "id": "bawn-west-l-0-b-2-21",
+      "type": "40HC",
+      "position": {
+        "x": -200,
+        "y": 0,
+        "z": 88
+      },
+      "rotation": 90,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn west L1 bay 3"
+    },
+    {
+      "id": "bawn-west-l-0-b-3-22",
+      "type": "40HC",
+      "position": {
+        "x": -200,
+        "y": 0,
+        "z": 128
+      },
+      "rotation": 90,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn west L1 bay 4"
+    },
+    {
+      "id": "bawn-east-l-0-b-0-23",
+      "type": "40HC",
+      "position": {
+        "x": 192,
+        "y": 0,
+        "z": 8
+      },
+      "rotation": 90,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn east L1 bay 1"
+    },
+    {
+      "id": "bawn-east-l-0-b-1-24",
+      "type": "40HC",
+      "position": {
+        "x": 192,
+        "y": 0,
+        "z": 48
+      },
+      "rotation": 90,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn east L1 bay 2"
+    },
+    {
+      "id": "bawn-east-l-0-b-2-25",
+      "type": "40HC",
+      "position": {
+        "x": 192,
+        "y": 0,
+        "z": 88
+      },
+      "rotation": 90,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn east L1 bay 3"
+    },
+    {
+      "id": "bawn-east-l-0-b-3-26",
+      "type": "40HC",
+      "position": {
+        "x": 192,
+        "y": 0,
+        "z": 128
+      },
+      "rotation": 90,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "label": "Bawn east L1 bay 4"
+    },
+    {
+      "id": "curtain-upper-0-224",
+      "type": "40HC",
+      "position": {
+        "x": -200,
+        "y": 9.5,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "zone": "castle",
+      "label": "Water curtain L2 bay 1"
+    },
+    {
+      "id": "curtain-upper-1-225",
+      "type": "40HC",
+      "position": {
+        "x": -160,
+        "y": 9.5,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "zone": "castle",
+      "label": "Water curtain L2 bay 2"
+    },
+    {
+      "id": "curtain-upper-2-226",
+      "type": "40HC",
+      "position": {
+        "x": -120,
+        "y": 9.5,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "zone": "castle",
+      "label": "Water curtain L2 bay 3"
+    },
+    {
+      "id": "curtain-upper-3-227",
+      "type": "40HC",
+      "position": {
+        "x": -80,
+        "y": 9.5,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "zone": "castle",
+      "label": "Water curtain L2 bay 4"
+    },
+    {
+      "id": "curtain-upper-6-228",
+      "type": "40HC",
+      "position": {
+        "x": 40,
+        "y": 9.5,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "zone": "castle",
+      "label": "Water curtain L2 bay 7"
+    },
+    {
+      "id": "curtain-upper-7-229",
+      "type": "40HC",
+      "position": {
+        "x": 80,
+        "y": 9.5,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "zone": "castle",
+      "label": "Water curtain L2 bay 8"
+    },
+    {
+      "id": "curtain-upper-8-230",
+      "type": "40HC",
+      "position": {
+        "x": 120,
+        "y": 9.5,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "zone": "castle",
+      "label": "Water curtain L2 bay 9"
+    },
+    {
+      "id": "curtain-upper-9-231",
+      "type": "40HC",
+      "position": {
+        "x": 160,
+        "y": 9.5,
+        "z": 192
+      },
+      "rotation": 0,
+      "role": "structural",
+      "finish": "stone",
+      "openings": [],
+      "zone": "castle",
+      "label": "Water curtain L2 bay 10"
+    },
+    {
+      "id": "tower-nw-l-0-p-0-232",
+      "type": "20ST",
+      "position": {
+        "x": -220,
+        "y": 0,
+        "z": -16
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-nw L1"
+    },
+    {
+      "id": "tower-nw-l-0-p-1-233",
+      "type": "20ST",
+      "position": {
+        "x": -220,
+        "y": 0,
+        "z": -8
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-nw L1"
+    },
+    {
+      "id": "tower-nw-l-1-p-0-234",
+      "type": "20ST",
+      "position": {
+        "x": -220,
+        "y": 8.5,
+        "z": -16
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-nw L2"
+    },
+    {
+      "id": "tower-nw-l-1-p-1-235",
+      "type": "20ST",
+      "position": {
+        "x": -220,
+        "y": 8.5,
+        "z": -8
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-nw L2"
+    },
+    {
+      "id": "tower-nw-l-2-p-0-236",
+      "type": "20ST",
+      "position": {
+        "x": -220,
+        "y": 17,
+        "z": -16
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-nw L3"
+    },
+    {
+      "id": "tower-nw-l-2-p-1-237",
+      "type": "20ST",
+      "position": {
+        "x": -220,
+        "y": 17,
+        "z": -8
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-nw L3"
+    },
+    {
+      "id": "tower-ne-l-0-p-0-260",
+      "type": "20ST",
+      "position": {
+        "x": 200,
+        "y": 0,
+        "z": -16
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-ne L1"
+    },
+    {
+      "id": "tower-ne-l-0-p-1-261",
+      "type": "20ST",
+      "position": {
+        "x": 200,
+        "y": 0,
+        "z": -8
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-ne L1"
+    },
+    {
+      "id": "tower-ne-l-1-p-0-262",
+      "type": "20ST",
+      "position": {
+        "x": 200,
+        "y": 8.5,
+        "z": -16
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-ne L2"
+    },
+    {
+      "id": "tower-ne-l-1-p-1-263",
+      "type": "20ST",
+      "position": {
+        "x": 200,
+        "y": 8.5,
+        "z": -8
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-ne L2"
+    },
+    {
+      "id": "tower-ne-l-2-p-0-264",
+      "type": "20ST",
+      "position": {
+        "x": 200,
+        "y": 17,
+        "z": -16
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-ne L3"
+    },
+    {
+      "id": "tower-ne-l-2-p-1-265",
+      "type": "20ST",
+      "position": {
+        "x": 200,
+        "y": 17,
+        "z": -8
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-ne L3"
+    },
+    {
+      "id": "tower-se-l-0-p-0-288",
+      "type": "20ST",
+      "position": {
+        "x": 200,
+        "y": 0,
+        "z": 200
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-se L1"
+    },
+    {
+      "id": "tower-se-l-0-p-1-289",
+      "type": "20ST",
+      "position": {
+        "x": 200,
+        "y": 0,
+        "z": 208
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-se L1"
+    },
+    {
+      "id": "tower-se-l-1-p-0-290",
+      "type": "20ST",
+      "position": {
+        "x": 200,
+        "y": 8.5,
+        "z": 200
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-se L2"
+    },
+    {
+      "id": "tower-se-l-1-p-1-291",
+      "type": "20ST",
+      "position": {
+        "x": 200,
+        "y": 8.5,
+        "z": 208
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-se L2"
+    },
+    {
+      "id": "tower-se-l-2-p-0-292",
+      "type": "20ST",
+      "position": {
+        "x": 200,
+        "y": 17,
+        "z": 200
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-se L3"
+    },
+    {
+      "id": "tower-se-l-2-p-1-293",
+      "type": "20ST",
+      "position": {
+        "x": 200,
+        "y": 17,
+        "z": 208
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-se L3"
+    },
+    {
+      "id": "tower-sw-l-0-p-0-316",
+      "type": "20ST",
+      "position": {
+        "x": -220,
+        "y": 0,
+        "z": 200
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-sw L1"
+    },
+    {
+      "id": "tower-sw-l-0-p-1-317",
+      "type": "20ST",
+      "position": {
+        "x": -220,
+        "y": 0,
+        "z": 208
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-sw L1"
+    },
+    {
+      "id": "tower-sw-l-1-p-0-318",
+      "type": "20ST",
+      "position": {
+        "x": -220,
+        "y": 8.5,
+        "z": 200
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-sw L2"
+    },
+    {
+      "id": "tower-sw-l-1-p-1-319",
+      "type": "20ST",
+      "position": {
+        "x": -220,
+        "y": 8.5,
+        "z": 208
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-sw L2"
+    },
+    {
+      "id": "tower-sw-l-2-p-0-320",
+      "type": "20ST",
+      "position": {
+        "x": -220,
+        "y": 17,
+        "z": 200
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-sw L3"
+    },
+    {
+      "id": "tower-sw-l-2-p-1-321",
+      "type": "20ST",
+      "position": {
+        "x": -220,
+        "y": 17,
+        "z": 208
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-sw L3"
+    },
+    {
+      "id": "tower-sw-l-3-p-0-322",
+      "type": "20ST",
+      "position": {
+        "x": -220,
+        "y": 25.5,
+        "z": 200
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-sw L4"
+    },
+    {
+      "id": "tower-sw-l-3-p-1-323",
+      "type": "20ST",
+      "position": {
+        "x": -220,
+        "y": 25.5,
+        "z": 208
+      },
+      "rotation": 0,
+      "role": "tower",
+      "finish": "stone",
+      "openings": [],
+      "label": "tower-sw L4"
+    },
+    {
+      "id": "gatetower-0-l-0-p-0-346",
+      "type": "20ST",
+      "position": {
+        "x": -60,
+        "y": 0,
+        "z": 200
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [],
+      "label": "gatetower-0 L1"
+    },
+    {
+      "id": "gatetower-0-l-0-p-1-347",
+      "type": "20ST",
+      "position": {
+        "x": -60,
+        "y": 0,
+        "z": 208
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [],
+      "label": "gatetower-0 L1"
+    },
+    {
+      "id": "gatetower-0-l-1-p-0-348",
+      "type": "20ST",
+      "position": {
+        "x": -60,
+        "y": 8.5,
+        "z": 200
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [],
+      "label": "gatetower-0 L2"
+    },
+    {
+      "id": "gatetower-0-l-1-p-1-349",
+      "type": "20ST",
+      "position": {
+        "x": -60,
+        "y": 8.5,
+        "z": 208
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [],
+      "label": "gatetower-0 L2"
+    },
+    {
+      "id": "gatetower-1-l-0-p-0-366",
+      "type": "20ST",
+      "position": {
+        "x": 40,
+        "y": 0,
+        "z": 200
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [],
+      "label": "gatetower-1 L1"
+    },
+    {
+      "id": "gatetower-1-l-0-p-1-367",
+      "type": "20ST",
+      "position": {
+        "x": 40,
+        "y": 0,
+        "z": 208
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [],
+      "label": "gatetower-1 L1"
+    },
+    {
+      "id": "gatetower-1-l-1-p-0-368",
+      "type": "20ST",
+      "position": {
+        "x": 40,
+        "y": 8.5,
+        "z": 200
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [],
+      "label": "gatetower-1 L2"
+    },
+    {
+      "id": "gatetower-1-l-1-p-1-369",
+      "type": "20ST",
+      "position": {
+        "x": 40,
+        "y": 8.5,
+        "z": 208
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [],
+      "label": "gatetower-1 L2"
+    },
+    {
+      "id": "hall-w-0-l-0-b-0-386",
+      "type": "40HC",
+      "position": {
+        "x": -80,
+        "y": 0,
+        "z": 48
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall W L1 bay 1"
+    },
+    {
+      "id": "hall-w-0-l-0-b-1-387",
+      "type": "40HC",
+      "position": {
+        "x": -40,
+        "y": 0,
+        "z": 48
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall W L1 bay 2"
+    },
+    {
+      "id": "hall-w-0-l-0-b-2-388",
+      "type": "40HC",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 48
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall W L1 bay 3"
+    },
+    {
+      "id": "hall-w-0-l-0-b-3-389",
+      "type": "40HC",
+      "position": {
+        "x": 40,
+        "y": 0,
+        "z": 48
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall W L1 bay 4"
+    },
+    {
+      "id": "hall-w-0-l-1-b-0-390",
+      "type": "40HC",
+      "position": {
+        "x": -80,
+        "y": 9.5,
+        "z": 48
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall W L2 bay 1"
+    },
+    {
+      "id": "hall-w-0-l-1-b-1-391",
+      "type": "40HC",
+      "position": {
+        "x": -40,
+        "y": 9.5,
+        "z": 48
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall W L2 bay 2"
+    },
+    {
+      "id": "hall-w-0-l-1-b-2-392",
+      "type": "40HC",
+      "position": {
+        "x": 0,
+        "y": 9.5,
+        "z": 48
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall W L2 bay 3"
+    },
+    {
+      "id": "hall-w-0-l-1-b-3-393",
+      "type": "40HC",
+      "position": {
+        "x": 40,
+        "y": 9.5,
+        "z": 48
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall W L2 bay 4"
+    },
+    {
+      "id": "hall-w-1-l-0-b-0-394",
+      "type": "40HC",
+      "position": {
+        "x": -80,
+        "y": 0,
+        "z": 100
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall E L1 bay 1"
+    },
+    {
+      "id": "hall-w-1-l-0-b-1-395",
+      "type": "40HC",
+      "position": {
+        "x": -40,
+        "y": 0,
+        "z": 100
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall E L1 bay 2"
+    },
+    {
+      "id": "hall-w-1-l-0-b-2-396",
+      "type": "40HC",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 100
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall E L1 bay 3"
+    },
+    {
+      "id": "hall-w-1-l-0-b-3-397",
+      "type": "40HC",
+      "position": {
+        "x": 40,
+        "y": 0,
+        "z": 100
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall E L1 bay 4"
+    },
+    {
+      "id": "hall-w-1-l-1-b-0-398",
+      "type": "40HC",
+      "position": {
+        "x": -80,
+        "y": 9.5,
+        "z": 100
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall E L2 bay 1"
+    },
+    {
+      "id": "hall-w-1-l-1-b-1-399",
+      "type": "40HC",
+      "position": {
+        "x": -40,
+        "y": 9.5,
+        "z": 100
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall E L2 bay 2"
+    },
+    {
+      "id": "hall-w-1-l-1-b-2-400",
+      "type": "40HC",
+      "position": {
+        "x": 0,
+        "y": 9.5,
+        "z": 100
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall E L2 bay 3"
+    },
+    {
+      "id": "hall-w-1-l-1-b-3-401",
+      "type": "40HC",
+      "position": {
+        "x": 40,
+        "y": 9.5,
+        "z": 100
+      },
+      "rotation": 0,
+      "role": "wall",
+      "finish": "stone",
+      "openings": [],
+      "label": "Hall wall E L2 bay 4"
+    },
+    {
+      "id": "keep-0--40-144-475",
+      "type": "40HC",
+      "position": {
+        "x": -40,
+        "y": 0,
+        "z": 144
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [
+        {
+          "id": "keep-win-0--40-144-476",
+          "face": "sideA",
+          "width": 3,
+          "height": 4,
+          "offsetU": 18,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "castle",
+      "label": "Keep L1"
+    },
+    {
+      "id": "keep-0--40-152-477",
+      "type": "40HC",
+      "position": {
+        "x": -40,
+        "y": 0,
+        "z": 152
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [
+        {
+          "id": "keep-door--40-478",
+          "face": "sideB",
+          "width": 6,
+          "height": 8,
+          "offsetU": 17,
+          "offsetV": 0,
+          "label": "Keep entry"
+        }
+      ],
+      "zone": "castle",
+      "label": "Keep L1"
+    },
+    {
+      "id": "keep-0-0-144-479",
+      "type": "40HC",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 144
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [
+        {
+          "id": "keep-win-0-0-144-480",
+          "face": "sideA",
+          "width": 3,
+          "height": 4,
+          "offsetU": 18,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "castle",
+      "label": "Keep L1"
+    },
+    {
+      "id": "keep-0-0-152-481",
+      "type": "40HC",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 152
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [
+        {
+          "id": "keep-door-0-482",
+          "face": "sideB",
+          "width": 6,
+          "height": 8,
+          "offsetU": 17,
+          "offsetV": 0,
+          "label": "Keep entry"
+        }
+      ],
+      "zone": "castle",
+      "label": "Keep L1"
+    },
+    {
+      "id": "keep-1--40-144-483",
+      "type": "40HC",
+      "position": {
+        "x": -40,
+        "y": 9.5,
+        "z": 144
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [
+        {
+          "id": "keep-win-1--40-144-484",
+          "face": "sideA",
+          "width": 3,
+          "height": 4,
+          "offsetU": 18,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "castle",
+      "label": "Keep L2"
+    },
+    {
+      "id": "keep-1--40-152-485",
+      "type": "40HC",
+      "position": {
+        "x": -40,
+        "y": 9.5,
+        "z": 152
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [
+        {
+          "id": "keep-win-1--40-152-486",
+          "face": "sideA",
+          "width": 3,
+          "height": 4,
+          "offsetU": 18,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "castle",
+      "label": "Keep L2"
+    },
+    {
+      "id": "keep-1-0-144-487",
+      "type": "40HC",
+      "position": {
+        "x": 0,
+        "y": 9.5,
+        "z": 144
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [
+        {
+          "id": "keep-win-1-0-144-488",
+          "face": "sideA",
+          "width": 3,
+          "height": 4,
+          "offsetU": 18,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "castle",
+      "label": "Keep L2"
+    },
+    {
+      "id": "keep-1-0-152-489",
+      "type": "40HC",
+      "position": {
+        "x": 0,
+        "y": 9.5,
+        "z": 152
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [
+        {
+          "id": "keep-win-1-0-152-490",
+          "face": "sideA",
+          "width": 3,
+          "height": 4,
+          "offsetU": 18,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "castle",
+      "label": "Keep L2"
+    },
+    {
+      "id": "keep-2--40-144-491",
+      "type": "40HC",
+      "position": {
+        "x": -40,
+        "y": 19,
+        "z": 144
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [
+        {
+          "id": "keep-win-2--40-144-492",
+          "face": "sideA",
+          "width": 3,
+          "height": 4,
+          "offsetU": 18,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "castle",
+      "label": "Keep L3"
+    },
+    {
+      "id": "keep-2--40-152-493",
+      "type": "40HC",
+      "position": {
+        "x": -40,
+        "y": 19,
+        "z": 152
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [
+        {
+          "id": "keep-win-2--40-152-494",
+          "face": "sideA",
+          "width": 3,
+          "height": 4,
+          "offsetU": 18,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "castle",
+      "label": "Keep L3"
+    },
+    {
+      "id": "keep-2-0-144-495",
+      "type": "40HC",
+      "position": {
+        "x": 0,
+        "y": 19,
+        "z": 144
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [
+        {
+          "id": "keep-win-2-0-144-496",
+          "face": "sideA",
+          "width": 3,
+          "height": 4,
+          "offsetU": 18,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "castle",
+      "label": "Keep L3"
+    },
+    {
+      "id": "keep-2-0-152-497",
+      "type": "40HC",
+      "position": {
+        "x": 0,
+        "y": 19,
+        "z": 152
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "stone",
+      "openings": [
+        {
+          "id": "keep-win-2-0-152-498",
+          "face": "sideA",
+          "width": 3,
+          "height": 4,
+          "offsetU": 18,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "castle",
+      "label": "Keep L3"
+    },
+    {
+      "id": "cabin-0-503",
+      "type": "40HC",
+      "position": {
+        "x": -320,
+        "y": 0,
+        "z": 40
+      },
+      "rotation": 90,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "cabin-0-door-504",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0,
+          "label": "Entry"
+        },
+        {
+          "id": "cabin-0-window-505",
+          "face": "sideA",
+          "width": 8,
+          "height": 5,
+          "offsetU": 22,
+          "offsetV": 3,
+          "label": "Lake window"
+        }
+      ],
+      "zone": "lodging",
+      "label": "Cabin 1"
+    },
+    {
+      "id": "cabin-1-510",
+      "type": "40HC",
+      "position": {
+        "x": -320,
+        "y": 0,
+        "z": 120
+      },
+      "rotation": 90,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "cabin-1-door-511",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0,
+          "label": "Entry"
+        },
+        {
+          "id": "cabin-1-window-512",
+          "face": "sideA",
+          "width": 8,
+          "height": 5,
+          "offsetU": 22,
+          "offsetV": 3,
+          "label": "Lake window"
+        }
+      ],
+      "zone": "lodging",
+      "label": "Cabin 2"
+    },
+    {
+      "id": "cabin-2-517",
+      "type": "40HC",
+      "position": {
+        "x": -320,
+        "y": 0,
+        "z": 200
+      },
+      "rotation": 90,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "cabin-2-door-518",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0,
+          "label": "Entry"
+        },
+        {
+          "id": "cabin-2-window-519",
+          "face": "sideA",
+          "width": 8,
+          "height": 5,
+          "offsetU": 22,
+          "offsetV": 3,
+          "label": "Lake window"
+        }
+      ],
+      "zone": "lodging",
+      "label": "Cabin 3"
+    },
+    {
+      "id": "cabin-3-524",
+      "type": "40HC",
+      "position": {
+        "x": -240,
+        "y": 0,
+        "z": 40
+      },
+      "rotation": 90,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "cabin-3-door-525",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0,
+          "label": "Entry"
+        },
+        {
+          "id": "cabin-3-window-526",
+          "face": "sideA",
+          "width": 8,
+          "height": 5,
+          "offsetU": 22,
+          "offsetV": 3,
+          "label": "Lake window"
+        }
+      ],
+      "zone": "lodging",
+      "label": "Cabin 4"
+    },
+    {
+      "id": "cabin-4-531",
+      "type": "40HC",
+      "position": {
+        "x": -240,
+        "y": 0,
+        "z": 120
+      },
+      "rotation": 90,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "cabin-4-door-532",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0,
+          "label": "Entry"
+        },
+        {
+          "id": "cabin-4-window-533",
+          "face": "sideA",
+          "width": 8,
+          "height": 5,
+          "offsetU": 22,
+          "offsetV": 3,
+          "label": "Lake window"
+        }
+      ],
+      "zone": "lodging",
+      "label": "Cabin 5"
+    },
+    {
+      "id": "cabin-5-538",
+      "type": "40HC",
+      "position": {
+        "x": -240,
+        "y": 0,
+        "z": 200
+      },
+      "rotation": 90,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "cabin-5-door-539",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0,
+          "label": "Entry"
+        },
+        {
+          "id": "cabin-5-window-540",
+          "face": "sideA",
+          "width": 8,
+          "height": 5,
+          "offsetU": 22,
+          "offsetV": 3,
+          "label": "Lake window"
+        }
+      ],
+      "zone": "lodging",
+      "label": "Cabin 6"
+    },
+    {
+      "id": "cabin-6-545",
+      "type": "40HC",
+      "position": {
+        "x": -160,
+        "y": 0,
+        "z": 40
+      },
+      "rotation": 90,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "cabin-6-door-546",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0,
+          "label": "Entry"
+        },
+        {
+          "id": "cabin-6-window-547",
+          "face": "sideA",
+          "width": 8,
+          "height": 5,
+          "offsetU": 22,
+          "offsetV": 3,
+          "label": "Lake window"
+        }
+      ],
+      "zone": "lodging",
+      "label": "Cabin 7"
+    },
+    {
+      "id": "cabin-7-552",
+      "type": "40HC",
+      "position": {
+        "x": -160,
+        "y": 0,
+        "z": 120
+      },
+      "rotation": 90,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "cabin-7-door-553",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0,
+          "label": "Entry"
+        },
+        {
+          "id": "cabin-7-window-554",
+          "face": "sideA",
+          "width": 8,
+          "height": 5,
+          "offsetU": 22,
+          "offsetV": 3,
+          "label": "Lake window"
+        }
+      ],
+      "zone": "lodging",
+      "label": "Cabin 8"
+    },
+    {
+      "id": "cabin-8-559",
+      "type": "40HC",
+      "position": {
+        "x": -160,
+        "y": 0,
+        "z": 200
+      },
+      "rotation": 90,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "cabin-8-door-560",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0,
+          "label": "Entry"
+        },
+        {
+          "id": "cabin-8-window-561",
+          "face": "sideA",
+          "width": 8,
+          "height": 5,
+          "offsetU": 22,
+          "offsetV": 3,
+          "label": "Lake window"
+        }
+      ],
+      "zone": "lodging",
+      "label": "Cabin 9"
+    },
+    {
+      "id": "bunk-0-0-566",
+      "type": "40HC",
+      "position": {
+        "x": -320,
+        "y": 0,
+        "z": -48
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "bunk-0-0-door-567",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0
+        },
+        {
+          "id": "bunk-0-0-win-568",
+          "face": "sideA",
+          "width": 4,
+          "height": 4,
+          "offsetU": 24,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "lodging",
+      "label": "Bunkhouse L1 bay 1"
+    },
+    {
+      "id": "bunk-0-1-569",
+      "type": "40HC",
+      "position": {
+        "x": -280,
+        "y": 0,
+        "z": -48
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "bunk-0-1-door-570",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0
+        },
+        {
+          "id": "bunk-0-1-win-571",
+          "face": "sideA",
+          "width": 4,
+          "height": 4,
+          "offsetU": 24,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "lodging",
+      "label": "Bunkhouse L1 bay 2"
+    },
+    {
+      "id": "bunk-0-2-572",
+      "type": "40HC",
+      "position": {
+        "x": -240,
+        "y": 0,
+        "z": -48
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "bunk-0-2-door-573",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0
+        },
+        {
+          "id": "bunk-0-2-win-574",
+          "face": "sideA",
+          "width": 4,
+          "height": 4,
+          "offsetU": 24,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "lodging",
+      "label": "Bunkhouse L1 bay 3"
+    },
+    {
+      "id": "bunk-1-0-575",
+      "type": "40HC",
+      "position": {
+        "x": -320,
+        "y": 9.5,
+        "z": -48
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "bunk-1-0-door-576",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0
+        },
+        {
+          "id": "bunk-1-0-win-577",
+          "face": "sideA",
+          "width": 4,
+          "height": 4,
+          "offsetU": 24,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "lodging",
+      "label": "Bunkhouse L2 bay 1"
+    },
+    {
+      "id": "bunk-1-1-578",
+      "type": "40HC",
+      "position": {
+        "x": -280,
+        "y": 9.5,
+        "z": -48
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "bunk-1-1-door-579",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0
+        },
+        {
+          "id": "bunk-1-1-win-580",
+          "face": "sideA",
+          "width": 4,
+          "height": 4,
+          "offsetU": 24,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "lodging",
+      "label": "Bunkhouse L2 bay 2"
+    },
+    {
+      "id": "bunk-1-2-581",
+      "type": "40HC",
+      "position": {
+        "x": -240,
+        "y": 9.5,
+        "z": -48
+      },
+      "rotation": 0,
+      "role": "sealed",
+      "finish": "painted",
+      "openings": [
+        {
+          "id": "bunk-1-2-door-582",
+          "face": "sideA",
+          "width": 3.5,
+          "height": 7,
+          "offsetU": 4,
+          "offsetV": 0
+        },
+        {
+          "id": "bunk-1-2-win-583",
+          "face": "sideA",
+          "width": 4,
+          "height": 4,
+          "offsetU": 24,
+          "offsetV": 3.5
+        }
+      ],
+      "zone": "lodging",
+      "label": "Bunkhouse L2 bay 3"
+    }
+  ],
+  "decor": [
+    {
+      "id": "bawn-north-walk-95",
+      "kind": "walkway",
+      "center": {
+        "x": 0,
+        "y": 9.75,
+        "z": 5.6
+      },
+      "size": {
+        "x": 400,
+        "y": 0.5,
+        "z": 4.8
+      }
+    },
+    {
+      "id": "bawn-south-walk-164",
+      "kind": "walkway",
+      "center": {
+        "x": 0,
+        "y": 9.75,
+        "z": 194.4
+      },
+      "size": {
+        "x": 400,
+        "y": 0.5,
+        "z": 4.8
+      }
+    },
+    {
+      "id": "bawn-west-walk-193",
+      "kind": "walkway",
+      "center": {
+        "x": -194.4,
+        "y": 9.75,
+        "z": 88
+      },
+      "size": {
+        "x": 4.8,
+        "y": 0.5,
+        "z": 160
+      }
+    },
+    {
+      "id": "bawn-east-walk-222",
+      "kind": "walkway",
+      "center": {
+        "x": 194.4,
+        "y": 9.75,
+        "z": 88
+      },
+      "size": {
+        "x": 4.8,
+        "y": 0.5,
+        "z": 160
+      }
+    },
+    {
+      "id": "bawn-gate-223",
+      "kind": "gate",
+      "center": {
+        "x": 0,
+        "y": 7,
+        "z": 196
+      },
+      "size": {
+        "x": 44,
+        "y": 14,
+        "z": 1.2
+      }
+    },
+    {
+      "id": "bawn-north-cren-parapet-27",
+      "kind": "parapet",
+      "center": {
+        "x": 0,
+        "y": 10,
+        "z": 4
+      },
+      "size": {
+        "x": 400,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-0-28",
+      "kind": "merlon",
+      "center": {
+        "x": -198,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-1-29",
+      "kind": "merlon",
+      "center": {
+        "x": -192,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-2-30",
+      "kind": "merlon",
+      "center": {
+        "x": -186,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-3-31",
+      "kind": "merlon",
+      "center": {
+        "x": -180,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-4-32",
+      "kind": "merlon",
+      "center": {
+        "x": -174,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-5-33",
+      "kind": "merlon",
+      "center": {
+        "x": -168,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-6-34",
+      "kind": "merlon",
+      "center": {
+        "x": -162,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-7-35",
+      "kind": "merlon",
+      "center": {
+        "x": -156,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-8-36",
+      "kind": "merlon",
+      "center": {
+        "x": -150,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-9-37",
+      "kind": "merlon",
+      "center": {
+        "x": -144,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-10-38",
+      "kind": "merlon",
+      "center": {
+        "x": -138,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-11-39",
+      "kind": "merlon",
+      "center": {
+        "x": -132,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-12-40",
+      "kind": "merlon",
+      "center": {
+        "x": -126,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-13-41",
+      "kind": "merlon",
+      "center": {
+        "x": -120,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-14-42",
+      "kind": "merlon",
+      "center": {
+        "x": -114,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-15-43",
+      "kind": "merlon",
+      "center": {
+        "x": -108,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-16-44",
+      "kind": "merlon",
+      "center": {
+        "x": -102,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-17-45",
+      "kind": "merlon",
+      "center": {
+        "x": -96,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-18-46",
+      "kind": "merlon",
+      "center": {
+        "x": -90,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-19-47",
+      "kind": "merlon",
+      "center": {
+        "x": -84,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-20-48",
+      "kind": "merlon",
+      "center": {
+        "x": -78,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-21-49",
+      "kind": "merlon",
+      "center": {
+        "x": -72,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-22-50",
+      "kind": "merlon",
+      "center": {
+        "x": -66,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-23-51",
+      "kind": "merlon",
+      "center": {
+        "x": -60,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-24-52",
+      "kind": "merlon",
+      "center": {
+        "x": -54,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-25-53",
+      "kind": "merlon",
+      "center": {
+        "x": -48,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-26-54",
+      "kind": "merlon",
+      "center": {
+        "x": -42,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-27-55",
+      "kind": "merlon",
+      "center": {
+        "x": -36,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-28-56",
+      "kind": "merlon",
+      "center": {
+        "x": -30,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-29-57",
+      "kind": "merlon",
+      "center": {
+        "x": -24,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-30-58",
+      "kind": "merlon",
+      "center": {
+        "x": -18,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-31-59",
+      "kind": "merlon",
+      "center": {
+        "x": -12,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-32-60",
+      "kind": "merlon",
+      "center": {
+        "x": -6,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-33-61",
+      "kind": "merlon",
+      "center": {
+        "x": 0,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-34-62",
+      "kind": "merlon",
+      "center": {
+        "x": 6,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-35-63",
+      "kind": "merlon",
+      "center": {
+        "x": 12,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-36-64",
+      "kind": "merlon",
+      "center": {
+        "x": 18,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-37-65",
+      "kind": "merlon",
+      "center": {
+        "x": 24,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-38-66",
+      "kind": "merlon",
+      "center": {
+        "x": 30,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-39-67",
+      "kind": "merlon",
+      "center": {
+        "x": 36,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-40-68",
+      "kind": "merlon",
+      "center": {
+        "x": 42,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-41-69",
+      "kind": "merlon",
+      "center": {
+        "x": 48,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-42-70",
+      "kind": "merlon",
+      "center": {
+        "x": 54,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-43-71",
+      "kind": "merlon",
+      "center": {
+        "x": 60,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-44-72",
+      "kind": "merlon",
+      "center": {
+        "x": 66,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-45-73",
+      "kind": "merlon",
+      "center": {
+        "x": 72,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-46-74",
+      "kind": "merlon",
+      "center": {
+        "x": 78,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-47-75",
+      "kind": "merlon",
+      "center": {
+        "x": 84,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-48-76",
+      "kind": "merlon",
+      "center": {
+        "x": 90,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-49-77",
+      "kind": "merlon",
+      "center": {
+        "x": 96,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-50-78",
+      "kind": "merlon",
+      "center": {
+        "x": 102,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-51-79",
+      "kind": "merlon",
+      "center": {
+        "x": 108,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-52-80",
+      "kind": "merlon",
+      "center": {
+        "x": 114,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-53-81",
+      "kind": "merlon",
+      "center": {
+        "x": 120,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-54-82",
+      "kind": "merlon",
+      "center": {
+        "x": 126,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-55-83",
+      "kind": "merlon",
+      "center": {
+        "x": 132,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-56-84",
+      "kind": "merlon",
+      "center": {
+        "x": 138,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-57-85",
+      "kind": "merlon",
+      "center": {
+        "x": 144,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-58-86",
+      "kind": "merlon",
+      "center": {
+        "x": 150,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-59-87",
+      "kind": "merlon",
+      "center": {
+        "x": 156,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-60-88",
+      "kind": "merlon",
+      "center": {
+        "x": 162,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-61-89",
+      "kind": "merlon",
+      "center": {
+        "x": 168,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-62-90",
+      "kind": "merlon",
+      "center": {
+        "x": 174,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-63-91",
+      "kind": "merlon",
+      "center": {
+        "x": 180,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-64-92",
+      "kind": "merlon",
+      "center": {
+        "x": 186,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-65-93",
+      "kind": "merlon",
+      "center": {
+        "x": 192,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-north-cren-merlon-66-94",
+      "kind": "merlon",
+      "center": {
+        "x": 198,
+        "y": 12.5,
+        "z": 4
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-parapet-96",
+      "kind": "parapet",
+      "center": {
+        "x": 0,
+        "y": 10,
+        "z": 196
+      },
+      "size": {
+        "x": 400,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-0-97",
+      "kind": "merlon",
+      "center": {
+        "x": -198,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-1-98",
+      "kind": "merlon",
+      "center": {
+        "x": -192,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-2-99",
+      "kind": "merlon",
+      "center": {
+        "x": -186,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-3-100",
+      "kind": "merlon",
+      "center": {
+        "x": -180,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-4-101",
+      "kind": "merlon",
+      "center": {
+        "x": -174,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-5-102",
+      "kind": "merlon",
+      "center": {
+        "x": -168,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-6-103",
+      "kind": "merlon",
+      "center": {
+        "x": -162,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-7-104",
+      "kind": "merlon",
+      "center": {
+        "x": -156,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-8-105",
+      "kind": "merlon",
+      "center": {
+        "x": -150,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-9-106",
+      "kind": "merlon",
+      "center": {
+        "x": -144,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-10-107",
+      "kind": "merlon",
+      "center": {
+        "x": -138,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-11-108",
+      "kind": "merlon",
+      "center": {
+        "x": -132,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-12-109",
+      "kind": "merlon",
+      "center": {
+        "x": -126,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-13-110",
+      "kind": "merlon",
+      "center": {
+        "x": -120,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-14-111",
+      "kind": "merlon",
+      "center": {
+        "x": -114,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-15-112",
+      "kind": "merlon",
+      "center": {
+        "x": -108,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-16-113",
+      "kind": "merlon",
+      "center": {
+        "x": -102,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-17-114",
+      "kind": "merlon",
+      "center": {
+        "x": -96,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-18-115",
+      "kind": "merlon",
+      "center": {
+        "x": -90,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-19-116",
+      "kind": "merlon",
+      "center": {
+        "x": -84,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-20-117",
+      "kind": "merlon",
+      "center": {
+        "x": -78,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-21-118",
+      "kind": "merlon",
+      "center": {
+        "x": -72,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-22-119",
+      "kind": "merlon",
+      "center": {
+        "x": -66,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-23-120",
+      "kind": "merlon",
+      "center": {
+        "x": -60,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-24-121",
+      "kind": "merlon",
+      "center": {
+        "x": -54,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-25-122",
+      "kind": "merlon",
+      "center": {
+        "x": -48,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-26-123",
+      "kind": "merlon",
+      "center": {
+        "x": -42,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-27-124",
+      "kind": "merlon",
+      "center": {
+        "x": -36,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-28-125",
+      "kind": "merlon",
+      "center": {
+        "x": -30,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-29-126",
+      "kind": "merlon",
+      "center": {
+        "x": -24,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-30-127",
+      "kind": "merlon",
+      "center": {
+        "x": -18,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-31-128",
+      "kind": "merlon",
+      "center": {
+        "x": -12,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-32-129",
+      "kind": "merlon",
+      "center": {
+        "x": -6,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-33-130",
+      "kind": "merlon",
+      "center": {
+        "x": 0,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-34-131",
+      "kind": "merlon",
+      "center": {
+        "x": 6,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-35-132",
+      "kind": "merlon",
+      "center": {
+        "x": 12,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-36-133",
+      "kind": "merlon",
+      "center": {
+        "x": 18,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-37-134",
+      "kind": "merlon",
+      "center": {
+        "x": 24,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-38-135",
+      "kind": "merlon",
+      "center": {
+        "x": 30,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-39-136",
+      "kind": "merlon",
+      "center": {
+        "x": 36,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-40-137",
+      "kind": "merlon",
+      "center": {
+        "x": 42,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-41-138",
+      "kind": "merlon",
+      "center": {
+        "x": 48,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-42-139",
+      "kind": "merlon",
+      "center": {
+        "x": 54,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-43-140",
+      "kind": "merlon",
+      "center": {
+        "x": 60,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-44-141",
+      "kind": "merlon",
+      "center": {
+        "x": 66,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-45-142",
+      "kind": "merlon",
+      "center": {
+        "x": 72,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-46-143",
+      "kind": "merlon",
+      "center": {
+        "x": 78,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-47-144",
+      "kind": "merlon",
+      "center": {
+        "x": 84,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-48-145",
+      "kind": "merlon",
+      "center": {
+        "x": 90,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-49-146",
+      "kind": "merlon",
+      "center": {
+        "x": 96,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-50-147",
+      "kind": "merlon",
+      "center": {
+        "x": 102,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-51-148",
+      "kind": "merlon",
+      "center": {
+        "x": 108,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-52-149",
+      "kind": "merlon",
+      "center": {
+        "x": 114,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-53-150",
+      "kind": "merlon",
+      "center": {
+        "x": 120,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-54-151",
+      "kind": "merlon",
+      "center": {
+        "x": 126,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-55-152",
+      "kind": "merlon",
+      "center": {
+        "x": 132,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-56-153",
+      "kind": "merlon",
+      "center": {
+        "x": 138,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-57-154",
+      "kind": "merlon",
+      "center": {
+        "x": 144,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-58-155",
+      "kind": "merlon",
+      "center": {
+        "x": 150,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-59-156",
+      "kind": "merlon",
+      "center": {
+        "x": 156,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-60-157",
+      "kind": "merlon",
+      "center": {
+        "x": 162,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-61-158",
+      "kind": "merlon",
+      "center": {
+        "x": 168,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-62-159",
+      "kind": "merlon",
+      "center": {
+        "x": 174,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-63-160",
+      "kind": "merlon",
+      "center": {
+        "x": 180,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-64-161",
+      "kind": "merlon",
+      "center": {
+        "x": 186,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-65-162",
+      "kind": "merlon",
+      "center": {
+        "x": 192,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-south-cren-merlon-66-163",
+      "kind": "merlon",
+      "center": {
+        "x": 198,
+        "y": 12.5,
+        "z": 196
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-west-cren-parapet-165",
+      "kind": "parapet",
+      "center": {
+        "x": -196,
+        "y": 10,
+        "z": 88
+      },
+      "size": {
+        "x": 160,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-0-166",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 10
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-1-167",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 16
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-2-168",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 22
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-3-169",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 28
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-4-170",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 34
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-5-171",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 40
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-6-172",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 46
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-7-173",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-8-174",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 58
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-9-175",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 64
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-10-176",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 70
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-11-177",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 76
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-12-178",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 82
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-13-179",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 88
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-14-180",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 94
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-15-181",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 100
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-16-182",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 106
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-17-183",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 112
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-18-184",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 118
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-19-185",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 124
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-20-186",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 130
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-21-187",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 136
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-22-188",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 142
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-23-189",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 148
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-24-190",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 154
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-25-191",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 160
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-west-cren-merlon-26-192",
+      "kind": "merlon",
+      "center": {
+        "x": -196,
+        "y": 12.5,
+        "z": 166
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-parapet-194",
+      "kind": "parapet",
+      "center": {
+        "x": 196,
+        "y": 10,
+        "z": 88
+      },
+      "size": {
+        "x": 160,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-0-195",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 10
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-1-196",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 16
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-2-197",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 22
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-3-198",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 28
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-4-199",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 34
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-5-200",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 40
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-6-201",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 46
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-7-202",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-8-203",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 58
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-9-204",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 64
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-10-205",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 70
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-11-206",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 76
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-12-207",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 82
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-13-208",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 88
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-14-209",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 94
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-15-210",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 100
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-16-211",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 106
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-17-212",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 112
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-18-213",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 118
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-19-214",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 124
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-20-215",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 130
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-21-216",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 136
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-22-217",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 142
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-23-218",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 148
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-24-219",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 154
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-25-220",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 160
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "bawn-east-cren-merlon-26-221",
+      "kind": "merlon",
+      "center": {
+        "x": 196,
+        "y": 12.5,
+        "z": 166
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-nw-crown-0-parapet-238",
+      "kind": "parapet",
+      "center": {
+        "x": -210,
+        "y": 26,
+        "z": -16
+      },
+      "size": {
+        "x": 20,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-nw-crown-0-merlon-0-239",
+      "kind": "merlon",
+      "center": {
+        "x": -216,
+        "y": 28.5,
+        "z": -16
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-nw-crown-0-merlon-1-240",
+      "kind": "merlon",
+      "center": {
+        "x": -210,
+        "y": 28.5,
+        "z": -16
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-nw-crown-0-merlon-2-241",
+      "kind": "merlon",
+      "center": {
+        "x": -204,
+        "y": 28.5,
+        "z": -16
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-nw-crown-1-parapet-242",
+      "kind": "parapet",
+      "center": {
+        "x": -200,
+        "y": 26,
+        "z": -8
+      },
+      "size": {
+        "x": 16,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-nw-crown-1-merlon-0-243",
+      "kind": "merlon",
+      "center": {
+        "x": -200,
+        "y": 28.5,
+        "z": -14
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-nw-crown-1-merlon-1-244",
+      "kind": "merlon",
+      "center": {
+        "x": -200,
+        "y": 28.5,
+        "z": -8
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-nw-crown-1-merlon-2-245",
+      "kind": "merlon",
+      "center": {
+        "x": -200,
+        "y": 28.5,
+        "z": -2
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-nw-crown-2-parapet-246",
+      "kind": "parapet",
+      "center": {
+        "x": -210,
+        "y": 26,
+        "z": 0
+      },
+      "size": {
+        "x": 20,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-nw-crown-2-merlon-0-247",
+      "kind": "merlon",
+      "center": {
+        "x": -204,
+        "y": 28.5,
+        "z": 0
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-nw-crown-2-merlon-1-248",
+      "kind": "merlon",
+      "center": {
+        "x": -210,
+        "y": 28.5,
+        "z": 0
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-nw-crown-2-merlon-2-249",
+      "kind": "merlon",
+      "center": {
+        "x": -216,
+        "y": 28.5,
+        "z": 0
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-nw-crown-3-parapet-250",
+      "kind": "parapet",
+      "center": {
+        "x": -220,
+        "y": 26,
+        "z": -8
+      },
+      "size": {
+        "x": 16,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-nw-crown-3-merlon-0-251",
+      "kind": "merlon",
+      "center": {
+        "x": -220,
+        "y": 28.5,
+        "z": -2
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-nw-crown-3-merlon-1-252",
+      "kind": "merlon",
+      "center": {
+        "x": -220,
+        "y": 28.5,
+        "z": -8
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-nw-crown-3-merlon-2-253",
+      "kind": "merlon",
+      "center": {
+        "x": -220,
+        "y": 28.5,
+        "z": -14
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-nw-bartizan-0-corbel-254",
+      "kind": "bartizan",
+      "center": {
+        "x": -220,
+        "y": 18,
+        "z": -16
+      },
+      "size": {
+        "x": 8,
+        "y": 3,
+        "z": 8
+      },
+      "radius": 2.2
+    },
+    {
+      "id": "tower-nw-bartizan-0-drum-255",
+      "kind": "bartizan",
+      "center": {
+        "x": -220,
+        "y": 25,
+        "z": -16
+      },
+      "size": {
+        "x": 8,
+        "y": 11,
+        "z": 8
+      },
+      "radius": 4
+    },
+    {
+      "id": "tower-nw-bartizan-0-cap-256",
+      "kind": "conicalRoof",
+      "center": {
+        "x": -220,
+        "y": 34,
+        "z": -16
+      },
+      "size": {
+        "x": 9.2,
+        "y": 7,
+        "z": 9.2
+      },
+      "radius": 4.6
+    },
+    {
+      "id": "tower-nw-bartizan-1-corbel-257",
+      "kind": "bartizan",
+      "center": {
+        "x": -200,
+        "y": 18,
+        "z": 0
+      },
+      "size": {
+        "x": 8,
+        "y": 3,
+        "z": 8
+      },
+      "radius": 2.2
+    },
+    {
+      "id": "tower-nw-bartizan-1-drum-258",
+      "kind": "bartizan",
+      "center": {
+        "x": -200,
+        "y": 25,
+        "z": 0
+      },
+      "size": {
+        "x": 8,
+        "y": 11,
+        "z": 8
+      },
+      "radius": 4
+    },
+    {
+      "id": "tower-nw-bartizan-1-cap-259",
+      "kind": "conicalRoof",
+      "center": {
+        "x": -200,
+        "y": 34,
+        "z": 0
+      },
+      "size": {
+        "x": 9.2,
+        "y": 7,
+        "z": 9.2
+      },
+      "radius": 4.6
+    },
+    {
+      "id": "tower-ne-crown-0-parapet-266",
+      "kind": "parapet",
+      "center": {
+        "x": 210,
+        "y": 26,
+        "z": -16
+      },
+      "size": {
+        "x": 20,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-ne-crown-0-merlon-0-267",
+      "kind": "merlon",
+      "center": {
+        "x": 204,
+        "y": 28.5,
+        "z": -16
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-ne-crown-0-merlon-1-268",
+      "kind": "merlon",
+      "center": {
+        "x": 210,
+        "y": 28.5,
+        "z": -16
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-ne-crown-0-merlon-2-269",
+      "kind": "merlon",
+      "center": {
+        "x": 216,
+        "y": 28.5,
+        "z": -16
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-ne-crown-1-parapet-270",
+      "kind": "parapet",
+      "center": {
+        "x": 220,
+        "y": 26,
+        "z": -8
+      },
+      "size": {
+        "x": 16,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-ne-crown-1-merlon-0-271",
+      "kind": "merlon",
+      "center": {
+        "x": 220,
+        "y": 28.5,
+        "z": -14
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-ne-crown-1-merlon-1-272",
+      "kind": "merlon",
+      "center": {
+        "x": 220,
+        "y": 28.5,
+        "z": -8
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-ne-crown-1-merlon-2-273",
+      "kind": "merlon",
+      "center": {
+        "x": 220,
+        "y": 28.5,
+        "z": -2
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-ne-crown-2-parapet-274",
+      "kind": "parapet",
+      "center": {
+        "x": 210,
+        "y": 26,
+        "z": 0
+      },
+      "size": {
+        "x": 20,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-ne-crown-2-merlon-0-275",
+      "kind": "merlon",
+      "center": {
+        "x": 216,
+        "y": 28.5,
+        "z": 0
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-ne-crown-2-merlon-1-276",
+      "kind": "merlon",
+      "center": {
+        "x": 210,
+        "y": 28.5,
+        "z": 0
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-ne-crown-2-merlon-2-277",
+      "kind": "merlon",
+      "center": {
+        "x": 204,
+        "y": 28.5,
+        "z": 0
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-ne-crown-3-parapet-278",
+      "kind": "parapet",
+      "center": {
+        "x": 200,
+        "y": 26,
+        "z": -8
+      },
+      "size": {
+        "x": 16,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-ne-crown-3-merlon-0-279",
+      "kind": "merlon",
+      "center": {
+        "x": 200,
+        "y": 28.5,
+        "z": -2
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-ne-crown-3-merlon-1-280",
+      "kind": "merlon",
+      "center": {
+        "x": 200,
+        "y": 28.5,
+        "z": -8
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-ne-crown-3-merlon-2-281",
+      "kind": "merlon",
+      "center": {
+        "x": 200,
+        "y": 28.5,
+        "z": -14
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-ne-bartizan-0-corbel-282",
+      "kind": "bartizan",
+      "center": {
+        "x": 200,
+        "y": 18,
+        "z": -16
+      },
+      "size": {
+        "x": 8,
+        "y": 3,
+        "z": 8
+      },
+      "radius": 2.2
+    },
+    {
+      "id": "tower-ne-bartizan-0-drum-283",
+      "kind": "bartizan",
+      "center": {
+        "x": 200,
+        "y": 25,
+        "z": -16
+      },
+      "size": {
+        "x": 8,
+        "y": 11,
+        "z": 8
+      },
+      "radius": 4
+    },
+    {
+      "id": "tower-ne-bartizan-0-cap-284",
+      "kind": "conicalRoof",
+      "center": {
+        "x": 200,
+        "y": 34,
+        "z": -16
+      },
+      "size": {
+        "x": 9.2,
+        "y": 7,
+        "z": 9.2
+      },
+      "radius": 4.6
+    },
+    {
+      "id": "tower-ne-bartizan-1-corbel-285",
+      "kind": "bartizan",
+      "center": {
+        "x": 220,
+        "y": 18,
+        "z": 0
+      },
+      "size": {
+        "x": 8,
+        "y": 3,
+        "z": 8
+      },
+      "radius": 2.2
+    },
+    {
+      "id": "tower-ne-bartizan-1-drum-286",
+      "kind": "bartizan",
+      "center": {
+        "x": 220,
+        "y": 25,
+        "z": 0
+      },
+      "size": {
+        "x": 8,
+        "y": 11,
+        "z": 8
+      },
+      "radius": 4
+    },
+    {
+      "id": "tower-ne-bartizan-1-cap-287",
+      "kind": "conicalRoof",
+      "center": {
+        "x": 220,
+        "y": 34,
+        "z": 0
+      },
+      "size": {
+        "x": 9.2,
+        "y": 7,
+        "z": 9.2
+      },
+      "radius": 4.6
+    },
+    {
+      "id": "tower-se-crown-0-parapet-294",
+      "kind": "parapet",
+      "center": {
+        "x": 210,
+        "y": 26,
+        "z": 200
+      },
+      "size": {
+        "x": 20,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-se-crown-0-merlon-0-295",
+      "kind": "merlon",
+      "center": {
+        "x": 204,
+        "y": 28.5,
+        "z": 200
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-se-crown-0-merlon-1-296",
+      "kind": "merlon",
+      "center": {
+        "x": 210,
+        "y": 28.5,
+        "z": 200
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-se-crown-0-merlon-2-297",
+      "kind": "merlon",
+      "center": {
+        "x": 216,
+        "y": 28.5,
+        "z": 200
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-se-crown-1-parapet-298",
+      "kind": "parapet",
+      "center": {
+        "x": 220,
+        "y": 26,
+        "z": 208
+      },
+      "size": {
+        "x": 16,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-se-crown-1-merlon-0-299",
+      "kind": "merlon",
+      "center": {
+        "x": 220,
+        "y": 28.5,
+        "z": 202
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-se-crown-1-merlon-1-300",
+      "kind": "merlon",
+      "center": {
+        "x": 220,
+        "y": 28.5,
+        "z": 208
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-se-crown-1-merlon-2-301",
+      "kind": "merlon",
+      "center": {
+        "x": 220,
+        "y": 28.5,
+        "z": 214
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-se-crown-2-parapet-302",
+      "kind": "parapet",
+      "center": {
+        "x": 210,
+        "y": 26,
+        "z": 216
+      },
+      "size": {
+        "x": 20,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-se-crown-2-merlon-0-303",
+      "kind": "merlon",
+      "center": {
+        "x": 216,
+        "y": 28.5,
+        "z": 216
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-se-crown-2-merlon-1-304",
+      "kind": "merlon",
+      "center": {
+        "x": 210,
+        "y": 28.5,
+        "z": 216
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-se-crown-2-merlon-2-305",
+      "kind": "merlon",
+      "center": {
+        "x": 204,
+        "y": 28.5,
+        "z": 216
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-se-crown-3-parapet-306",
+      "kind": "parapet",
+      "center": {
+        "x": 200,
+        "y": 26,
+        "z": 208
+      },
+      "size": {
+        "x": 16,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-se-crown-3-merlon-0-307",
+      "kind": "merlon",
+      "center": {
+        "x": 200,
+        "y": 28.5,
+        "z": 214
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-se-crown-3-merlon-1-308",
+      "kind": "merlon",
+      "center": {
+        "x": 200,
+        "y": 28.5,
+        "z": 208
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-se-crown-3-merlon-2-309",
+      "kind": "merlon",
+      "center": {
+        "x": 200,
+        "y": 28.5,
+        "z": 202
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-se-bartizan-0-corbel-310",
+      "kind": "bartizan",
+      "center": {
+        "x": 200,
+        "y": 18,
+        "z": 200
+      },
+      "size": {
+        "x": 8,
+        "y": 3,
+        "z": 8
+      },
+      "radius": 2.2
+    },
+    {
+      "id": "tower-se-bartizan-0-drum-311",
+      "kind": "bartizan",
+      "center": {
+        "x": 200,
+        "y": 25,
+        "z": 200
+      },
+      "size": {
+        "x": 8,
+        "y": 11,
+        "z": 8
+      },
+      "radius": 4
+    },
+    {
+      "id": "tower-se-bartizan-0-cap-312",
+      "kind": "conicalRoof",
+      "center": {
+        "x": 200,
+        "y": 34,
+        "z": 200
+      },
+      "size": {
+        "x": 9.2,
+        "y": 7,
+        "z": 9.2
+      },
+      "radius": 4.6
+    },
+    {
+      "id": "tower-se-bartizan-1-corbel-313",
+      "kind": "bartizan",
+      "center": {
+        "x": 220,
+        "y": 18,
+        "z": 216
+      },
+      "size": {
+        "x": 8,
+        "y": 3,
+        "z": 8
+      },
+      "radius": 2.2
+    },
+    {
+      "id": "tower-se-bartizan-1-drum-314",
+      "kind": "bartizan",
+      "center": {
+        "x": 220,
+        "y": 25,
+        "z": 216
+      },
+      "size": {
+        "x": 8,
+        "y": 11,
+        "z": 8
+      },
+      "radius": 4
+    },
+    {
+      "id": "tower-se-bartizan-1-cap-315",
+      "kind": "conicalRoof",
+      "center": {
+        "x": 220,
+        "y": 34,
+        "z": 216
+      },
+      "size": {
+        "x": 9.2,
+        "y": 7,
+        "z": 9.2
+      },
+      "radius": 4.6
+    },
+    {
+      "id": "tower-sw-crown-0-parapet-324",
+      "kind": "parapet",
+      "center": {
+        "x": -210,
+        "y": 34.5,
+        "z": 200
+      },
+      "size": {
+        "x": 20,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-sw-crown-0-merlon-0-325",
+      "kind": "merlon",
+      "center": {
+        "x": -216,
+        "y": 37,
+        "z": 200
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-sw-crown-0-merlon-1-326",
+      "kind": "merlon",
+      "center": {
+        "x": -210,
+        "y": 37,
+        "z": 200
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-sw-crown-0-merlon-2-327",
+      "kind": "merlon",
+      "center": {
+        "x": -204,
+        "y": 37,
+        "z": 200
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "tower-sw-crown-1-parapet-328",
+      "kind": "parapet",
+      "center": {
+        "x": -200,
+        "y": 34.5,
+        "z": 208
+      },
+      "size": {
+        "x": 16,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-sw-crown-1-merlon-0-329",
+      "kind": "merlon",
+      "center": {
+        "x": -200,
+        "y": 37,
+        "z": 202
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-sw-crown-1-merlon-1-330",
+      "kind": "merlon",
+      "center": {
+        "x": -200,
+        "y": 37,
+        "z": 208
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-sw-crown-1-merlon-2-331",
+      "kind": "merlon",
+      "center": {
+        "x": -200,
+        "y": 37,
+        "z": 214
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "tower-sw-crown-2-parapet-332",
+      "kind": "parapet",
+      "center": {
+        "x": -210,
+        "y": 34.5,
+        "z": 216
+      },
+      "size": {
+        "x": 20,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-sw-crown-2-merlon-0-333",
+      "kind": "merlon",
+      "center": {
+        "x": -204,
+        "y": 37,
+        "z": 216
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-sw-crown-2-merlon-1-334",
+      "kind": "merlon",
+      "center": {
+        "x": -210,
+        "y": 37,
+        "z": 216
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-sw-crown-2-merlon-2-335",
+      "kind": "merlon",
+      "center": {
+        "x": -216,
+        "y": 37,
+        "z": 216
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "tower-sw-crown-3-parapet-336",
+      "kind": "parapet",
+      "center": {
+        "x": -220,
+        "y": 34.5,
+        "z": 208
+      },
+      "size": {
+        "x": 16,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-sw-crown-3-merlon-0-337",
+      "kind": "merlon",
+      "center": {
+        "x": -220,
+        "y": 37,
+        "z": 214
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-sw-crown-3-merlon-1-338",
+      "kind": "merlon",
+      "center": {
+        "x": -220,
+        "y": 37,
+        "z": 208
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-sw-crown-3-merlon-2-339",
+      "kind": "merlon",
+      "center": {
+        "x": -220,
+        "y": 37,
+        "z": 202
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "tower-sw-bartizan-0-corbel-340",
+      "kind": "bartizan",
+      "center": {
+        "x": -220,
+        "y": 26.5,
+        "z": 200
+      },
+      "size": {
+        "x": 8,
+        "y": 3,
+        "z": 8
+      },
+      "radius": 2.2
+    },
+    {
+      "id": "tower-sw-bartizan-0-drum-341",
+      "kind": "bartizan",
+      "center": {
+        "x": -220,
+        "y": 33.5,
+        "z": 200
+      },
+      "size": {
+        "x": 8,
+        "y": 11,
+        "z": 8
+      },
+      "radius": 4
+    },
+    {
+      "id": "tower-sw-bartizan-0-cap-342",
+      "kind": "conicalRoof",
+      "center": {
+        "x": -220,
+        "y": 42.5,
+        "z": 200
+      },
+      "size": {
+        "x": 9.2,
+        "y": 7,
+        "z": 9.2
+      },
+      "radius": 4.6
+    },
+    {
+      "id": "tower-sw-bartizan-1-corbel-343",
+      "kind": "bartizan",
+      "center": {
+        "x": -200,
+        "y": 26.5,
+        "z": 216
+      },
+      "size": {
+        "x": 8,
+        "y": 3,
+        "z": 8
+      },
+      "radius": 2.2
+    },
+    {
+      "id": "tower-sw-bartizan-1-drum-344",
+      "kind": "bartizan",
+      "center": {
+        "x": -200,
+        "y": 33.5,
+        "z": 216
+      },
+      "size": {
+        "x": 8,
+        "y": 11,
+        "z": 8
+      },
+      "radius": 4
+    },
+    {
+      "id": "tower-sw-bartizan-1-cap-345",
+      "kind": "conicalRoof",
+      "center": {
+        "x": -200,
+        "y": 42.5,
+        "z": 216
+      },
+      "size": {
+        "x": 9.2,
+        "y": 7,
+        "z": 9.2
+      },
+      "radius": 4.6
+    },
+    {
+      "id": "gatetower-0-crown-0-parapet-350",
+      "kind": "parapet",
+      "center": {
+        "x": -50,
+        "y": 17.5,
+        "z": 200
+      },
+      "size": {
+        "x": 20,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "gatetower-0-crown-0-merlon-0-351",
+      "kind": "merlon",
+      "center": {
+        "x": -56,
+        "y": 20,
+        "z": 200
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "gatetower-0-crown-0-merlon-1-352",
+      "kind": "merlon",
+      "center": {
+        "x": -50,
+        "y": 20,
+        "z": 200
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "gatetower-0-crown-0-merlon-2-353",
+      "kind": "merlon",
+      "center": {
+        "x": -44,
+        "y": 20,
+        "z": 200
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "gatetower-0-crown-1-parapet-354",
+      "kind": "parapet",
+      "center": {
+        "x": -40,
+        "y": 17.5,
+        "z": 208
+      },
+      "size": {
+        "x": 16,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "gatetower-0-crown-1-merlon-0-355",
+      "kind": "merlon",
+      "center": {
+        "x": -40,
+        "y": 20,
+        "z": 202
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "gatetower-0-crown-1-merlon-1-356",
+      "kind": "merlon",
+      "center": {
+        "x": -40,
+        "y": 20,
+        "z": 208
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "gatetower-0-crown-1-merlon-2-357",
+      "kind": "merlon",
+      "center": {
+        "x": -40,
+        "y": 20,
+        "z": 214
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "gatetower-0-crown-2-parapet-358",
+      "kind": "parapet",
+      "center": {
+        "x": -50,
+        "y": 17.5,
+        "z": 216
+      },
+      "size": {
+        "x": 20,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "gatetower-0-crown-2-merlon-0-359",
+      "kind": "merlon",
+      "center": {
+        "x": -44,
+        "y": 20,
+        "z": 216
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "gatetower-0-crown-2-merlon-1-360",
+      "kind": "merlon",
+      "center": {
+        "x": -50,
+        "y": 20,
+        "z": 216
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "gatetower-0-crown-2-merlon-2-361",
+      "kind": "merlon",
+      "center": {
+        "x": -56,
+        "y": 20,
+        "z": 216
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "gatetower-0-crown-3-parapet-362",
+      "kind": "parapet",
+      "center": {
+        "x": -60,
+        "y": 17.5,
+        "z": 208
+      },
+      "size": {
+        "x": 16,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "gatetower-0-crown-3-merlon-0-363",
+      "kind": "merlon",
+      "center": {
+        "x": -60,
+        "y": 20,
+        "z": 214
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "gatetower-0-crown-3-merlon-1-364",
+      "kind": "merlon",
+      "center": {
+        "x": -60,
+        "y": 20,
+        "z": 208
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "gatetower-0-crown-3-merlon-2-365",
+      "kind": "merlon",
+      "center": {
+        "x": -60,
+        "y": 20,
+        "z": 202
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "gatetower-1-crown-0-parapet-370",
+      "kind": "parapet",
+      "center": {
+        "x": 50,
+        "y": 17.5,
+        "z": 200
+      },
+      "size": {
+        "x": 20,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "gatetower-1-crown-0-merlon-0-371",
+      "kind": "merlon",
+      "center": {
+        "x": 44,
+        "y": 20,
+        "z": 200
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "gatetower-1-crown-0-merlon-1-372",
+      "kind": "merlon",
+      "center": {
+        "x": 50,
+        "y": 20,
+        "z": 200
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "gatetower-1-crown-0-merlon-2-373",
+      "kind": "merlon",
+      "center": {
+        "x": 56,
+        "y": 20,
+        "z": 200
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "gatetower-1-crown-1-parapet-374",
+      "kind": "parapet",
+      "center": {
+        "x": 60,
+        "y": 17.5,
+        "z": 208
+      },
+      "size": {
+        "x": 16,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "gatetower-1-crown-1-merlon-0-375",
+      "kind": "merlon",
+      "center": {
+        "x": 60,
+        "y": 20,
+        "z": 202
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "gatetower-1-crown-1-merlon-1-376",
+      "kind": "merlon",
+      "center": {
+        "x": 60,
+        "y": 20,
+        "z": 208
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "gatetower-1-crown-1-merlon-2-377",
+      "kind": "merlon",
+      "center": {
+        "x": 60,
+        "y": 20,
+        "z": 214
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -1.5707963267948966
+    },
+    {
+      "id": "gatetower-1-crown-2-parapet-378",
+      "kind": "parapet",
+      "center": {
+        "x": 50,
+        "y": 17.5,
+        "z": 216
+      },
+      "size": {
+        "x": 20,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "gatetower-1-crown-2-merlon-0-379",
+      "kind": "merlon",
+      "center": {
+        "x": 56,
+        "y": 20,
+        "z": 216
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "gatetower-1-crown-2-merlon-1-380",
+      "kind": "merlon",
+      "center": {
+        "x": 50,
+        "y": 20,
+        "z": 216
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "gatetower-1-crown-2-merlon-2-381",
+      "kind": "merlon",
+      "center": {
+        "x": 44,
+        "y": 20,
+        "z": 216
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": -3.141592653589793
+    },
+    {
+      "id": "gatetower-1-crown-3-parapet-382",
+      "kind": "parapet",
+      "center": {
+        "x": 40,
+        "y": 17.5,
+        "z": 208
+      },
+      "size": {
+        "x": 16,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "gatetower-1-crown-3-merlon-0-383",
+      "kind": "merlon",
+      "center": {
+        "x": 40,
+        "y": 20,
+        "z": 214
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "gatetower-1-crown-3-merlon-1-384",
+      "kind": "merlon",
+      "center": {
+        "x": 40,
+        "y": 20,
+        "z": 208
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "gatetower-1-crown-3-merlon-2-385",
+      "kind": "merlon",
+      "center": {
+        "x": 40,
+        "y": 20,
+        "z": 202
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 1.5707963267948966
+    },
+    {
+      "id": "hall-truss-0-402",
+      "kind": "truss",
+      "center": {
+        "x": -80,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-1-403",
+      "kind": "truss",
+      "center": {
+        "x": -70,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-2-404",
+      "kind": "truss",
+      "center": {
+        "x": -60,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-3-405",
+      "kind": "truss",
+      "center": {
+        "x": -50,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-4-406",
+      "kind": "truss",
+      "center": {
+        "x": -40,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-5-407",
+      "kind": "truss",
+      "center": {
+        "x": -30,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-6-408",
+      "kind": "truss",
+      "center": {
+        "x": -20,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-7-409",
+      "kind": "truss",
+      "center": {
+        "x": -10,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-8-410",
+      "kind": "truss",
+      "center": {
+        "x": 0,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-9-411",
+      "kind": "truss",
+      "center": {
+        "x": 10,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-10-412",
+      "kind": "truss",
+      "center": {
+        "x": 20,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-11-413",
+      "kind": "truss",
+      "center": {
+        "x": 30,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-12-414",
+      "kind": "truss",
+      "center": {
+        "x": 40,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-13-415",
+      "kind": "truss",
+      "center": {
+        "x": 50,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-14-416",
+      "kind": "truss",
+      "center": {
+        "x": 60,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-15-417",
+      "kind": "truss",
+      "center": {
+        "x": 70,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-truss-16-418",
+      "kind": "truss",
+      "center": {
+        "x": 80,
+        "y": 20.571428571428573,
+        "z": 78
+      },
+      "size": {
+        "x": 0.9,
+        "y": 3.142857142857143,
+        "z": 44
+      }
+    },
+    {
+      "id": "hall-cren-0-parapet-419",
+      "kind": "parapet",
+      "center": {
+        "x": 0,
+        "y": 19.5,
+        "z": 52
+      },
+      "size": {
+        "x": 160,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-0-420",
+      "kind": "merlon",
+      "center": {
+        "x": -78,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-1-421",
+      "kind": "merlon",
+      "center": {
+        "x": -72,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-2-422",
+      "kind": "merlon",
+      "center": {
+        "x": -66,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-3-423",
+      "kind": "merlon",
+      "center": {
+        "x": -60,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-4-424",
+      "kind": "merlon",
+      "center": {
+        "x": -54,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-5-425",
+      "kind": "merlon",
+      "center": {
+        "x": -48,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-6-426",
+      "kind": "merlon",
+      "center": {
+        "x": -42,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-7-427",
+      "kind": "merlon",
+      "center": {
+        "x": -36,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-8-428",
+      "kind": "merlon",
+      "center": {
+        "x": -30,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-9-429",
+      "kind": "merlon",
+      "center": {
+        "x": -24,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-10-430",
+      "kind": "merlon",
+      "center": {
+        "x": -18,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-11-431",
+      "kind": "merlon",
+      "center": {
+        "x": -12,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-12-432",
+      "kind": "merlon",
+      "center": {
+        "x": -6,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-13-433",
+      "kind": "merlon",
+      "center": {
+        "x": 0,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-14-434",
+      "kind": "merlon",
+      "center": {
+        "x": 6,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-15-435",
+      "kind": "merlon",
+      "center": {
+        "x": 12,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-16-436",
+      "kind": "merlon",
+      "center": {
+        "x": 18,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-17-437",
+      "kind": "merlon",
+      "center": {
+        "x": 24,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-18-438",
+      "kind": "merlon",
+      "center": {
+        "x": 30,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-19-439",
+      "kind": "merlon",
+      "center": {
+        "x": 36,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-20-440",
+      "kind": "merlon",
+      "center": {
+        "x": 42,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-21-441",
+      "kind": "merlon",
+      "center": {
+        "x": 48,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-22-442",
+      "kind": "merlon",
+      "center": {
+        "x": 54,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-23-443",
+      "kind": "merlon",
+      "center": {
+        "x": 60,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-24-444",
+      "kind": "merlon",
+      "center": {
+        "x": 66,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-25-445",
+      "kind": "merlon",
+      "center": {
+        "x": 72,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-0-merlon-26-446",
+      "kind": "merlon",
+      "center": {
+        "x": 78,
+        "y": 22,
+        "z": 52
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-parapet-447",
+      "kind": "parapet",
+      "center": {
+        "x": 0,
+        "y": 19.5,
+        "z": 104
+      },
+      "size": {
+        "x": 160,
+        "y": 1,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-0-448",
+      "kind": "merlon",
+      "center": {
+        "x": -78,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-1-449",
+      "kind": "merlon",
+      "center": {
+        "x": -72,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-2-450",
+      "kind": "merlon",
+      "center": {
+        "x": -66,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-3-451",
+      "kind": "merlon",
+      "center": {
+        "x": -60,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-4-452",
+      "kind": "merlon",
+      "center": {
+        "x": -54,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-5-453",
+      "kind": "merlon",
+      "center": {
+        "x": -48,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-6-454",
+      "kind": "merlon",
+      "center": {
+        "x": -42,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-7-455",
+      "kind": "merlon",
+      "center": {
+        "x": -36,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-8-456",
+      "kind": "merlon",
+      "center": {
+        "x": -30,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-9-457",
+      "kind": "merlon",
+      "center": {
+        "x": -24,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-10-458",
+      "kind": "merlon",
+      "center": {
+        "x": -18,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-11-459",
+      "kind": "merlon",
+      "center": {
+        "x": -12,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-12-460",
+      "kind": "merlon",
+      "center": {
+        "x": -6,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-13-461",
+      "kind": "merlon",
+      "center": {
+        "x": 0,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-14-462",
+      "kind": "merlon",
+      "center": {
+        "x": 6,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-15-463",
+      "kind": "merlon",
+      "center": {
+        "x": 12,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-16-464",
+      "kind": "merlon",
+      "center": {
+        "x": 18,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-17-465",
+      "kind": "merlon",
+      "center": {
+        "x": 24,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-18-466",
+      "kind": "merlon",
+      "center": {
+        "x": 30,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-19-467",
+      "kind": "merlon",
+      "center": {
+        "x": 36,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-20-468",
+      "kind": "merlon",
+      "center": {
+        "x": 42,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-21-469",
+      "kind": "merlon",
+      "center": {
+        "x": 48,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-22-470",
+      "kind": "merlon",
+      "center": {
+        "x": 54,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-23-471",
+      "kind": "merlon",
+      "center": {
+        "x": 60,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-24-472",
+      "kind": "merlon",
+      "center": {
+        "x": 66,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-25-473",
+      "kind": "merlon",
+      "center": {
+        "x": 72,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "hall-cren-1-merlon-26-474",
+      "kind": "merlon",
+      "center": {
+        "x": 78,
+        "y": 22,
+        "z": 104
+      },
+      "size": {
+        "x": 3,
+        "y": 4,
+        "z": 1.5
+      },
+      "rotationY": 0
+    },
+    {
+      "id": "bawn-batter-panel-0-499",
+      "kind": "batter",
+      "center": {
+        "x": 0,
+        "y": 4,
+        "z": 0.6666666666666666
+      },
+      "size": {
+        "x": 401.3333333333333,
+        "y": 8.110350040397627,
+        "z": 1.25
+      },
+      "rotationY": 0,
+      "slope": 0.16514867741462683,
+      "finish": "stone"
+    },
+    {
+      "id": "bawn-batter-panel-1-500",
+      "kind": "batter",
+      "center": {
+        "x": 199.33333333333334,
+        "y": 4,
+        "z": 100
+      },
+      "size": {
+        "x": 201.33333333333334,
+        "y": 8.110350040397627,
+        "z": 1.25
+      },
+      "rotationY": -1.5707963267948966,
+      "slope": 0.16514867741462683,
+      "finish": "stone"
+    },
+    {
+      "id": "bawn-batter-panel-2-501",
+      "kind": "batter",
+      "center": {
+        "x": 0,
+        "y": 4,
+        "z": 199.33333333333334
+      },
+      "size": {
+        "x": 401.3333333333333,
+        "y": 8.110350040397627,
+        "z": 1.25
+      },
+      "rotationY": -3.141592653589793,
+      "slope": 0.16514867741462683,
+      "finish": "stone"
+    },
+    {
+      "id": "bawn-batter-panel-3-502",
+      "kind": "batter",
+      "center": {
+        "x": -199.33333333333334,
+        "y": 4,
+        "z": 100
+      },
+      "size": {
+        "x": 201.33333333333334,
+        "y": 8.110350040397627,
+        "z": 1.25
+      },
+      "rotationY": 1.5707963267948966,
+      "slope": 0.16514867741462683,
+      "finish": "stone"
+    },
+    {
+      "id": "cabin-0-deck-506",
+      "kind": "deck",
+      "center": {
+        "x": -325,
+        "y": 1.2,
+        "z": 60
+      },
+      "size": {
+        "x": 10,
+        "y": 0.6,
+        "z": 24
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-0-roof-507",
+      "kind": "shedRoof",
+      "center": {
+        "x": -317.5,
+        "y": 10.6,
+        "z": 60
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 43
+      },
+      "slope": 0.16,
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-0-post-a-508",
+      "kind": "post",
+      "center": {
+        "x": -330,
+        "y": 5,
+        "z": 44
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-0-post-b-509",
+      "kind": "post",
+      "center": {
+        "x": -330,
+        "y": 5,
+        "z": 76
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-1-deck-513",
+      "kind": "deck",
+      "center": {
+        "x": -325,
+        "y": 1.2,
+        "z": 140
+      },
+      "size": {
+        "x": 10,
+        "y": 0.6,
+        "z": 24
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-1-roof-514",
+      "kind": "shedRoof",
+      "center": {
+        "x": -317.5,
+        "y": 10.6,
+        "z": 140
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 43
+      },
+      "slope": 0.16,
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-1-post-a-515",
+      "kind": "post",
+      "center": {
+        "x": -330,
+        "y": 5,
+        "z": 124
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-1-post-b-516",
+      "kind": "post",
+      "center": {
+        "x": -330,
+        "y": 5,
+        "z": 156
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-2-deck-520",
+      "kind": "deck",
+      "center": {
+        "x": -325,
+        "y": 1.2,
+        "z": 220
+      },
+      "size": {
+        "x": 10,
+        "y": 0.6,
+        "z": 24
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-2-roof-521",
+      "kind": "shedRoof",
+      "center": {
+        "x": -317.5,
+        "y": 10.6,
+        "z": 220
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 43
+      },
+      "slope": 0.16,
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-2-post-a-522",
+      "kind": "post",
+      "center": {
+        "x": -330,
+        "y": 5,
+        "z": 204
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-2-post-b-523",
+      "kind": "post",
+      "center": {
+        "x": -330,
+        "y": 5,
+        "z": 236
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-3-deck-527",
+      "kind": "deck",
+      "center": {
+        "x": -245,
+        "y": 1.2,
+        "z": 60
+      },
+      "size": {
+        "x": 10,
+        "y": 0.6,
+        "z": 24
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-3-roof-528",
+      "kind": "shedRoof",
+      "center": {
+        "x": -237.5,
+        "y": 10.6,
+        "z": 60
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 43
+      },
+      "slope": 0.16,
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-3-post-a-529",
+      "kind": "post",
+      "center": {
+        "x": -250,
+        "y": 5,
+        "z": 44
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-3-post-b-530",
+      "kind": "post",
+      "center": {
+        "x": -250,
+        "y": 5,
+        "z": 76
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-4-deck-534",
+      "kind": "deck",
+      "center": {
+        "x": -245,
+        "y": 1.2,
+        "z": 140
+      },
+      "size": {
+        "x": 10,
+        "y": 0.6,
+        "z": 24
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-4-roof-535",
+      "kind": "shedRoof",
+      "center": {
+        "x": -237.5,
+        "y": 10.6,
+        "z": 140
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 43
+      },
+      "slope": 0.16,
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-4-post-a-536",
+      "kind": "post",
+      "center": {
+        "x": -250,
+        "y": 5,
+        "z": 124
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-4-post-b-537",
+      "kind": "post",
+      "center": {
+        "x": -250,
+        "y": 5,
+        "z": 156
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-5-deck-541",
+      "kind": "deck",
+      "center": {
+        "x": -245,
+        "y": 1.2,
+        "z": 220
+      },
+      "size": {
+        "x": 10,
+        "y": 0.6,
+        "z": 24
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-5-roof-542",
+      "kind": "shedRoof",
+      "center": {
+        "x": -237.5,
+        "y": 10.6,
+        "z": 220
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 43
+      },
+      "slope": 0.16,
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-5-post-a-543",
+      "kind": "post",
+      "center": {
+        "x": -250,
+        "y": 5,
+        "z": 204
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-5-post-b-544",
+      "kind": "post",
+      "center": {
+        "x": -250,
+        "y": 5,
+        "z": 236
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-6-deck-548",
+      "kind": "deck",
+      "center": {
+        "x": -165,
+        "y": 1.2,
+        "z": 60
+      },
+      "size": {
+        "x": 10,
+        "y": 0.6,
+        "z": 24
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-6-roof-549",
+      "kind": "shedRoof",
+      "center": {
+        "x": -157.5,
+        "y": 10.6,
+        "z": 60
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 43
+      },
+      "slope": 0.16,
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-6-post-a-550",
+      "kind": "post",
+      "center": {
+        "x": -170,
+        "y": 5,
+        "z": 44
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-6-post-b-551",
+      "kind": "post",
+      "center": {
+        "x": -170,
+        "y": 5,
+        "z": 76
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-7-deck-555",
+      "kind": "deck",
+      "center": {
+        "x": -165,
+        "y": 1.2,
+        "z": 140
+      },
+      "size": {
+        "x": 10,
+        "y": 0.6,
+        "z": 24
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-7-roof-556",
+      "kind": "shedRoof",
+      "center": {
+        "x": -157.5,
+        "y": 10.6,
+        "z": 140
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 43
+      },
+      "slope": 0.16,
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-7-post-a-557",
+      "kind": "post",
+      "center": {
+        "x": -170,
+        "y": 5,
+        "z": 124
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-7-post-b-558",
+      "kind": "post",
+      "center": {
+        "x": -170,
+        "y": 5,
+        "z": 156
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-8-deck-562",
+      "kind": "deck",
+      "center": {
+        "x": -165,
+        "y": 1.2,
+        "z": 220
+      },
+      "size": {
+        "x": 10,
+        "y": 0.6,
+        "z": 24
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-8-roof-563",
+      "kind": "shedRoof",
+      "center": {
+        "x": -157.5,
+        "y": 10.6,
+        "z": 220
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 43
+      },
+      "slope": 0.16,
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-8-post-a-564",
+      "kind": "post",
+      "center": {
+        "x": -170,
+        "y": 5,
+        "z": 204
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "cabin-8-post-b-565",
+      "kind": "post",
+      "center": {
+        "x": -170,
+        "y": 5,
+        "z": 236
+      },
+      "size": {
+        "x": 0.5,
+        "y": 10,
+        "z": 0.5
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "bunk-gallery-0-584",
+      "kind": "deck",
+      "center": {
+        "x": -260,
+        "y": 0.8,
+        "z": -51
+      },
+      "size": {
+        "x": 120,
+        "y": 0.6,
+        "z": 6
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "bunk-gallery-1-585",
+      "kind": "deck",
+      "center": {
+        "x": -260,
+        "y": 10.3,
+        "z": -51
+      },
+      "size": {
+        "x": 120,
+        "y": 0.6,
+        "z": 6
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "bunk-roof-586",
+      "kind": "shedRoof",
+      "center": {
+        "x": -260,
+        "y": 20,
+        "z": -49
+      },
+      "size": {
+        "x": 123,
+        "y": 0.6,
+        "z": 17
+      },
+      "slope": 0.14,
+      "zone": "lodging"
+    },
+    {
+      "id": "glamp-0-deck-587",
+      "kind": "deck",
+      "center": {
+        "x": 260,
+        "y": 1.5,
+        "z": 60
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 20
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "glamp-0-tent-588",
+      "kind": "tent",
+      "center": {
+        "x": 260,
+        "y": 6.5,
+        "z": 60
+      },
+      "size": {
+        "x": 16,
+        "y": 9,
+        "z": 16
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "glamp-1-deck-589",
+      "kind": "deck",
+      "center": {
+        "x": 260,
+        "y": 1.5,
+        "z": 110
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 20
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "glamp-1-tent-590",
+      "kind": "tent",
+      "center": {
+        "x": 260,
+        "y": 6.5,
+        "z": 110
+      },
+      "size": {
+        "x": 16,
+        "y": 9,
+        "z": 16
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "glamp-2-deck-591",
+      "kind": "deck",
+      "center": {
+        "x": 260,
+        "y": 1.5,
+        "z": 160
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 20
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "glamp-2-tent-592",
+      "kind": "tent",
+      "center": {
+        "x": 260,
+        "y": 6.5,
+        "z": 160
+      },
+      "size": {
+        "x": 16,
+        "y": 9,
+        "z": 16
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "glamp-3-deck-593",
+      "kind": "deck",
+      "center": {
+        "x": 315,
+        "y": 1.5,
+        "z": 85
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 20
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "glamp-3-tent-594",
+      "kind": "tent",
+      "center": {
+        "x": 315,
+        "y": 6.5,
+        "z": 85
+      },
+      "size": {
+        "x": 16,
+        "y": 9,
+        "z": 16
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "glamp-4-deck-595",
+      "kind": "deck",
+      "center": {
+        "x": 315,
+        "y": 1.5,
+        "z": 135
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 20
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "glamp-4-tent-596",
+      "kind": "tent",
+      "center": {
+        "x": 315,
+        "y": 6.5,
+        "z": 135
+      },
+      "size": {
+        "x": 16,
+        "y": 9,
+        "z": 16
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "glamp-5-deck-597",
+      "kind": "deck",
+      "center": {
+        "x": 315,
+        "y": 1.5,
+        "z": 185
+      },
+      "size": {
+        "x": 20,
+        "y": 0.6,
+        "z": 20
+      },
+      "zone": "lodging"
+    },
+    {
+      "id": "glamp-5-tent-598",
+      "kind": "tent",
+      "center": {
+        "x": 315,
+        "y": 6.5,
+        "z": 185
+      },
+      "size": {
+        "x": 16,
+        "y": 9,
+        "z": 16
+      },
+      "zone": "lodging"
+    }
+  ],
+  "features": [
+    {
+      "id": "dragon-primary",
+      "kind": "dragon",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 244
+      },
+      "rotationY": 0,
+      "lengthFt": 150,
+      "wingspanFt": 186,
+      "shoulderHeightFt": 52,
+      "breathingFire": true,
+      "burstPeriodS": 9,
+      "label": "Steel dragon"
+    },
+    {
+      "id": "firepit-0-599",
+      "kind": "firePit",
+      "position": {
+        "x": -94,
+        "y": 0,
+        "z": 252
+      },
+      "radiusFt": 5,
+      "hue": 0,
+      "rainbow": true,
+      "label": "Fire pit 1"
+    },
+    {
+      "id": "firepit-1-600",
+      "kind": "firePit",
+      "position": {
+        "x": -128,
+        "y": 0,
+        "z": 286
+      },
+      "radiusFt": 5,
+      "hue": 90,
+      "rainbow": true,
+      "label": "Fire pit 2"
+    },
+    {
+      "id": "firepit-2-601",
+      "kind": "firePit",
+      "position": {
+        "x": -162,
+        "y": 0,
+        "z": 252
+      },
+      "radiusFt": 5,
+      "hue": 180,
+      "rainbow": true,
+      "label": "Fire pit 3"
+    },
+    {
+      "id": "firepit-3-602",
+      "kind": "firePit",
+      "position": {
+        "x": -128,
+        "y": 0,
+        "z": 218
+      },
+      "radiusFt": 5,
+      "hue": 270,
+      "rainbow": true,
+      "label": "Fire pit 4"
+    },
+    {
+      "id": "firepit-0-603",
+      "kind": "firePit",
+      "position": {
+        "x": 162,
+        "y": 0,
+        "z": 252
+      },
+      "radiusFt": 5,
+      "hue": 180,
+      "rainbow": true,
+      "label": "Fire pit 1"
+    },
+    {
+      "id": "firepit-1-604",
+      "kind": "firePit",
+      "position": {
+        "x": 111,
+        "y": 0,
+        "z": 281.4448637286709
+      },
+      "radiusFt": 5,
+      "hue": 300,
+      "rainbow": true,
+      "label": "Fire pit 2"
+    },
+    {
+      "id": "firepit-2-605",
+      "kind": "firePit",
+      "position": {
+        "x": 110.99999999999999,
+        "y": 0,
+        "z": 222.5551362713291
+      },
+      "radiusFt": 5,
+      "hue": 60,
+      "rainbow": true,
+      "label": "Fire pit 3"
+    },
+    {
+      "id": "stage-0-606",
+      "kind": "stage",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 78
+      },
+      "rotationY": 0,
+      "widthFt": 28,
+      "depthFt": 18,
+      "heightFt": 3,
+      "roof": "container",
+      "name": "Great hall stage"
+    },
+    {
+      "id": "stage-1-607",
+      "kind": "stage",
+      "position": {
+        "x": -128,
+        "y": 0,
+        "z": 252
+      },
+      "rotationY": 1.5707963267948966,
+      "widthFt": 22,
+      "depthFt": 14,
+      "heightFt": 2.5,
+      "roof": "truss",
+      "name": "Fire ring stage"
+    },
+    {
+      "id": "stage-2-608",
+      "kind": "stage",
+      "position": {
+        "x": 128,
+        "y": 0,
+        "z": 252
+      },
+      "rotationY": -1.5707963267948966,
+      "widthFt": 22,
+      "depthFt": 14,
+      "heightFt": 2.5,
+      "roof": "open",
+      "name": "Grove stage"
+    },
+    {
+      "id": "lawnlights-0-609",
+      "kind": "stringLights",
+      "from": {
+        "x": 150,
+        "y": 18,
+        "z": 250
+      },
+      "to": {
+        "x": 138.581929876693,
+        "y": 18,
+        "z": 307.40251485476347
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 0
+    },
+    {
+      "id": "lawnlights-1-610",
+      "kind": "stringLights",
+      "from": {
+        "x": 138.581929876693,
+        "y": 18,
+        "z": 307.40251485476347
+      },
+      "to": {
+        "x": 106.06601717798213,
+        "y": 18,
+        "z": 356.06601717798213
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 22.5
+    },
+    {
+      "id": "lawnlights-2-611",
+      "kind": "stringLights",
+      "from": {
+        "x": 106.06601717798213,
+        "y": 18,
+        "z": 356.06601717798213
+      },
+      "to": {
+        "x": 57.402514854763474,
+        "y": 18,
+        "z": 388.58192987669304
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 45
+    },
+    {
+      "id": "lawnlights-3-612",
+      "kind": "stringLights",
+      "from": {
+        "x": 57.402514854763474,
+        "y": 18,
+        "z": 388.58192987669304
+      },
+      "to": {
+        "x": 9.184850993605149e-15,
+        "y": 18,
+        "z": 400
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 67.5
+    },
+    {
+      "id": "lawnlights-4-613",
+      "kind": "stringLights",
+      "from": {
+        "x": 9.184850993605149e-15,
+        "y": 18,
+        "z": 400
+      },
+      "to": {
+        "x": -57.40251485476346,
+        "y": 18,
+        "z": 388.58192987669304
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 90
+    },
+    {
+      "id": "lawnlights-5-614",
+      "kind": "stringLights",
+      "from": {
+        "x": -57.40251485476346,
+        "y": 18,
+        "z": 388.58192987669304
+      },
+      "to": {
+        "x": -106.06601717798212,
+        "y": 18,
+        "z": 356.06601717798213
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 112.5
+    },
+    {
+      "id": "lawnlights-6-615",
+      "kind": "stringLights",
+      "from": {
+        "x": -106.06601717798212,
+        "y": 18,
+        "z": 356.06601717798213
+      },
+      "to": {
+        "x": -138.581929876693,
+        "y": 18,
+        "z": 307.40251485476347
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 135
+    },
+    {
+      "id": "lawnlights-7-616",
+      "kind": "stringLights",
+      "from": {
+        "x": -138.581929876693,
+        "y": 18,
+        "z": 307.40251485476347
+      },
+      "to": {
+        "x": -150,
+        "y": 18,
+        "z": 250.00000000000003
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 157.5
+    },
+    {
+      "id": "lawnlights-8-617",
+      "kind": "stringLights",
+      "from": {
+        "x": -150,
+        "y": 18,
+        "z": 250.00000000000003
+      },
+      "to": {
+        "x": -138.58192987669304,
+        "y": 18,
+        "z": 192.59748514523653
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 180
+    },
+    {
+      "id": "lawnlights-9-618",
+      "kind": "stringLights",
+      "from": {
+        "x": -138.58192987669304,
+        "y": 18,
+        "z": 192.59748514523653
+      },
+      "to": {
+        "x": -106.06601717798215,
+        "y": 18,
+        "z": 143.93398282201787
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 202.5
+    },
+    {
+      "id": "lawnlights-10-619",
+      "kind": "stringLights",
+      "from": {
+        "x": -106.06601717798215,
+        "y": 18,
+        "z": 143.93398282201787
+      },
+      "to": {
+        "x": -57.40251485476355,
+        "y": 18,
+        "z": 111.41807012330702
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 225
+    },
+    {
+      "id": "lawnlights-11-620",
+      "kind": "stringLights",
+      "from": {
+        "x": -57.40251485476355,
+        "y": 18,
+        "z": 111.41807012330702
+      },
+      "to": {
+        "x": -2.7554552980815446e-14,
+        "y": 18,
+        "z": 100
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 247.5
+    },
+    {
+      "id": "lawnlights-12-621",
+      "kind": "stringLights",
+      "from": {
+        "x": -2.7554552980815446e-14,
+        "y": 18,
+        "z": 100
+      },
+      "to": {
+        "x": 57.4025148547635,
+        "y": 18,
+        "z": 111.41807012330702
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 270
+    },
+    {
+      "id": "lawnlights-13-622",
+      "kind": "stringLights",
+      "from": {
+        "x": 57.4025148547635,
+        "y": 18,
+        "z": 111.41807012330702
+      },
+      "to": {
+        "x": 106.0660171779821,
+        "y": 18,
+        "z": 143.93398282201787
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 292.5
+    },
+    {
+      "id": "lawnlights-14-623",
+      "kind": "stringLights",
+      "from": {
+        "x": 106.0660171779821,
+        "y": 18,
+        "z": 143.93398282201787
+      },
+      "to": {
+        "x": 138.58192987669298,
+        "y": 18,
+        "z": 192.59748514523645
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 315
+    },
+    {
+      "id": "lawnlights-15-624",
+      "kind": "stringLights",
+      "from": {
+        "x": 138.58192987669298,
+        "y": 18,
+        "z": 192.59748514523645
+      },
+      "to": {
+        "x": 150,
+        "y": 18,
+        "z": 249.99999999999997
+      },
+      "sagFt": 4,
+      "bulbSpacingFt": 4,
+      "rainbow": true,
+      "hue": 337.5
+    },
+    {
+      "id": "lodging-cabins",
+      "kind": "accommodation",
+      "position": {
+        "x": -320,
+        "y": 0,
+        "z": 40
+      },
+      "rotationY": 0,
+      "style": "containerCabin",
+      "units": 9,
+      "sleeps": 36,
+      "sqFt": 2745,
+      "name": "Lake cabins"
+    },
+    {
+      "id": "lodging-bunkhouse",
+      "kind": "accommodation",
+      "position": {
+        "x": -320,
+        "y": 0,
+        "z": -48
+      },
+      "rotationY": 0,
+      "style": "bunkhouse",
+      "units": 6,
+      "sleeps": 24,
+      "sqFt": 1830,
+      "name": "Bunkhouse"
+    },
+    {
+      "id": "lodging-glamping",
+      "kind": "accommodation",
+      "position": {
+        "x": 260,
+        "y": 0,
+        "z": 60
+      },
+      "rotationY": 0,
+      "style": "glamping",
+      "units": 6,
+      "sleeps": 12,
+      "sqFt": 1320,
+      "name": "Canvas platforms"
+    },
+    {
+      "id": "lodging-tower-suites",
+      "kind": "accommodation",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "rotationY": 0,
+      "style": "towerSuite",
+      "units": 8,
+      "sleeps": 16,
+      "sqFt": 1216,
+      "name": "Tower suites"
+    },
+    {
+      "id": "marina-gangway-625",
+      "kind": "dock",
+      "position": {
+        "x": 0,
+        "y": -2.25,
+        "z": 305
+      },
+      "rotationY": -1.5707963267948966,
+      "lengthFt": 14,
+      "widthFt": 6,
+      "role": "gangway",
+      "stringLights": false,
+      "label": "Gangway"
+    },
+    {
+      "id": "marina-main-626",
+      "kind": "dock",
+      "position": {
+        "x": 0,
+        "y": -4.5,
+        "z": 390
+      },
+      "rotationY": -1.5707963267948966,
+      "lengthFt": 160,
+      "widthFt": 8,
+      "role": "main",
+      "stringLights": false,
+      "label": "Main dock"
+    },
+    {
+      "id": "marina-finger--1-0-627",
+      "kind": "dock",
+      "position": {
+        "x": -17,
+        "y": -4.5,
+        "z": 311.5
+      },
+      "rotationY": 0,
+      "lengthFt": 26,
+      "widthFt": 3,
+      "role": "finger",
+      "stringLights": false
+    },
+    {
+      "id": "marina-finger--1-1-628",
+      "kind": "dock",
+      "position": {
+        "x": -17,
+        "y": -4.5,
+        "z": 327.5
+      },
+      "rotationY": 0,
+      "lengthFt": 26,
+      "widthFt": 3,
+      "role": "finger",
+      "stringLights": false
+    },
+    {
+      "id": "marina-finger--1-2-629",
+      "kind": "dock",
+      "position": {
+        "x": -17,
+        "y": -4.5,
+        "z": 343.5
+      },
+      "rotationY": 0,
+      "lengthFt": 26,
+      "widthFt": 3,
+      "role": "finger",
+      "stringLights": false
+    },
+    {
+      "id": "marina-finger--1-3-630",
+      "kind": "dock",
+      "position": {
+        "x": -17,
+        "y": -4.5,
+        "z": 359.5
+      },
+      "rotationY": 0,
+      "lengthFt": 26,
+      "widthFt": 3,
+      "role": "finger",
+      "stringLights": false
+    },
+    {
+      "id": "marina-finger--1-4-631",
+      "kind": "dock",
+      "position": {
+        "x": -17,
+        "y": -4.5,
+        "z": 375.5
+      },
+      "rotationY": 0,
+      "lengthFt": 26,
+      "widthFt": 3,
+      "role": "finger",
+      "stringLights": false
+    },
+    {
+      "id": "marina-finger--1-5-632",
+      "kind": "dock",
+      "position": {
+        "x": -17,
+        "y": -4.5,
+        "z": 391.5
+      },
+      "rotationY": 0,
+      "lengthFt": 26,
+      "widthFt": 3,
+      "role": "finger",
+      "stringLights": false
+    },
+    {
+      "id": "marina-finger--1-6-633",
+      "kind": "dock",
+      "position": {
+        "x": -17,
+        "y": -4.5,
+        "z": 407.5
+      },
+      "rotationY": 0,
+      "lengthFt": 26,
+      "widthFt": 3,
+      "role": "finger",
+      "stringLights": false
+    },
+    {
+      "id": "marina-slip--1-0-634",
+      "kind": "slip",
+      "position": {
+        "x": -17,
+        "y": -6,
+        "z": 319.5
+      },
+      "rotationY": 0,
+      "widthFt": 13,
+      "lengthFt": 26,
+      "tier": "standard",
+      "slipNumber": 1,
+      "patio": false,
+      "furnished": false,
+      "ropeSwing": false,
+      "jumpPlatform": false,
+      "bar": false,
+      "stringLights": false,
+      "boat": "runabout",
+      "label": "Slip 1"
+    },
+    {
+      "id": "marina-slip--1-1-635",
+      "kind": "slip",
+      "position": {
+        "x": -17,
+        "y": -6,
+        "z": 335.5
+      },
+      "rotationY": 0,
+      "widthFt": 13,
+      "lengthFt": 26,
+      "tier": "standard",
+      "slipNumber": 2,
+      "patio": false,
+      "furnished": false,
+      "ropeSwing": false,
+      "jumpPlatform": false,
+      "bar": false,
+      "stringLights": false,
+      "boat": "pontoon",
+      "label": "Slip 2"
+    },
+    {
+      "id": "marina-slip--1-2-636",
+      "kind": "slip",
+      "position": {
+        "x": -17,
+        "y": -6,
+        "z": 351.5
+      },
+      "rotationY": 0,
+      "widthFt": 13,
+      "lengthFt": 26,
+      "tier": "standard",
+      "slipNumber": 3,
+      "patio": false,
+      "furnished": false,
+      "ropeSwing": false,
+      "jumpPlatform": false,
+      "bar": false,
+      "stringLights": false,
+      "boat": "cruiser",
+      "label": "Slip 3"
+    },
+    {
+      "id": "marina-slip--1-3-637",
+      "kind": "slip",
+      "position": {
+        "x": -17,
+        "y": -6,
+        "z": 367.5
+      },
+      "rotationY": 0,
+      "widthFt": 13,
+      "lengthFt": 26,
+      "tier": "standard",
+      "slipNumber": 4,
+      "patio": false,
+      "furnished": false,
+      "ropeSwing": false,
+      "jumpPlatform": false,
+      "bar": false,
+      "stringLights": false,
+      "boat": "none",
+      "label": "Slip 4"
+    },
+    {
+      "id": "marina-slip--1-4-638",
+      "kind": "slip",
+      "position": {
+        "x": -17,
+        "y": -6,
+        "z": 383.5
+      },
+      "rotationY": 0,
+      "widthFt": 13,
+      "lengthFt": 26,
+      "tier": "standard",
+      "slipNumber": 5,
+      "patio": false,
+      "furnished": false,
+      "ropeSwing": false,
+      "jumpPlatform": false,
+      "bar": false,
+      "stringLights": false,
+      "boat": "pontoon",
+      "label": "Slip 5"
+    },
+    {
+      "id": "marina-slip--1-5-639",
+      "kind": "slip",
+      "position": {
+        "x": -17,
+        "y": -6,
+        "z": 399.5
+      },
+      "rotationY": 0,
+      "widthFt": 13,
+      "lengthFt": 26,
+      "tier": "standard",
+      "slipNumber": 6,
+      "patio": false,
+      "furnished": false,
+      "ropeSwing": false,
+      "jumpPlatform": false,
+      "bar": false,
+      "stringLights": false,
+      "boat": "runabout",
+      "label": "Slip 6"
+    },
+    {
+      "id": "marina-finger-1-0-640",
+      "kind": "dock",
+      "position": {
+        "x": 17,
+        "y": -4.5,
+        "z": 311.5
+      },
+      "rotationY": 0,
+      "lengthFt": 26,
+      "widthFt": 3,
+      "role": "finger",
+      "stringLights": false
+    },
+    {
+      "id": "marina-finger-1-1-641",
+      "kind": "dock",
+      "position": {
+        "x": 17,
+        "y": -4.5,
+        "z": 327.5
+      },
+      "rotationY": 0,
+      "lengthFt": 26,
+      "widthFt": 3,
+      "role": "finger",
+      "stringLights": false
+    },
+    {
+      "id": "marina-finger-1-2-642",
+      "kind": "dock",
+      "position": {
+        "x": 17,
+        "y": -4.5,
+        "z": 343.5
+      },
+      "rotationY": 0,
+      "lengthFt": 26,
+      "widthFt": 3,
+      "role": "finger",
+      "stringLights": false
+    },
+    {
+      "id": "marina-finger-1-3-643",
+      "kind": "dock",
+      "position": {
+        "x": 17,
+        "y": -4.5,
+        "z": 359.5
+      },
+      "rotationY": 0,
+      "lengthFt": 26,
+      "widthFt": 3,
+      "role": "finger",
+      "stringLights": false
+    },
+    {
+      "id": "marina-finger-1-4-644",
+      "kind": "dock",
+      "position": {
+        "x": 17,
+        "y": -4.5,
+        "z": 375.5
+      },
+      "rotationY": 0,
+      "lengthFt": 26,
+      "widthFt": 3,
+      "role": "finger",
+      "stringLights": false
+    },
+    {
+      "id": "marina-finger-1-5-645",
+      "kind": "dock",
+      "position": {
+        "x": 17,
+        "y": -4.5,
+        "z": 391.5
+      },
+      "rotationY": 0,
+      "lengthFt": 26,
+      "widthFt": 3,
+      "role": "finger",
+      "stringLights": false
+    },
+    {
+      "id": "marina-finger-1-6-646",
+      "kind": "dock",
+      "position": {
+        "x": 17,
+        "y": -4.5,
+        "z": 407.5
+      },
+      "rotationY": 0,
+      "lengthFt": 26,
+      "widthFt": 3,
+      "role": "finger",
+      "stringLights": false
+    },
+    {
+      "id": "marina-slip-1-0-647",
+      "kind": "slip",
+      "position": {
+        "x": 17,
+        "y": -6,
+        "z": 319.5
+      },
+      "rotationY": 0,
+      "widthFt": 13,
+      "lengthFt": 26,
+      "tier": "standard",
+      "slipNumber": 7,
+      "patio": false,
+      "furnished": false,
+      "ropeSwing": false,
+      "jumpPlatform": false,
+      "bar": false,
+      "stringLights": false,
+      "boat": "runabout",
+      "label": "Slip 7"
+    },
+    {
+      "id": "marina-slip-1-1-648",
+      "kind": "slip",
+      "position": {
+        "x": 17,
+        "y": -6,
+        "z": 335.5
+      },
+      "rotationY": 0,
+      "widthFt": 13,
+      "lengthFt": 26,
+      "tier": "standard",
+      "slipNumber": 8,
+      "patio": false,
+      "furnished": false,
+      "ropeSwing": false,
+      "jumpPlatform": false,
+      "bar": false,
+      "stringLights": false,
+      "boat": "pontoon",
+      "label": "Slip 8"
+    },
+    {
+      "id": "marina-slip-1-2-649",
+      "kind": "slip",
+      "position": {
+        "x": 17,
+        "y": -6,
+        "z": 351.5
+      },
+      "rotationY": 0,
+      "widthFt": 13,
+      "lengthFt": 26,
+      "tier": "standard",
+      "slipNumber": 9,
+      "patio": false,
+      "furnished": false,
+      "ropeSwing": false,
+      "jumpPlatform": false,
+      "bar": false,
+      "stringLights": false,
+      "boat": "cruiser",
+      "label": "Slip 9"
+    },
+    {
+      "id": "marina-slip-1-3-650",
+      "kind": "slip",
+      "position": {
+        "x": 17,
+        "y": -6,
+        "z": 367.5
+      },
+      "rotationY": 0,
+      "widthFt": 13,
+      "lengthFt": 26,
+      "tier": "standard",
+      "slipNumber": 10,
+      "patio": false,
+      "furnished": false,
+      "ropeSwing": false,
+      "jumpPlatform": false,
+      "bar": false,
+      "stringLights": false,
+      "boat": "none",
+      "label": "Slip 10"
+    },
+    {
+      "id": "marina-slip-1-4-651",
+      "kind": "slip",
+      "position": {
+        "x": 17,
+        "y": -6,
+        "z": 383.5
+      },
+      "rotationY": 0,
+      "widthFt": 13,
+      "lengthFt": 26,
+      "tier": "standard",
+      "slipNumber": 11,
+      "patio": false,
+      "furnished": false,
+      "ropeSwing": false,
+      "jumpPlatform": false,
+      "bar": false,
+      "stringLights": false,
+      "boat": "pontoon",
+      "label": "Slip 11"
+    },
+    {
+      "id": "marina-slip-1-5-652",
+      "kind": "slip",
+      "position": {
+        "x": 17,
+        "y": -6,
+        "z": 399.5
+      },
+      "rotationY": 0,
+      "widthFt": 13,
+      "lengthFt": 26,
+      "tier": "standard",
+      "slipNumber": 12,
+      "patio": false,
+      "furnished": false,
+      "ropeSwing": false,
+      "jumpPlatform": false,
+      "bar": false,
+      "stringLights": false,
+      "boat": "runabout",
+      "label": "Slip 12"
+    }
+  ],
+  "notes": "Parametric build-out. Castle containers carry zone \"castle\"; lodging containers carry zone \"lodging\" so the reference cost validation is never inflated by the lodging or marina programme."
+}
