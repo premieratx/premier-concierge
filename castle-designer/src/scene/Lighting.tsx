@@ -115,8 +115,8 @@ export function Lighting({ timeOfDay }: { timeOfDay: TimeOfDay }) {
         color={p.sunColor}
         intensity={p.sunIntensity}
         castShadow
-        shadow-mapSize-width={2048}
-        shadow-mapSize-height={2048}
+        shadow-mapSize-width={1536}
+        shadow-mapSize-height={1536}
         shadow-camera-left={-520}
         shadow-camera-right={520}
         shadow-camera-top={520}

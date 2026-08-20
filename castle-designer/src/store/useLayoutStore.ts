@@ -36,6 +36,8 @@ export const LAYER_LABELS: Record<ModelLayer, string> = {
   bunkhouse: 'Bunkhouse',
   glamping: 'Canvas platforms',
   docks: 'Docks and fingers',
+  roofDecks: 'Roof decks and solar',
+  shipStore: 'Ship store',
   slipsStandard: 'Standard slips',
   slipsPremier: 'Premier slips',
   patios: 'Over-slip patios',
@@ -81,7 +83,16 @@ export const LAYER_GROUPS: LayerGroup[] = [
   },
   {
     title: 'Marina',
-    layers: ['docks', 'slipsStandard', 'slipsPremier', 'patios', 'boats', 'swimToys'],
+    layers: [
+      'docks',
+      'shipStore',
+      'roofDecks',
+      'slipsStandard',
+      'slipsPremier',
+      'patios',
+      'boats',
+      'swimToys',
+    ],
   },
   {
     title: 'Programme',
@@ -172,7 +183,7 @@ export function cloneLayout(layout: Layout): Layout {
       size: { ...d.size },
     })),
     features: layout.features.map((f) =>
-      f.kind === 'stringLights'
+      f.kind === 'stringLights' || f.kind === 'walkway'
         ? { ...f, from: { ...f.from }, to: { ...f.to } }
         : { ...f, position: { ...f.position } },
     ),

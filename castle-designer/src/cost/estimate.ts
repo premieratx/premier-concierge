@@ -1,4 +1,5 @@
 import { featuresOfKind } from '../domain/types';
+import { FLOAT, PV_WATTS_PER_SQFT } from '../domain/generators/hexMarina';
 import { earthwork } from '../domain/terrain';
 import type { Layout } from '../domain/types';
 import type { CheckResult } from '../rules/structural';
@@ -265,7 +266,53 @@ export function estimateSite(layout: Layout): SiteEstimate {
     lines.push(line('Stages', 'Power and audio rough-in', stages.length, 'ea', R.stage.servicesEach));
   }
 
-  /* Marina ------------------------------------------------------- */
+  /* Hexagonal marina ---------------------------------------------- */
+  const hexDocks = featuresOfKind(layout.features, 'hexDock');
+  if (hexDocks.length > 0) {
+    const H = R.hexMarina;
+    const deckSqFt = hexDocks.reduce((a, d) => a + d.deckSqFt, 0);
+    const roofSqFt = hexDocks.reduce((a, d) => a + d.roofSqFt, 0);
+    const solarSqFt = hexDocks.reduce((a, d) => a + d.solarSqFt, 0);
+    const solarWatts = solarSqFt * PV_WATTS_PER_SQFT;
+    const hub = hexDocks.find((d) => d.role === 'hub');
+    const walkways = featuresOfKind(layout.features, 'walkway').filter((w) => w.retractable);
+
+    lines.push(
+      line('Marina', 'Dock floats', Math.ceil(deckSqFt / FLOAT.areaSqFt), 'ea', H.floatEach),
+      line('Marina', 'Dock framework and decking', deckSqFt, 'sf', H.frameworkPerSqFt),
+      line('Marina', 'Mooring piles', hexDocks.length * H.pilesPerHexagon, 'ea', H.mooringPileEach),
+      line('Marina', 'Retractable walkways', walkways.length, 'ea', H.retractableWalkwayEach),
+      line('Roof and solar', 'Roof structure', roofSqFt, 'sf', H.roofStructurePerSqFt),
+      line('Roof and solar', 'Clear structural decking', roofSqFt, 'sf', H.clearDeckPerSqFt),
+      line('Roof and solar', 'Photovoltaic array', solarWatts, 'W', H.solarPerWatt),
+    );
+
+    if (hub) {
+      lines.push(
+        line(
+          'Marina',
+          'Ship store',
+          hub.roofSqFt * H.shipStoreFootprintShare,
+          'sf',
+          H.shipStorePerSqFt,
+        ),
+      );
+    }
+
+    const amenities = hexDocks.filter((d) => d.amenities.bar).length;
+    if (amenities > 0) {
+      lines.push(line('Premier slips', 'Roof-deck bars', amenities, 'ea', R.marina.patioBarEach));
+    }
+    const jumps = hexDocks.filter((d) => d.amenities.jumpPlatform).length;
+    if (jumps > 0) {
+      lines.push(
+        line('Premier slips', 'Roof jump platforms', jumps, 'ea', R.marina.jumpPlatformEach),
+        line('Premier slips', 'Rope swings', jumps, 'ea', R.marina.ropeSwingEach),
+      );
+    }
+  }
+
+  /* Linear marina -------------------------------------------------- */
   const docks = featuresOfKind(layout.features, 'dock');
   let deckSqFt = 0;
   for (const d of docks) {

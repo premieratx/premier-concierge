@@ -118,6 +118,36 @@ export const SITE_RATES = {
     /** Power, water and fire line run out to the dock. */
     dockUtilitiesLumpSum: 120000,
   },
+  /**
+   * The hexagonal marina.
+   *
+   * Priced the way a floating dock is actually bought — by the float, by the
+   * square foot of framework, and by the watt — rather than as one number per
+   * berth. The roof is the biggest line in it by a distance, which is what you
+   * would expect once you decide to put a structural deck sixteen feet above
+   * open water.
+   */
+  hexMarina: {
+    /** One 4 x 8 x 32-inch dock float. */
+    floatEach: 700,
+    /** Aluminium frame, decking, hardware and connectors over the floats. */
+    frameworkPerSqFt: 42,
+    /** Steel roof structure standing sixteen feet over the water. */
+    roofStructurePerSqFt: 46,
+    /** Structural clear polycarbonate decking you can walk on. */
+    clearDeckPerSqFt: 34,
+    /** Panels, racking, inverters and the DC run, per watt of array. */
+    solarPerWatt: 2.15,
+    /** Two-level ship store and service counter on a floating deck. */
+    shipStorePerSqFt: 265,
+    /** Share of the hub hexagon the store building occupies. */
+    shipStoreFootprintShare: 0.6,
+    /** Hinged, winched and storm-rated, one per satellite. */
+    retractableWalkwayEach: 46000,
+    /** Guide piles holding a hexagon on station. */
+    mooringPileEach: 6800,
+    pilesPerHexagon: 6,
+  },
   lighting: {
     /** Commercial-grade catenary festoon, poles and drivers included. */
     stringLightsPerLf: 14,

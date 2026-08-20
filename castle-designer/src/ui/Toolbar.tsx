@@ -7,7 +7,13 @@ import { Button } from './primitives';
 
 const TIMES: TimeOfDay[] = ['day', 'dusk', 'night'];
 
-export function Toolbar() {
+export interface ToolbarProps {
+  workspace: string;
+  workspaces: readonly string[];
+  onWorkspace(next: string): void;
+}
+
+export function Toolbar({ workspace, workspaces, onWorkspace }: ToolbarProps) {
   const layout = useLayoutStore((s) => s.layout);
   const timeOfDay = useLayoutStore((s) => s.timeOfDay);
   const setTimeOfDay = useLayoutStore((s) => s.setTimeOfDay);
@@ -54,6 +60,14 @@ export function Toolbar() {
               ? 'Drag to orbit · scroll to zoom · click a container to inspect it'
               : 'Parametric property model · 1 world unit = 1 foot'}
         </p>
+      </div>
+
+      <div className="flex items-center gap-1.5">
+        {workspaces.map((w) => (
+          <Button key={w} active={workspace === w} onClick={() => onWorkspace(w)}>
+            {w}
+          </Button>
+        ))}
       </div>
 
       <div className="flex items-center gap-1.5">

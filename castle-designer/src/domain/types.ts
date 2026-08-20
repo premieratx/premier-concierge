@@ -217,6 +217,8 @@ export type ModelLayer =
   | 'glamping'
   // Marina
   | 'docks'
+  | 'roofDecks'
+  | 'shipStore'
   | 'slipsStandard'
   | 'slipsPremier'
   | 'patios'
@@ -384,6 +386,52 @@ export interface SlipFeature {
   label?: string;
 }
 
+/**
+ * One hexagon of the marina: a floating ring of dock, sixty feet a side,
+ * roofed at sixteen feet with a clear deck over photovoltaic. The hub carries
+ * the ship store and the roof stage; the satellites carry the berths.
+ */
+export interface HexDockFeature {
+  id: string;
+  kind: 'hexDock';
+  /** Centre of the hexagon, at deck level. */
+  position: Vec3;
+  rotationY: number;
+  /** Side length, which for a regular hexagon is also its circumradius. */
+  sideFt: number;
+  /** Width of the walkway ringing the inside of the hexagon. */
+  perimeterWalkFt: number;
+  role: 'hub' | 'satellite';
+  /** Height of the roof deck above the dock deck. */
+  roofHeightFt: number;
+  /** Floating deck area, in square feet. */
+  deckSqFt: number;
+  roofSqFt: number;
+  /** Roof area carrying panels under the clear decking. */
+  solarSqFt: number;
+  /** Edge indices left open for boats to enter. */
+  entranceEdges: number[];
+  /** What is on the roof deck. */
+  amenities: { bar: boolean; jumpPlatform: boolean; ropeSwing: boolean };
+  label?: string;
+}
+
+/**
+ * A walkway between two docks.
+ *
+ * The ones out to the satellites retract: pulling them in before a storm
+ * leaves seven independent hexagons rather than one rigid raft, which is the
+ * difference between riding out a blow and losing the marina.
+ */
+export interface WalkwayFeature {
+  id: string;
+  kind: 'walkway';
+  from: Vec3;
+  to: Vec3;
+  widthFt: number;
+  retractable: boolean;
+}
+
 export interface OverwaterStageFeature {
   id: string;
   kind: 'overwaterStage';
@@ -455,6 +503,8 @@ export interface AccommodationFeature {
 }
 
 export type SiteFeature =
+  | HexDockFeature
+  | WalkwayFeature
   | DragonFeature
   | FirePitFeature
   | StageFeature

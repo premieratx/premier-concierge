@@ -29,7 +29,7 @@ sandboxed page cannot hand the viewer a file.
 | **Dragon** | A 48-foot scrap-metal beast on the arrival lawn — donor car hoods for wing membrane, wheel rims at the joints, leaf springs for legs, headlights for eyes — breathing fire on a nine-second cycle |
 | **Fire** | Seven rainbow gas pits in two clusters flanking the dragon, each drifting through the spectrum on its own clock |
 | **Stages** | Three land stages — great hall, fire ring, grove — plus an overwater stage at the head of the dock |
-| **Marina** | Existing and enhanced schemes, switchable. Enhanced runs a 260′ spine, 26 berths, and ten premier berths with over-slip patios, shade, bars, rope swings, jump platforms and festoon lighting |
+| **Marina** | Existing and enhanced schemes, switchable. Enhanced is seven hexagons — a hub carrying the ship store with a stage on its roof, and six satellites off its corners on retractable walkways — 90 berths at 12′ × 24′ under 65,000 sf of clear roof deck with 792 kW of solar beneath it |
 | **Lodging** | Nine lake cabins, a two-level bunkhouse, six canvas platforms and eight tower suites — 29 keys, 88 beds |
 
 ## The idea the tool exists to teach
@@ -87,6 +87,33 @@ cannot, with the assumption written next to the number. It is a check on the
 programme, not an egress design: door widths, travel distances, parking, water
 and septic are unmodelled, and one of them will cap this site long before the
 floor area does.
+
+## The marina
+
+Seven hexagons, sixty feet a side. The hub carries a ship store with a stage on
+its roof; six satellites sit off its corners at the end of fifty-foot walkways
+that **retract at the hub end**, so a storm meets seven independent rafts on
+their own piles rather than one rigid structure trying to move as a single
+body.
+
+Each satellite is ringed by a six-foot walkway with berths off its inner faces
+— 12′ × 24′, fifteen per hexagon, ninety in all — and three of its six edges
+left open at twenty feet clear. What is left in the middle is a 44-foot turning
+basin, about one and a half boat lengths.
+
+Every hexagon is roofed at sixteen feet with clear structural decking you can
+stand on and photovoltaic underneath it: 65,472 sf of roof, 40,592 sf of array,
+792 kW. The roof is the shade over every berth and the largest revenue line the
+marina has that is not a lease.
+
+It is costed the way a floating dock is actually bought — 893 dock floats at
+4′ × 8′ × 32″ and $700 each, framework by the square foot, array by the watt —
+not as one number per berth.
+
+The **Dock plan** workspace draws the whole thing at one unit to the foot, from
+the same model the 3D view uses. Scroll to zoom and berth numbers, dimensions
+and the float grid appear as the scale crosses the point where they would be
+legible on paper.
 
 ## The dragon
 

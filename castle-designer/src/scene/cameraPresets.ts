@@ -49,16 +49,16 @@ export const CAMERA_PRESETS: CameraPreset[] = [
   {
     key: 'marina',
     label: 'Marina',
-    position: [250, 165, 570],
-    target: [-120, 4, 330],
-    hint: 'Slips, patios and the overwater stage in the cove',
+    position: [330, 320, 830],
+    target: [-120, 10, 430],
+    hint: 'The seven hexagons, the store and the roof decks',
   },
   {
     key: 'premier',
-    label: 'Premier slip',
-    position: [10, 34, 476],
-    target: [-104, 6, 412],
-    hint: 'The product: patio, bar, swing and jump platform',
+    label: 'Dock hexagon',
+    position: [-120, 78, 190],
+    target: [-120, 14, 280],
+    hint: 'One module: berths, entrances, roof deck and the jump platform',
   },
   {
     key: 'lodging',

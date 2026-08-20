@@ -44,8 +44,10 @@ describe('property areas', () => {
     expect(names).toContain('Courtyard');
     expect(names).toContain('Arrival lawn');
     expect(names).toContain('Keep');
-    expect(names).toContain('Docks and fingers');
-    expect(names.some((n) => n.startsWith('Premier patios'))).toBe(true);
+    expect(names).toContain('Dock decks');
+    expect(names).toContain('Ship store');
+    expect(names).toContain('Store roof deck');
+    expect(names.some((n) => n.startsWith('Dock roof decks'))).toBe(true);
     expect(names.some((n) => n.startsWith('Fire terrace'))).toBe(true);
   });
 
@@ -94,7 +96,8 @@ describe('property areas', () => {
 
   it('shrinks with the marina when the build-out is not there', () => {
     const existing = propertyAreas(generateProperty({ marinaPhase: 'existing' }));
-    expect(existing.some((a) => a.name.startsWith('Premier patios'))).toBe(false);
+    expect(existing.some((a) => a.name === 'Ship store')).toBe(false);
+    expect(existing.some((a) => a.name === 'Store roof deck')).toBe(false);
     expect(capacitySummary(existing).assembly).toBeLessThan(capacitySummary(areas).assembly);
   });
 });

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Scene } from './scene/Scene';
+import { DockPlan } from './ui/DockPlan';
 import { CapacityPanel } from './ui/CapacityPanel';
 import { CostPanel } from './ui/CostPanel';
 import { Inspector } from './ui/Inspector';
@@ -14,8 +15,13 @@ import { useLayoutStore } from './store/useLayoutStore';
 const TABS = ['Cost', 'Checks', 'Capacity', 'Marina', 'View', 'Inspect'] as const;
 type Tab = (typeof TABS)[number];
 
+/** The two things this tool draws: the property, and the marina sheet. */
+const WORKSPACES = ['Property model', 'Dock plan'] as const;
+type Workspace = (typeof WORKSPACES)[number];
+
 export function App() {
   const [tab, setTab] = useState<Tab>('Cost');
+  const [workspace, setWorkspace] = useState<Workspace>('Property model');
   useKeyboardShortcuts();
 
   const layout = useLayoutStore((s) => s.layout);
@@ -23,7 +29,12 @@ export function App() {
 
   return (
     <div className="flex h-full w-full flex-col bg-slate-950">
-      <Toolbar />
+      <Toolbar workspace={workspace} workspaces={WORKSPACES} onWorkspace={(next) => setWorkspace(next as Workspace)} />
+      {workspace === 'Dock plan' ? (
+        <div className="min-h-0 flex-1">
+          <DockPlan />
+        </div>
+      ) : (
       <div className="flex min-h-0 flex-1">
         <aside className="flex w-[22rem] shrink-0 flex-col border-r border-slate-800 bg-slate-950">
           <nav className="flex shrink-0 gap-1 border-b border-slate-800 px-2 py-2">
@@ -60,6 +71,7 @@ export function App() {
           <Scene />
         </main>
       </div>
+      )}
     </div>
   );
 }

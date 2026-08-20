@@ -1,6 +1,7 @@
 import { featuresOfKind } from '../domain/types';
 import type { Layout, SlipFeature } from '../domain/types';
 import { estimateSite } from '../cost/estimate';
+import { PV_WATTS_PER_SQFT } from '../domain/generators/hexMarina';
 import { SITE_RATES } from '../cost/rates';
 
 /**
@@ -35,6 +36,10 @@ export const SLIP_MARKET = {
   operatingMargin: 0.72,
   /** Annual replacement reserve on a furniture package, as a share of cost. */
   furnitureReserveRate: 0.2,
+  /** Central Texas yield for a fixed array, kilowatt-hours per kilowatt-year. */
+  solarYieldKwhPerKwYear: 1550,
+  /** Blended retail rate the array offsets or sells back at. */
+  solarValuePerKwh: 0.115,
 } as const;
 
 export type PricingStrategy = 'bundled' | 'unbundled';
@@ -117,10 +122,25 @@ export function slipRevenue(
 
   if (premier > 0) {
     lines.push({
-      label: 'Patio event bookings',
+      label: 'Patio and roof-deck bookings',
       units: premier,
-      unitLabel: 'patios',
+      unitLabel: 'berths',
       annual: premier * m.eventNightsPerYear * m.eventNightlyRate,
+    });
+  }
+
+  // The roof is an array as well as a deck, and what it generates is marina
+  // income whether it is sold back or simply not bought.
+  const solarKw = featuresOfKind(layout.features, 'hexDock').reduce(
+    (a, d) => a + (d.solarSqFt * PV_WATTS_PER_SQFT) / 1000,
+    0,
+  );
+  if (solarKw > 0) {
+    lines.push({
+      label: 'Roof solar generation',
+      units: Math.round(solarKw),
+      unitLabel: 'kW',
+      annual: solarKw * m.solarYieldKwhPerKwYear * m.solarValuePerKwh,
     });
   }
 
@@ -164,7 +184,7 @@ export function marinaBusinessCase(
   const existing = slipRevenue(existingLayout, strategy);
   const proposed = slipRevenue(proposedLayout, strategy);
 
-  const marinaGroups = new Set(['Marina', 'Premier slips']);
+  const marinaGroups = new Set(['Marina', 'Premier slips', 'Roof and solar']);
   const proposedSite = estimateSite(proposedLayout);
   const existingSite = estimateSite(existingLayout);
   const groupTotal = (est: typeof proposedSite) =>

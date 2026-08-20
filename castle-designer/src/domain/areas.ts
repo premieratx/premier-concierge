@@ -319,6 +319,89 @@ export function propertyAreas(layout: Layout): Area[] {
     );
   }
 
+  /* Hexagonal marina ---------------------------------------------- */
+  const hexDocks = featuresOfKind(layout.features, 'hexDock');
+  if (hexDocks.length > 0) {
+    const deckSqFt = hexDocks.reduce((a, d) => a + d.deckSqFt, 0);
+    const hub = hexDocks.find((d) => d.role === 'hub');
+    const satellites = hexDocks.filter((d) => d.role === 'satellite');
+    const centre = {
+      x: hexDocks.reduce((a, d) => a + d.position.x, 0) / hexDocks.length,
+      z: hexDocks.reduce((a, d) => a + d.position.z, 0) / hexDocks.length,
+    };
+
+    areas.push(
+      area({
+        id: 'area-hex-decks',
+        name: 'Dock decks',
+        use: 'dock',
+        anchor: { x: centre.x, y: 26, z: centre.z },
+        sqFt: deckSqFt,
+        usableFraction: 1,
+        groundY: hexDocks[0]!.position.y + 0.4,
+        spreadFt: 190,
+        layer: 'docks',
+        note: 'Walkways and fingers — circulation, not assembly',
+      }),
+    );
+
+    if (hub) {
+      const storeSqFt = hub.roofSqFt * 0.6;
+      areas.push(
+        area({
+          id: 'area-ship-store',
+          name: 'Ship store',
+          use: 'business',
+          anchor: { x: hub.position.x, y: hub.position.y + hub.roofHeightFt + 34, z: hub.position.z },
+          sqFt: storeSqFt,
+          usableFraction: 1,
+          groundY: hub.position.y + 0.4,
+          spreadFt: 30,
+          layer: 'shipStore',
+          note: 'Chandlery, fuel desk, rentals and the service counter',
+        }),
+        area({
+          id: 'area-store-roof',
+          name: 'Store roof deck',
+          use: 'assemblyUnconcentrated',
+          anchor: {
+            x: hub.position.x,
+            y: hub.position.y + hub.roofHeightFt + 22,
+            z: hub.position.z,
+          },
+          sqFt: hub.roofSqFt,
+          usableFraction: 0.5,
+          groundY: hub.position.y + hub.roofHeightFt,
+          spreadFt: 34,
+          layer: 'roofDecks',
+          note: 'The stage, the bar and the crowd in front of them',
+        }),
+      );
+    }
+
+    if (satellites.length > 0) {
+      const roofSqFt = satellites.reduce((a, d) => a + d.roofSqFt, 0);
+      areas.push(
+        area({
+          id: 'area-dock-roofs',
+          name: `Dock roof decks (${satellites.length})`,
+          use: 'assemblyUnconcentrated',
+          anchor: {
+            x: centre.x,
+            y: satellites[0]!.position.y + satellites[0]!.roofHeightFt + 20,
+            z: centre.z,
+          },
+          sqFt: roofSqFt,
+          usableFraction: 0.35,
+          groundY: satellites[0]!.position.y + satellites[0]!.roofHeightFt,
+          spreadFt: 200,
+          layer: 'roofDecks',
+          note: 'Net of stair cores, plant and the array access aisles',
+        }),
+      );
+    }
+  }
+
   const patios = featuresOfKind(layout.features, 'slip').filter((s) => s.patio);
   if (patios.length > 0) {
     const each = patios[0]!;

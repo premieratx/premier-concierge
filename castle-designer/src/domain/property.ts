@@ -16,6 +16,11 @@ import {
 } from './generators/common';
 import { generateFurnishings, type BanquetSpec } from './generators/furnishings';
 import { generateGreatHall } from './generators/greatHall';
+import {
+  DEFAULT_HEX_MARINA,
+  hexMarinaFeatures,
+  planHexMarina,
+} from './generators/hexMarina';
 import { MARINA_SPECS, generateMarina } from './generators/marina';
 import { generateSiteLighting } from './generators/siteLighting';
 import {
@@ -356,6 +361,85 @@ export const KEEP_CLEAR: Rect[] = [
   { x: 120, z: -300, sizeX: 130, sizeZ: 130 },
 ];
 
+/** The hexagonal marina, sat in the cove west of the centre line. */
+export const HEX_MARINA = {
+  ...DEFAULT_HEX_MARINA,
+  center: { x: -120, z: 440 },
+  waterLevelFt: SITE.waterLevelFt,
+};
+
+/**
+ * The build-out marina: seven hexagons, the shore gangway that reaches the
+ * one nearest the bank, the stage on the store roof, and the festoon runs
+ * out along each retractable walkway.
+ */
+export function enhancedMarinaFeatures(): SiteFeature[] {
+  const plan = planHexMarina(HEX_MARINA);
+  const features: SiteFeature[] = [...hexMarinaFeatures(plan)];
+  const deckY = HEX_MARINA.waterLevelFt + HEX_MARINA.freeboardFt;
+
+  // The satellite pointing back at the bank is the one the ramp lands on.
+  const landward = plan.modules
+    .filter((m) => m.role === 'satellite')
+    .reduce((a, b) => (a.centre.z < b.centre.z ? a : b));
+  const landingZ = landward.centre.z - HEX_MARINA.sideFt;
+
+  features.push({
+    id: 'marina-gangway',
+    kind: 'dock',
+    position: { x: landward.centre.x, y: deckY / 2, z: (196 + landingZ) / 2 },
+    rotationY: -Math.PI / 2,
+    lengthFt: Math.max(12, landingZ - 196),
+    widthFt: 8,
+    role: 'gangway',
+    stringLights: true,
+    label: 'Shore gangway',
+  });
+
+  const hub = plan.modules.find((m) => m.role === 'hub')!;
+  features.push({
+    id: 'marina-roof-stage',
+    kind: 'overwaterStage',
+    position: { x: hub.centre.x, y: deckY + HEX_MARINA.roofHeightFt, z: hub.centre.z },
+    rotationY: 0,
+    widthFt: 44,
+    depthFt: 28,
+    deckHeightFt: 3,
+    roof: 'truss',
+    name: 'Store roof stage',
+  });
+
+  // Festoon down every walkway, and a ring around the store roof.
+  for (const [i, walk] of plan.walkways.entries()) {
+    features.push({
+      id: `marina-walk-lights-${i}`,
+      kind: 'stringLights',
+      from: { x: walk.from.x, y: deckY + 11, z: walk.from.z },
+      to: { x: walk.to.x, y: deckY + 11, z: walk.to.z },
+      sagFt: 2,
+      bulbSpacingFt: 3,
+      rainbow: true,
+      hue: (i * 60) % 360,
+    });
+  }
+  for (let i = 0; i < 6; i++) {
+    const a = hub.vertices[i]!;
+    const b = hub.vertices[(i + 1) % 6]!;
+    features.push({
+      id: `marina-roof-lights-${i}`,
+      kind: 'stringLights',
+      from: { x: a.x, y: deckY + HEX_MARINA.roofHeightFt + 9, z: a.z },
+      to: { x: b.x, y: deckY + HEX_MARINA.roofHeightFt + 9, z: b.z },
+      sagFt: 1.6,
+      bulbSpacingFt: 2.5,
+      rainbow: true,
+      hue: (i * 47 + 20) % 360,
+    });
+  }
+
+  return features;
+}
+
 export interface PropertyOptions {
   marinaPhase?: MarinaPhase;
   includeLodging?: boolean;
@@ -382,16 +466,18 @@ export function generateProperty(options: PropertyOptions = {}): Layout {
           groundAt: naturalGrade,
         });
   const lawn = options.includeLawn === false ? [] : generateLawn();
-  const marinaSpec = MARINA_SPECS[marinaPhase];
-  const marina = generateMarina({
-    ...marinaSpec,
-    // The cove bites in west of centre; that is where the docks go.
-    centerX: -120,
-    shorelineZ: 196,
-    waterLevelFt: SITE.waterLevelFt,
-  });
+  const marinaFeatures =
+    marinaPhase === 'enhanced'
+      ? enhancedMarinaFeatures()
+      : generateMarina({
+          ...MARINA_SPECS[marinaPhase],
+          // The cove bites in west of centre; that is where the docks go.
+          centerX: -120,
+          shorelineZ: 196,
+          waterLevelFt: SITE.waterLevelFt,
+        }).features;
 
-  const features = [...lawn, ...lodging.features, ...marina.features];
+  const features = [...lawn, ...lodging.features, ...marinaFeatures];
 
   const furnishings =
     options.includeFurnishings === false

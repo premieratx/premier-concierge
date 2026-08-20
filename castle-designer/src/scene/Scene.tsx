@@ -11,6 +11,7 @@ import { CapacityLabels } from './CapacityLabels';
 import { Contours, TerraceOutlines } from './Contours';
 import { DecorMeshes } from './DecorMeshes';
 import { Effects } from './Effects';
+import { HexMarina } from './HexMarina';
 import { People } from './People';
 import { Vegetation } from './Vegetation';
 import { WalkControls } from './WalkControls';
@@ -138,6 +139,7 @@ function PropertyModel() {
 
       <DecorMeshes decor={visibleDecor} />
       <Marina layout={layout} layers={layers} />
+      <HexMarina layout={layout} layers={layers} />
       <Stages layout={layout} night={night} layers={layers} />
       {layers.firePits && <FirePits layout={layout} night={night} />}
       {layers.stringLights && <StringLightsMesh layout={layout} night={night} />}

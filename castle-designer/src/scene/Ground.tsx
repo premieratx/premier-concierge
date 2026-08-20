@@ -108,8 +108,8 @@ function Hillside() {
   const { geometry, material } = useMemo(() => {
     const width = 6000;
     const depth = 4200;
-    const segX = 300;
-    const segZ = 210;
+    const segX = 200;
+    const segZ = 140;
 
     const g = new THREE.PlaneGeometry(width, depth, segX, segZ);
     g.rotateX(-Math.PI / 2);

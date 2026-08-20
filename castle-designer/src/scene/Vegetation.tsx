@@ -106,7 +106,7 @@ export interface VegetationProps {
  * of paper: it is what tells you the site is in central Texas rather than
  * anywhere else.
  */
-export function Vegetation({ exclusions, count = 520 }: VegetationProps) {
+export function Vegetation({ exclusions, count = 380 }: VegetationProps) {
   const plants = useMemo(() => scatter(exclusions, count), [exclusions, count]);
 
   const oaks = useMemo(() => plants.filter((p) => p.species === 0), [plants]);
