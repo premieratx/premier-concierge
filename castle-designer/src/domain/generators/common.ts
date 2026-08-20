@@ -21,6 +21,27 @@ export function withDecorLayer(result: GeneratorResult, layer: ModelLayer): Gene
   };
 }
 
+/**
+ * Lift a whole generator result to a terrace.
+ *
+ * The vocabulary generators all build from zero, which keeps them simple and
+ * testable. Putting the result on a hill is a translation, so it belongs here
+ * rather than as a base-elevation argument threaded through every one of them.
+ */
+export function raise(result: GeneratorResult, y: number): GeneratorResult {
+  if (y === 0) return result;
+  return {
+    containers: result.containers.map((c) => ({
+      ...c,
+      position: { ...c.position, y: c.position.y + y },
+    })),
+    decor: result.decor.map((d) => ({
+      ...d,
+      center: { ...d.center, y: d.center.y + y },
+    })),
+  };
+}
+
 export function merge(...results: GeneratorResult[]): GeneratorResult {
   return {
     containers: results.flatMap((r) => r.containers),

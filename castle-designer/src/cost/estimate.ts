@@ -1,4 +1,5 @@
 import { featuresOfKind } from '../domain/types';
+import { earthwork } from '../domain/terrain';
 import type { Layout } from '../domain/types';
 import type { CheckResult } from '../rules/structural';
 import { RATES, SITE_RATES } from './rates';
@@ -197,9 +198,31 @@ function groupTotals(lines: LineItem[]): { group: string; amount: number }[] {
     .sort((a, b) => b.amount - a.amount);
 }
 
+/** Length of the switchback drive from the road down to the gate terrace. */
+const DRIVE_LENGTH_LF = 980;
+
 export function estimateSite(layout: Layout): SiteEstimate {
   const lines: LineItem[] = [];
   const R = SITE_RATES;
+
+  /* Earthwork ----------------------------------------------------- */
+  if (layout.site.terrain === 'cypressCreek') {
+    const dirt = earthwork();
+    lines.push(
+      line('Earthwork', 'Excavation', dirt.cutCy, 'cy', R.earthwork.cutPerCy),
+      line('Earthwork', 'Engineered fill', dirt.fillCy, 'cy', R.earthwork.fillPerCy),
+      line('Earthwork', 'Haul imbalance', Math.abs(dirt.importCy), 'cy', R.earthwork.haulPerCy),
+      line(
+        'Earthwork',
+        'Retaining walls',
+        dirt.retainingSqFt,
+        'sf',
+        R.earthwork.retainingWallPerSqFt,
+      ),
+      line('Earthwork', 'Erosion control', 1, 'ls', R.earthwork.erosionControlLumpSum),
+      line('Earthwork', 'Switchback drive', DRIVE_LENGTH_LF, 'lf', R.earthwork.drivePerLf),
+    );
+  }
 
   for (const dragon of featuresOfKind(layout.features, 'dragon')) {
     // Parts, consumables and rigging scale with the beast; the plinth and the

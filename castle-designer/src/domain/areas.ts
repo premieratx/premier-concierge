@@ -1,6 +1,6 @@
 import { dimsOf } from './dimensions';
 import { boxOf, layoutBounds } from './geometry';
-import { BAWN, LAWN } from './property';
+import { BAWN, GATE_LEVEL, HALL_LEVEL, KEEP_LEVEL, LAWN, LAWN_LEVEL } from './property';
 import { featuresOfKind, layerOfContainer } from './types';
 import type { Layout, ModelLayer, Vec3 } from './types';
 
@@ -121,6 +121,7 @@ export function propertyAreas(layout: Layout): Area[] {
         anchor: { x: (Math.max(...xs) + Math.min(...xs)) / 2, y: roofY + 8, z: centreZ },
         sqFt: span * lengthFt,
         usableFraction: 0.85,
+        groundY: HALL_LEVEL,
         spreadFt: Math.min(span, lengthFt) / 2,
         layer: 'greatHall',
         note: 'Banquet seating under the truss roof, circulation taken out',
@@ -182,9 +183,10 @@ export function propertyAreas(layout: Layout): Area[] {
         id: `area-fire-${key}`,
         name: `Fire terrace ${key}`,
         use: 'assemblyStanding',
-        anchor: { x: cx, y: 18, z: cz },
+        anchor: { x: cx, y: LAWN_LEVEL + 20, z: cz },
         sqFt: Math.PI * radius * radius,
         usableFraction: 0.55,
+        groundY: LAWN_LEVEL,
         layer: 'firePits',
         note: `${list.length} pits, seating ring and the clear zone round each burner`,
       }),
@@ -198,10 +200,14 @@ export function propertyAreas(layout: Layout): Area[] {
         id: `area-${stage.id}`,
         name: stage.name,
         use: 'assemblyConcentrated',
-        anchor: { x: stage.position.x, y: stage.heightFt + 22, z: stage.position.z },
+        anchor: {
+          x: stage.position.x,
+          y: stage.position.y + stage.heightFt + 24,
+          z: stage.position.z,
+        },
         sqFt: stage.widthFt * stage.depthFt,
         usableFraction: 0.8,
-        groundY: stage.heightFt,
+        groundY: stage.position.y + stage.heightFt,
         spreadFt: Math.min(stage.widthFt, stage.depthFt) / 2.4,
         layer: 'stages',
         note: 'Performers and crew on the deck',
@@ -243,6 +249,7 @@ export function propertyAreas(layout: Layout): Area[] {
         },
         sqFt: keep.reduce((a, c) => a + dimsOf(c.type).usableSqFt, 0),
         usableFraction: 1,
+        groundY: KEEP_LEVEL,
         layer: 'keep',
         note: 'Offices, back of house and the bridal suite',
       }),
@@ -266,6 +273,7 @@ export function propertyAreas(layout: Layout): Area[] {
         },
         sqFt: sealedTowers.reduce((a, c) => a + dimsOf(c.type).usableSqFt, 0),
         usableFraction: 1,
+        groundY: GATE_LEVEL,
         layer: 'towers',
         note: 'Ticketing, security and the box office',
       }),
@@ -347,7 +355,7 @@ export function propertyAreas(layout: Layout): Area[] {
         id: `area-${lodging.id}`,
         name: lodging.name,
         use: 'lodging',
-        anchor: { x: lodging.position.x, y: 26, z: lodging.position.z },
+        anchor: { x: lodging.position.x, y: lodging.position.y + 34, z: lodging.position.z },
         sqFt: lodging.sqFt,
         usableFraction: 1,
         capacity: lodging.sleeps,

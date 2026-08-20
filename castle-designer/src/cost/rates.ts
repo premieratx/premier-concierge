@@ -124,6 +124,28 @@ export const SITE_RATES = {
     /** Colour-changing heads and the controller that runs the whole site. */
     rainbowControlLumpSum: 42000,
   },
+  /**
+   * Earthwork.
+   *
+   * On a flat pad this table would not exist. On a hillside it is one of the
+   * largest numbers in the job, and it is spent before a single container
+   * arrives — which is exactly the sort of thing a site model should surface
+   * rather than let somebody discover at bid.
+   */
+  earthwork: {
+    /** Excavate, in place. */
+    cutPerCy: 9,
+    /** Place and compact engineered fill. */
+    fillPerCy: 22,
+    /** Haul the imbalance on or off site. */
+    haulPerCy: 14,
+    /** Segmental gravity wall, engineered, drained and backfilled. */
+    retainingWallPerSqFt: 78,
+    /** Silt fence, rock berms, stabilised entrance and inspections. */
+    erosionControlLumpSum: 68000,
+    /** Switchback drive down the hill: subgrade, base and chip seal. */
+    drivePerLf: 145,
+  },
   structural: {
     /** Supplementary framing when a container roof has to carry occupancy. */
     roofFramingPerSqFt: 28,

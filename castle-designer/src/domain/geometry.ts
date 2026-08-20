@@ -177,6 +177,31 @@ export function planOverlapSqFt(a: Container, b: Container): number {
   );
 }
 
+/**
+ * Finished ground level at a plan point, in feet.
+ *
+ * Everything used to assume grade was zero. On a terraced hillside it is not:
+ * a container standing on the hall terrace has its base at 74 feet and nothing
+ * modelled underneath it, and without this the cantilever rule reads the whole
+ * curtain wall as floating in mid-air.
+ */
+export type GroundAt = (x: number, z: number) => number;
+
+export const FLAT_GROUND: GroundAt = () => 0;
+
+/** How far above finished grade a base can sit and still count as bearing on it. */
+export const GRADE_TOLERANCE_FT = 2;
+
+/** Whether a container bears on the ground rather than on another container. */
+export function bearsOnGrade(container: Container, groundAt: GroundAt = FLAT_GROUND): boolean {
+  const b = boxOf(container);
+  const centreX = (b.min.x + b.max.x) / 2;
+  const centreZ = (b.min.z + b.max.z) / 2;
+  // At or below finished grade counts too: a container cut into the hill is
+  // bearing on it just as surely as one sitting on top.
+  return container.position.y <= groundAt(centreX, centreZ) + GRADE_TOLERANCE_FT;
+}
+
 export interface StackJoint {
   lowerIndex: number;
   upperIndex: number;
@@ -190,11 +215,14 @@ export interface StackJoint {
 }
 
 /** Every place one container bears directly on another. */
-export function findStackJoints(containers: Container[]): StackJoint[] {
+export function findStackJoints(
+  containers: Container[],
+  groundAt: GroundAt = FLAT_GROUND,
+): StackJoint[] {
   const joints: StackJoint[] = [];
   for (let u = 0; u < containers.length; u++) {
     const upper = containers[u];
-    if (!upper || upper.position.y === 0) continue;
+    if (!upper || bearsOnGrade(upper, groundAt)) continue;
     for (let l = 0; l < containers.length; l++) {
       if (l === u) continue;
       const lower = containers[l];
@@ -246,7 +274,10 @@ export function findAdjacencies(containers: Container[]): [number, number][] {
  * How many containers deep each column is, counted from grade. A container
  * sitting on grade is level 1.
  */
-export function stackDepths(containers: Container[]): number[] {
+export function stackDepths(
+  containers: Container[],
+  groundAt: GroundAt = FLAT_GROUND,
+): number[] {
   const depths = new Array<number>(containers.length).fill(0);
   const order = containers
     .map((c, i) => ({ i, y: c.position.y }))
@@ -254,7 +285,7 @@ export function stackDepths(containers: Container[]): number[] {
   for (const { i } of order) {
     const c = containers[i];
     if (!c) continue;
-    if (c.position.y === 0) {
+    if (bearsOnGrade(c, groundAt)) {
       depths[i] = 1;
       continue;
     }
@@ -282,8 +313,12 @@ export interface SupportReport {
 }
 
 /** How well a container is carried by grade or by the containers below it. */
-export function supportOf(container: Container, all: Container[]): SupportReport {
-  if (container.position.y === 0) {
+export function supportOf(
+  container: Container,
+  all: Container[],
+  groundAt: GroundAt = FLAT_GROUND,
+): SupportReport {
+  if (bearsOnGrade(container, groundAt)) {
     return { supportedFraction: 1, endOverhangFraction: 0 };
   }
   const b = boxOf(container);

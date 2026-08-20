@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { takeoff } from '../cost/takeoff';
 import { findIntersections, snapPosition } from './geometry';
 import { generateProperty } from './property';
+import { TERRACE_BY_ID, naturalGrade, shorelineZAt } from './terrain';
 import { featuresOfKind } from './types';
 
 describe('the generated property', () => {
@@ -75,23 +76,29 @@ describe('the generated property', () => {
     expect(dragon.rotationY).toBe(0);
   });
 
-  it('keeps the dragon and the fire pits clear of the castle footprint', () => {
-    const gateZ = 216;
+  it('keeps the dragon and the fire pits on the lawn terrace', () => {
+    const lawn = TERRACE_BY_ID.lawn!;
     for (const f of [
       ...featuresOfKind(layout.features, 'dragon'),
       ...featuresOfKind(layout.features, 'firePit'),
     ]) {
-      expect(f.position.z, f.id).toBeGreaterThan(gateZ);
-      expect(f.position.z, f.id).toBeLessThan(layout.site.shorelineZ);
+      expect(f.position.z, f.id).toBeGreaterThan(lawn.rect.z);
+      expect(f.position.z, f.id).toBeLessThan(lawn.rect.z + lawn.rect.sizeZ);
+      expect(f.position.x, f.id).toBeGreaterThan(lawn.rect.x);
+      expect(f.position.x, f.id).toBeLessThan(lawn.rect.x + lawn.rect.sizeX);
+      // Standing on the terrace, not floating over it or buried in it.
+      expect(f.position.y, f.id).toBe(lawn.elevation);
     }
   });
 
   it('puts the marina in the water and the buildings on land', () => {
     for (const slip of featuresOfKind(layout.features, 'slip')) {
-      expect(slip.position.z).toBeGreaterThan(layout.site.shorelineZ);
+      // The cove bites in west of centre, so the shoreline is checked where
+      // the slip actually is rather than against one nominal number.
+      expect(slip.position.z, slip.id).toBeGreaterThan(shorelineZAt(slip.position.x));
     }
     for (const c of layout.containers) {
-      expect(c.position.z).toBeLessThan(layout.site.shorelineZ);
+      expect(naturalGrade(c.position.x, c.position.z), c.id).toBeGreaterThan(0);
     }
   });
 

@@ -8,6 +8,7 @@ import { useLayoutStore, type TimeOfDay } from '../store/useLayoutStore';
 import { CAMERA_PRESETS, DEFAULT_PRESET } from './cameraPresets';
 import { KEEP_CLEAR } from '../domain/property';
 import { CapacityLabels } from './CapacityLabels';
+import { Contours, TerraceOutlines } from './Contours';
 import { DecorMeshes } from './DecorMeshes';
 import { Effects } from './Effects';
 import { People } from './People';
@@ -144,7 +145,9 @@ function PropertyModel() {
         dragons.map((d) => (
           <Dragon key={d.id} feature={d} night={night} showFire={layers.dragonFire} />
         ))}
-      {layers.trees && <Vegetation site={layout.site} exclusions={KEEP_CLEAR} />}
+      {layers.contours && <Contours />}
+      {layers.terraces && <TerraceOutlines />}
+      {layers.trees && <Vegetation exclusions={KEEP_CLEAR} />}
       {layers.people && <People layout={layout} layers={layers} />}
       {layers.capacity && <CapacityLabels layout={layout} layers={layers} />}
     </group>
@@ -174,7 +177,7 @@ export function Scene() {
       dpr={[1, 1.75]}
       // ACES maps anything over about 1.0 to white, and an unexposed sky sits
       // well over it — the daytime sky was rendering as a flat white sheet.
-      gl={{ antialias: true, preserveDrawingBuffer: false, toneMappingExposure: 0.85 }}
+      gl={{ antialias: true, preserveDrawingBuffer: false, toneMappingExposure: 0.8 }}
       camera={{ position: DEFAULT_PRESET.position, fov: 48, near: 1, far: 60000 }}
       onPointerMissed={() => select(null)}
     >

@@ -112,16 +112,29 @@ export interface Layout {
 export type MarinaPhase = 'existing' | 'enhanced';
 
 export interface SiteDefinition {
-  /** Half-extent of the property pad along X, in feet. */
+  /** Parcel width along X, in feet. */
   sizeX: number;
-  /** Extent of the property along Z from the back fence to open water. */
+  /** Parcel depth along Z, from the road down to the water. */
   sizeZ: number;
-  /** Land runs to this Z; water is everything beyond it. */
+  /**
+   * Nominal shoreline on the centre line. The real one curves — see
+   * `shorelineZAt` — and this is only for code that needs a single number.
+   */
   shorelineZ: number;
-  /** Water surface elevation relative to the grade datum, in feet. */
+  /**
+   * Water surface elevation. Zero: the lake is the datum, and everything on
+   * land is feet above it.
+   */
   waterLevelFt: number;
   marinaPhase: MarinaPhase;
+  /**
+   * Which landform the layout stands on. `flat` is a table top, used by the
+   * small test fragments; `cypressCreek` is the real parcel with its terraces.
+   */
+  terrain: TerrainModel;
 }
+
+export type TerrainModel = 'flat' | 'cypressCreek';
 
 /* ------------------------------------------------------------------ *
  * Decorative geometry
@@ -223,6 +236,8 @@ export type ModelLayer =
   | 'trees'
   | 'people'
   | 'water'
+  | 'contours'
+  | 'terraces'
   | 'grid'
   | 'capacity'
   | 'edges';

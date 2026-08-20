@@ -11,7 +11,10 @@ import {
   stackDepths,
   supportOf,
   EPS,
+  FLAT_GROUND,
+  type GroundAt,
 } from '../domain/geometry';
+import { groundFunctionFor } from '../domain/terrain';
 import type { Container, Decor, Layout, Opening } from '../domain/types';
 import { openingsToEliminate, weldingTakeoff, WELDING_CAP_HOURS } from './welding';
 
@@ -95,8 +98,11 @@ export function checkOverlap(containers: Container[]): Violation[] {
  * castings are the only rated load path; anywhere the stack steps, the load
  * has to be picked up by a transfer structure and carried back to a column.
  */
-export function checkCornerAlignment(containers: Container[]): Violation[] {
-  const joints = findStackJoints(containers);
+export function checkCornerAlignment(
+  containers: Container[],
+  groundAt: GroundAt = FLAT_GROUND,
+): Violation[] {
+  const joints = findStackJoints(containers, groundAt);
   const offenders = joints.filter((j) => j.offsetFt > EPS);
   if (offenders.length === 0) {
     return [pass('R1', `All ${joints.length} stack joints land casting on casting.`)];
@@ -123,8 +129,11 @@ export const STACK_MAX_LEVELS = 4;
  * R2 — four containers is the practical limit before the assembly needs
  * engineered lateral bracing. Three is where it stops being obvious.
  */
-export function checkStackHeight(containers: Container[]): Violation[] {
-  const depths = stackDepths(containers);
+export function checkStackHeight(
+  containers: Container[],
+  groundAt: GroundAt = FLAT_GROUND,
+): Violation[] {
+  const depths = stackDepths(containers, groundAt);
   const max = depths.reduce((a, b) => Math.max(a, b), 0);
   if (max < STACK_WARN_LEVELS) {
     return [pass('R2', `Tallest stack is ${max} container${max === 1 ? '' : 's'}.`)];
@@ -332,11 +341,13 @@ export function checkRoofLoads(containers: Container[], decor: Decor[]): Violati
 export const CANTILEVER_LIMIT = 0.25;
 
 /** R7 — no container may overhang more than a quarter of its length unsupported. */
-export function checkCantilever(containers: Container[]): Violation[] {
+export function checkCantilever(
+  containers: Container[],
+  groundAt: GroundAt = FLAT_GROUND,
+): Violation[] {
   const violations: Violation[] = [];
   for (const c of containers) {
-    if (c.position.y === 0) continue;
-    const support = supportOf(c, containers);
+    const support = supportOf(c, containers, groundAt);
     if (support.endOverhangFraction <= CANTILEVER_LIMIT + EPS) continue;
     const d = dimsOf(c.type);
     const overhangFt = support.endOverhangFraction * d.length;
@@ -360,7 +371,10 @@ export function checkCantilever(containers: Container[]): Violation[] {
  * steel path from conditioned space to a Texas summer. It needs a thermal
  * break at the joint or the envelope sweats and the mechanical load blows out.
  */
-export function checkSealedEnvelope(containers: Container[]): Violation[] {
+export function checkSealedEnvelope(
+  containers: Container[],
+  groundAt: GroundAt = FLAT_GROUND,
+): Violation[] {
   const pairs = findAdjacencies(containers);
   const flagged = new Map<string, Container>();
 
@@ -375,7 +389,7 @@ export function checkSealedEnvelope(containers: Container[]): Violation[] {
   }
 
   // Stacks count too: a sealed box on an open-air one shares a full floor.
-  for (const joint of findStackJoints(containers)) {
+  for (const joint of findStackJoints(containers, groundAt)) {
     const lower = containers[joint.lowerIndex]!;
     const upper = containers[joint.upperIndex]!;
     if ((lower.role === 'sealed') === (upper.role === 'sealed')) continue;
@@ -423,6 +437,9 @@ export interface CheckResult {
  */
 export function runAllChecks(layout: Layout): CheckResult {
   const c = layout.containers;
+  // The layout declares which landform it stands on, so the rules can tell a
+  // container bearing on a terrace from one hanging in the air.
+  const groundAt = groundFunctionFor(layout.site.terrain);
   // The $50,000 cap is a constraint on the castle build. Lodging cabins are
   // ordinary container conversions carrying their own budget, so their cuts
   // are reported but not charged against the castle's cap.
@@ -433,14 +450,14 @@ export function runAllChecks(layout: Layout): CheckResult {
 
   const violations = [
     ...checkOverlap(c),
-    ...checkCornerAlignment(c),
-    ...checkStackHeight(c),
+    ...checkCornerAlignment(c, groundAt),
+    ...checkStackHeight(c, groundAt),
     ...checkOpeningArea(c),
     ...checkOpeningReinforcement(c),
     ...checkWeldingBudget(castleOnly, otherZoneHours),
     ...checkRoofLoads(c, layout.decor),
-    ...checkCantilever(c),
-    ...checkSealedEnvelope(c),
+    ...checkCantilever(c, groundAt),
+    ...checkSealedEnvelope(c, groundAt),
   ];
 
   const errors = violations.filter((v) => v.severity === 'error');

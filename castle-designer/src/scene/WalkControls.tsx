@@ -2,6 +2,7 @@ import { PointerLockControls } from '@react-three/drei';
 import { useFrame, useThree } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import { finishedGrade, shorelineZAt } from '../domain/terrain';
 import type { SiteDefinition } from '../domain/types';
 
 /** Eye height, in feet. */
@@ -35,8 +36,10 @@ export function WalkControls({ site }: { site: SiteDefinition }) {
   const keys = useRef(new Set<string>());
 
   useEffect(() => {
-    camera.position.copy(WALK_START);
-    camera.lookAt(0, EYE_HEIGHT, 400);
+    const start = WALK_START.clone();
+    start.y = finishedGrade(start.x, start.z) + EYE_HEIGHT;
+    camera.position.copy(start);
+    camera.lookAt(0, start.y - 12, 400);
   }, [camera]);
 
   useEffect(() => {
@@ -75,9 +78,11 @@ export function WalkControls({ site }: { site: SiteDefinition }) {
     const speed = held.has('ShiftLeft') || held.has('ShiftRight') ? RUN_SPEED : WALK_SPEED;
     camera.position.addScaledVector(move, speed * Math.min(delta, 0.1));
 
-    // Past the shoreline you are on the dock, not in the lake.
+    // The floor follows the hill, and past the shoreline you are on the dock
+    // rather than in the lake.
+    const { x, z } = camera.position;
     const floor =
-      camera.position.z > site.shorelineZ ? site.waterLevelFt + 1.9 : 0;
+      z > shorelineZAt(x) ? site.waterLevelFt + 1.9 : finishedGrade(x, z);
     camera.position.y = floor + EYE_HEIGHT;
   });
 

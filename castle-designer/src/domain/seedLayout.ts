@@ -25,6 +25,7 @@ export const SEED_LAYOUT: Layout = {
     shorelineZ: 300,
     waterLevelFt: -6,
     marinaPhase: 'existing',
+    terrain: 'flat',
   },
   containers: [
     {

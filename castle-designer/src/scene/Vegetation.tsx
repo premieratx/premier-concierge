@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import type { Rect } from '../domain/generators/common';
-import type { SiteDefinition } from '../domain/types';
+import { PARCEL, finishedGrade, shorelineZAt } from '../domain/terrain';
 
 const dummy = new THREE.Object3D();
 const scratch = new THREE.Color();
@@ -23,6 +23,8 @@ function mulberry32(seed: number) {
 
 interface Plant {
   x: number;
+  /** Ground level under the plant, in feet. */
+  y: number;
   z: number;
   /** 0 is a live oak, 1 an Ashe juniper, 2 a shrub clump. */
   species: 0 | 1 | 2;
@@ -44,25 +46,36 @@ function inside(rect: Rect, x: number, z: number, margin = 0): boolean {
  * Where the planting can go: everywhere that is not building, lawn, water,
  * lodging pad, drive or fire clearance.
  */
-function scatter(site: SiteDefinition, exclusions: Rect[], count: number): Plant[] {
+function scatter(exclusions: Rect[], count: number): Plant[] {
   const random = mulberry32(0x0a5eed);
   const plants: Plant[] = [];
   let guard = 0;
 
+  // Plant a good way past the parcel so the property sits in a landscape
+  // rather than on an island of trees.
+  const marginX = 700;
+  const marginZ = 500;
+
   while (plants.length < count && guard < count * 30) {
     guard += 1;
-    const x = -940 + random() * 1880;
-    const z = -560 + random() * (site.shorelineZ + 560 - 14);
+    const x = PARCEL.minX - marginX + random() * (PARCEL.sizeX + marginX * 2);
+    const shore = shorelineZAt(x);
+    const z = PARCEL.minZ - marginZ + random() * (shore + marginZ - PARCEL.minZ - 12);
     if (exclusions.some((rect) => inside(rect, x, z))) continue;
 
     // Thin the planting out as it approaches the water, the way a bank does.
-    const nearShore = 1 - Math.max(0, (z - 140) / (site.shorelineZ - 140));
-    if (random() > 0.35 + 0.65 * nearShore) continue;
+    const nearShore = 1 - Math.max(0, (z - (shore - 130)) / 130);
+    if (random() > 0.32 + 0.68 * nearShore) continue;
+
+    const y = finishedGrade(x, z);
+    // Nothing grows below the waterline.
+    if (y < 2) continue;
 
     const roll = random();
     const species: Plant['species'] = roll < 0.42 ? 0 : roll < 0.78 ? 1 : 2;
     plants.push({
       x,
+      y,
       z,
       species,
       scale: 0.65 + random() * 0.8,
@@ -80,8 +93,7 @@ const CEDAR_CANOPY = ['#33483a', '#3c5442', '#2c3f34'];
 const SHRUB_CANOPY = ['#4d5c37', '#57663f'];
 
 export interface VegetationProps {
-  site: SiteDefinition;
-  /** Footprints to keep clear: compound, lawn, lodging, drive. */
+  /** Footprints to keep clear: compound, terraces, lodging, drive. */
   exclusions: Rect[];
   count?: number;
 }
@@ -94,8 +106,8 @@ export interface VegetationProps {
  * of paper: it is what tells you the site is in central Texas rather than
  * anywhere else.
  */
-export function Vegetation({ site, exclusions, count = 420 }: VegetationProps) {
-  const plants = useMemo(() => scatter(site, exclusions, count), [site, exclusions, count]);
+export function Vegetation({ exclusions, count = 520 }: VegetationProps) {
+  const plants = useMemo(() => scatter(exclusions, count), [exclusions, count]);
 
   const oaks = useMemo(() => plants.filter((p) => p.species === 0), [plants]);
   const cedars = useMemo(() => plants.filter((p) => p.species === 1), [plants]);
@@ -129,7 +141,7 @@ export function Vegetation({ site, exclusions, count = 420 }: VegetationProps) {
     if (!m) return;
     trunkPlants.forEach((p, i) => {
       const height = (p.species === 0 ? 9 : 6) * p.scale;
-      dummy.position.set(p.x, height / 2, p.z);
+      dummy.position.set(p.x, p.y + height / 2, p.z);
       dummy.rotation.set(0, p.rotation, 0);
       dummy.scale.set(p.scale, height, p.scale);
       dummy.updateMatrix();
@@ -153,7 +165,7 @@ export function Vegetation({ site, exclusions, count = 420 }: VegetationProps) {
       ];
       for (const [dx, dy, dz, r] of lobes) {
         const s = p.scale;
-        dummy.position.set(p.x + dx * s, dy * s, p.z + dz * s);
+        dummy.position.set(p.x + dx * s, p.y + dy * s, p.z + dz * s);
         dummy.rotation.set(p.tint * 2, p.rotation, 0);
         dummy.scale.set(9 * r * s, 6.2 * r * s, 9 * r * s);
         dummy.updateMatrix();
@@ -174,7 +186,7 @@ export function Vegetation({ site, exclusions, count = 420 }: VegetationProps) {
     if (!m) return;
     cedars.forEach((p, i) => {
       const s = p.scale;
-      dummy.position.set(p.x, 12 * s, p.z);
+      dummy.position.set(p.x, p.y + 12 * s, p.z);
       dummy.rotation.set(0, p.rotation, 0);
       dummy.scale.set(5.4 * s, 16 * s, 5.4 * s);
       dummy.updateMatrix();
@@ -193,7 +205,7 @@ export function Vegetation({ site, exclusions, count = 420 }: VegetationProps) {
     if (!m) return;
     shrubs.forEach((p, i) => {
       const s = p.scale;
-      dummy.position.set(p.x, 1.6 * s, p.z);
+      dummy.position.set(p.x, p.y + 1.6 * s, p.z);
       dummy.rotation.set(0, p.rotation, 0);
       dummy.scale.set(5 * s, 3 * s, 5 * s);
       dummy.updateMatrix();

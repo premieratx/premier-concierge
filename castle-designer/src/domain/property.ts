@@ -1,53 +1,91 @@
 import { dimsOf } from './dimensions';
-import { cabinPorchPoints, generateAccommodations } from './generators/accommodations';
+import {
+  DEFAULT_ACCOMMODATIONS,
+  cabinPorchPoints,
+  generateAccommodations,
+} from './generators/accommodations';
 import { generateBatter } from './generators/batter';
 import { generateBawn } from './generators/bawn';
-import { type GeneratorResult, type Rect, gid, merge, resetGeneratorIds } from './generators/common';
+import {
+  type GeneratorResult,
+  type Rect,
+  gid,
+  merge,
+  raise,
+  resetGeneratorIds,
+} from './generators/common';
+import { generateFurnishings, type BanquetSpec } from './generators/furnishings';
 import { generateGreatHall } from './generators/greatHall';
 import { MARINA_SPECS, generateMarina } from './generators/marina';
+import { generateSiteLighting } from './generators/siteLighting';
 import {
   generateDragon,
   generateFirePitRing,
   generateLandStages,
   generateLawnLights,
 } from './generators/spectacle';
-import { generateFurnishings, type BanquetSpec } from './generators/furnishings';
-import { generateSiteLighting } from './generators/siteLighting';
 import { generateTower } from './generators/tower';
+import {
+  NOMINAL_SHORELINE_Z,
+  PARCEL,
+  finishedGrade,
+  naturalGrade,
+  padUnder,
+  terraceElevation,
+} from './terrain';
 import type { Container, Layout, MarinaPhase, SiteFeature, SiteDefinition } from './types';
 
 /* ------------------------------------------------------------------ *
- * Site geography, in feet.
+ * The site plan.
  *
- * +Z runs from the back of the property down to the water. The castle
- * compound sits inland, the arrival lawn with the dragon and the fire pits
- * fills the ground between the gate and the bank, and the marina runs out
- * from the shoreline on the centre line.
+ * Laid out on the Cypress Creek parcel: a thousand feet across, six hundred
+ * deep, falling ninety-odd feet from the road at the back to the lake at the
+ * front. +Z runs downhill toward the water.
+ *
+ * The castle is terraced into the hill rather than sitting on it. The keep
+ * takes the crest, the great hall and courtyard the bench below, the gatehouse
+ * a bench below that, and the lawn with the dragon and the fire a bench below
+ * that again. Each step is twelve to eighteen feet, and the curtain wall on
+ * the hall terrace does double duty as the retaining wall for its own pad.
  * ------------------------------------------------------------------ */
 
 export const SITE: SiteDefinition = {
-  sizeX: 800,
-  sizeZ: 1000,
-  shorelineZ: 300,
-  waterLevelFt: -6,
+  sizeX: PARCEL.sizeX,
+  sizeZ: PARCEL.sizeZ,
+  shorelineZ: NOMINAL_SHORELINE_Z,
+  waterLevelFt: 0,
   marinaPhase: 'enhanced',
+  terrain: 'cypressCreek',
 };
 
-/** Outer footprint of the bawn — the courtyard curtain wall. */
-export const BAWN: Rect = { x: -200, z: 0, sizeX: 400, sizeZ: 200 };
+/** Terrace elevations, named where the layout reads better for it. */
+export const KEEP_LEVEL = terraceElevation('upper');
+export const HALL_LEVEL = terraceElevation('middle');
+export const GATE_LEVEL = terraceElevation('lower');
+export const LAWN_LEVEL = terraceElevation('lawn');
 
-/** The gate faces the water, so it goes in the +Z curtain. */
+/** Outer footprint of the bawn on the hall terrace. */
+export const BAWN: Rect = { x: -200, z: -152, sizeX: 400, sizeZ: 144 };
+
+/** Glamping platforms sit on the east bench below the cabins. */
+
+/** The gate faces downhill, toward the water. */
 const GATE_BAYS = 2;
 
 const D40 = dimsOf('40HC');
 const D20 = dimsOf('20ST');
 
+/** Pad elevation for a building that follows natural grade, to the nearest foot. */
+export function padElevation(x: number, z: number): number {
+  return Math.round(naturalGrade(x, z));
+}
+
 /**
  * One extra course of curtain wall along the water-facing side, so the
- * elevation you see from the lake is two containers tall rather than one.
- * The bays either side of the gate opening only — nothing spans the gate,
- * because a container bridging an opening with no support under its corner
- * castings is exactly the cantilever the checker is there to catch.
+ * elevation you see from the lake is two containers tall over an eighteen-foot
+ * retaining face. Nothing spans the gate opening — a container bridging an
+ * opening with no support under its corner castings is exactly the cantilever
+ * the checker is there to catch.
  */
 function curtainUpperCourse(perimeter: Rect, gateBays: number): GeneratorResult {
   const containers: Container[] = [];
@@ -72,12 +110,12 @@ function curtainUpperCourse(perimeter: Rect, gateBays: number): GeneratorResult 
   return { containers, decor: [] };
 }
 
-/** The keep: the tall block at the back of the courtyard. */
+/** The keep: the tall block on the crest, three levels over the courtyard. */
 function keep(): GeneratorResult {
   const containers: Container[] = [];
   const levels = 3;
   const xs = [-40, 0];
-  const zs = [144, 152];
+  const zs = [-216, -208, -200];
   for (let level = 0; level < levels; level++) {
     for (const x of xs) {
       for (const z of zs) {
@@ -89,7 +127,7 @@ function keep(): GeneratorResult {
           role: 'sealed',
           finish: 'stone',
           openings:
-            level === 0 && z === zs[1]
+            level === 0 && z === zs[2]
               ? [
                   {
                     id: gid('keep', 'door', x),
@@ -129,71 +167,103 @@ export interface CastleResult extends GeneratorResult {
 export function generateCastle(): CastleResult {
   const parts: GeneratorResult[] = [];
 
+  /* Hall terrace ---------------------------------------------------- */
   parts.push(
-    generateBawn(BAWN, 1, {
-      gateSide: 'south',
-      gateBays: GATE_BAYS,
-      idPrefix: 'bawn',
-      finish: 'stone',
-    }),
-  );
-  parts.push(curtainUpperCourse(BAWN, GATE_BAYS));
-
-  // Corner towers, sitting proud of the curtain at each corner. The
-  // south-west one is the great tower and runs a level higher, which is what
-  // trips the lateral-bracing warning — deliberately, so the cost of height
-  // shows up in the estimate instead of being free.
-  const towerCorners: { x: number; z: number; levels: number; name: string }[] = [
-    { x: BAWN.x - D20.length, z: BAWN.z - D20.width * 2, levels: 3, name: 'nw' },
-    { x: BAWN.x + BAWN.sizeX, z: BAWN.z - D20.width * 2, levels: 3, name: 'ne' },
-    { x: BAWN.x + BAWN.sizeX, z: BAWN.z + BAWN.sizeZ, levels: 3, name: 'se' },
-    { x: BAWN.x - D20.length, z: BAWN.z + BAWN.sizeZ, levels: 4, name: 'sw' },
-  ];
-  for (const t of towerCorners) {
-    parts.push(
-      generateTower(t.x, t.z, t.levels, '20ST', {
-        idPrefix: `tower-${t.name}`,
-        role: 'tower',
-        finish: 'stone',
-      }),
-    );
-  }
-
-  // Gate towers flank the opening, standing outside the curtain line.
-  for (const [i, x] of [-60, 40].entries()) {
-    parts.push(
-      generateTower(x, BAWN.z + BAWN.sizeZ, 2, '20ST', {
-        idPrefix: `gatetower-${i}`,
-        role: 'sealed',
-        finish: 'stone',
-        bartizans: false,
-      }),
-    );
-  }
-
-  parts.push(
-    generateGreatHall(44, 160, 2, {
-      origin: { x: -80, z: 48 },
-      idPrefix: 'hall',
-      finish: 'stone',
-    }),
-  );
-
-  parts.push(keep());
-
-  // Battered plinth around the whole compound: cheap, and it is what makes
-  // the thing look like it weighs something.
-  parts.push(
-    generateBatter(
-      { x: BAWN.x, z: BAWN.z, sizeX: BAWN.sizeX, sizeZ: BAWN.sizeZ },
-      1 / 6,
-      8,
-      { idPrefix: 'bawn-batter' },
+    raise(
+      merge(
+        generateBawn(BAWN, 1, {
+          gateSide: 'south',
+          gateBays: GATE_BAYS,
+          idPrefix: 'bawn',
+          finish: 'stone',
+        }),
+        curtainUpperCourse(BAWN, GATE_BAYS),
+        generateGreatHall(44, 160, 2, {
+          origin: { x: -80, z: -120 },
+          idPrefix: 'hall',
+          finish: 'stone',
+        }),
+      ),
+      HALL_LEVEL,
     ),
   );
 
+  // Towers standing proud of the curtain on the downhill corners, where the
+  // retaining face is tallest and a tower is the cheapest way to hold it.
+  for (const [i, x] of [BAWN.x - D20.length, BAWN.x + BAWN.sizeX].entries()) {
+    parts.push(
+      raise(
+        generateTower(x, BAWN.z + BAWN.sizeZ - D20.width * 2, 3, '20ST', {
+          idPrefix: `tower-front-${i}`,
+          role: 'tower',
+          finish: 'stone',
+        }),
+        HALL_LEVEL,
+      ),
+    );
+  }
+
+  parts.push(
+    raise(
+      generateBatter(
+        { x: BAWN.x, z: BAWN.z, sizeX: BAWN.sizeX, sizeZ: BAWN.sizeZ },
+        1 / 6,
+        8,
+        { idPrefix: 'bawn-batter' },
+      ),
+      HALL_LEVEL,
+    ),
+  );
+
+  /* Keep terrace ---------------------------------------------------- */
+  parts.push(raise(keep(), KEEP_LEVEL));
+
+  for (const [i, x] of [-160, 140].entries()) {
+    parts.push(
+      raise(
+        generateTower(x, -256, 3, '20ST', {
+          idPrefix: `tower-back-${i}`,
+          role: 'tower',
+          finish: 'stone',
+        }),
+        KEEP_LEVEL,
+      ),
+    );
+  }
+
+  /* Gate terrace ---------------------------------------------------- */
+  for (const [i, x] of [-60, 40].entries()) {
+    parts.push(
+      raise(
+        generateTower(x, 0, 2, '20ST', {
+          idPrefix: `gatetower-${i}`,
+          role: 'sealed',
+          finish: 'stone',
+          bartizans: false,
+        }),
+        GATE_LEVEL,
+      ),
+    );
+  }
+
   return { ...merge(...parts), features: [] };
 }
+
+/**
+ * The banquet in the great hall, on the hall terrace.
+ */
+export const HALL_BANQUET: BanquetSpec = {
+  center: { x: 0, z: -90 },
+  y: HALL_LEVEL,
+  rowZ: [-100, -78],
+  tablesPerRow: 8,
+  tableLengthFt: 8,
+  tableWidthFt: 2.5,
+  runFt: 152,
+};
+
+/** The arrival lawn, on its own terrace between the gatehouse and the bank. */
+export const LAWN = { x: -280, z: 64, sizeX: 560, sizeZ: 88 };
 
 /** The lawn between the gate and the water: dragon, fire, stages, lights. */
 export function generateLawn(): SiteFeature[] {
@@ -201,7 +271,7 @@ export function generateLawn(): SiteFeature[] {
 
   features.push(
     generateDragon({
-      position: { x: 0, y: 0, z: 248 },
+      position: { x: 0, y: LAWN_LEVEL, z: 110 },
       // Facing the water, so the fire goes out over the lake, not the gate.
       rotationY: 0,
       lengthFt: 48,
@@ -215,20 +285,22 @@ export function generateLawn(): SiteFeature[] {
   // Two rainbow pit clusters flanking the dragon, clear of its footprint.
   features.push(
     ...generateFirePitRing({
-      center: { x: -128, z: 252 },
-      ringRadiusFt: 34,
+      center: { x: -178, z: 106 },
+      ringRadiusFt: 28,
       count: 4,
       pitRadiusFt: 5,
       rainbow: true,
       startHue: 0,
+      y: LAWN_LEVEL,
     }),
     ...generateFirePitRing({
-      center: { x: 128, z: 252 },
-      ringRadiusFt: 34,
+      center: { x: 178, z: 106 },
+      ringRadiusFt: 28,
       count: 3,
       pitRadiusFt: 5,
       rainbow: true,
       startHue: 180,
+      y: LAWN_LEVEL,
     }),
   );
 
@@ -236,7 +308,7 @@ export function generateLawn(): SiteFeature[] {
     ...generateLandStages([
       {
         name: 'Great hall stage',
-        position: { x: 0, y: 0, z: 78 },
+        position: { x: 0, y: HALL_LEVEL, z: -90 },
         rotationY: 0,
         widthFt: 28,
         depthFt: 18,
@@ -245,7 +317,7 @@ export function generateLawn(): SiteFeature[] {
       },
       {
         name: 'Fire ring stage',
-        position: { x: -128, y: 0, z: 252 },
+        position: { x: -178, y: LAWN_LEVEL, z: 106 },
         rotationY: Math.PI / 2,
         widthFt: 22,
         depthFt: 14,
@@ -254,7 +326,7 @@ export function generateLawn(): SiteFeature[] {
       },
       {
         name: 'Grove stage',
-        position: { x: 128, y: 0, z: 252 },
+        position: { x: 178, y: LAWN_LEVEL, z: 106 },
         rotationY: -Math.PI / 2,
         widthFt: 22,
         depthFt: 14,
@@ -264,43 +336,24 @@ export function generateLawn(): SiteFeature[] {
     ]),
   );
 
-  features.push(...generateLawnLights({ x: 0, z: 250 }, 150, 16));
+  features.push(...generateLawnLights({ x: 0, z: 108 }, 250, 16, LAWN_LEVEL + 18));
 
   return features;
 }
 
 /**
- * The banquet in the great hall: two rows of trestles flanking the stage,
- * which is what turns the clear span into a seated capacity rather than an
- * abstract number of square feet.
- */
-export const HALL_BANQUET: BanquetSpec = {
-  center: { x: 0, z: 78 },
-  y: 0,
-  rowZ: [68, 88],
-  tablesPerRow: 8,
-  tableLengthFt: 8,
-  tableWidthFt: 2.5,
-  runFt: 152,
-};
-
-/** The arrival lawn between the gate and the bank. */
-export const LAWN = { x: -380, z: 216, sizeX: 760, sizeZ: 84 };
-
-/**
- * Footprints the landscape has to stay out of: everything built, the lawn,
- * the drive, the walk down to the water, and the lodging pads.
+ * Footprints the landscape has to stay out of: everything built, the terraces,
+ * the drive, and the walk down to the water.
  */
 export const KEEP_CLEAR: Rect[] = [
-  // Castle compound, with room for the towers and the plinth.
-  { x: BAWN.x - 40, z: BAWN.z - 40, sizeX: BAWN.sizeX + 80, sizeZ: BAWN.sizeZ + 80 },
-  // Arrival lawn and the walk to the gangway.
-  { x: LAWN.x, z: LAWN.z - 8, sizeX: LAWN.sizeX, sizeZ: LAWN.sizeZ + 30 },
-  // Lodging.
-  { x: -360, z: -80, sizeX: 240, sizeZ: 340 },
-  { x: 230, z: 30, sizeX: 130, sizeZ: 190 },
-  // Approach drive.
-  { x: -620, z: 226, sizeX: 400, sizeZ: 48 },
+  { x: -230, z: -286, sizeX: 460, sizeZ: 300 },
+  { x: -300, z: -20, sizeX: 600, sizeZ: 200 },
+  // Lodging benches.
+  { x: 230, z: -160, sizeX: 230, sizeZ: 260 },
+  { x: 270, z: 70, sizeX: 200, sizeZ: 150 },
+  { x: -500, z: -200, sizeX: 140, sizeZ: 120 },
+  // Approach drive off the road.
+  { x: 120, z: -300, sizeX: 130, sizeZ: 130 },
 ];
 
 export interface PropertyOptions {
@@ -320,14 +373,21 @@ export function generateProperty(options: PropertyOptions = {}): Layout {
   const marinaPhase = options.marinaPhase ?? 'enhanced';
 
   const castle = generateCastle();
-  const lodging = options.includeLodging === false
-    ? { containers: [], decor: [], features: [] }
-    : generateAccommodations();
+  const lodging =
+    options.includeLodging === false
+      ? { containers: [], decor: [], features: [] }
+      : generateAccommodations({
+          ...DEFAULT_ACCOMMODATIONS,
+          padUnder,
+          groundAt: naturalGrade,
+        });
   const lawn = options.includeLawn === false ? [] : generateLawn();
   const marinaSpec = MARINA_SPECS[marinaPhase];
   const marina = generateMarina({
     ...marinaSpec,
-    shorelineZ: SITE.shorelineZ,
+    // The cove bites in west of centre; that is where the docks go.
+    centerX: -120,
+    shorelineZ: 196,
     waterLevelFt: SITE.waterLevelFt,
   });
 
@@ -339,14 +399,24 @@ export function generateProperty(options: PropertyOptions = {}): Layout {
       : [
           ...generateFurnishings({
             features,
-            cabinPorches: options.includeLodging === false ? [] : cabinPorchPoints(),
+            cabinPorches:
+              options.includeLodging === false
+                ? []
+                : cabinPorchPoints({
+                    ...DEFAULT_ACCOMMODATIONS,
+                    padUnder,
+                    groundAt: naturalGrade,
+                  }),
             hall: HALL_BANQUET,
           }),
           ...generateSiteLighting({
-            compound: BAWN,
-            gateToDock: { from: { x: 0, z: 222 }, to: { x: 0, z: 300 } },
+            compound: { x: BAWN.x, z: BAWN.z, sizeX: BAWN.sizeX, sizeZ: BAWN.sizeZ },
+            compoundY: HALL_LEVEL,
+            gateToDock: { from: { x: 0, z: 70 }, to: { x: -110, z: 190 } },
             lawn: LAWN,
-            drive: { from: { x: -560, z: 250 }, to: { x: -230, z: 250 } },
+            lawnY: LAWN_LEVEL,
+            drive: { from: { x: 200, z: -292 }, to: { x: 120, z: -30 } },
+            groundAt: finishedGrade,
           }),
         ];
 
@@ -360,8 +430,10 @@ export function generateProperty(options: PropertyOptions = {}): Layout {
     decor: [...castle.decor, ...lodging.decor, ...furnishings],
     features,
     notes:
-      'Parametric build-out. Castle containers carry zone "castle"; lodging ' +
-      'containers carry zone "lodging" so the reference cost validation is ' +
-      'never inflated by the lodging or marina programme.',
+      'Terraced onto the Cypress Creek parcel: 1,000 by 600 feet, falling about ' +
+      '90 feet from the road to the lake. Elevations are read off aerial imagery, ' +
+      'not survey data. Castle containers carry zone "castle"; lodging containers ' +
+      'carry zone "lodging" so the reference cost validation is never inflated by ' +
+      'the lodging or marina programme.',
   };
 }

@@ -70,11 +70,12 @@ export function deserializeLayout(json: string): Layout {
     decor: (o.decor ?? []) as Layout['decor'],
     features: (o.features ?? []) as Layout['features'],
     site: (o.site ?? {
-      sizeX: 800,
-      sizeZ: 1000,
-      shorelineZ: 300,
-      waterLevelFt: -6,
+      sizeX: 1000,
+      sizeZ: 600,
+      shorelineZ: 231,
+      waterLevelFt: 0,
       marinaPhase: 'enhanced',
+      terrain: 'cypressCreek',
     }) as Layout['site'],
     ...(typeof o.notes === 'string' ? { notes: o.notes } : {}),
   };

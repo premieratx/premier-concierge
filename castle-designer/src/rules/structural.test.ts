@@ -38,7 +38,14 @@ function layoutOf(containers: Container[], decor: Decor[] = []): Layout {
     containers,
     decor,
     features: [],
-    site: { sizeX: 400, sizeZ: 400, shorelineZ: 300, waterLevelFt: -6, marinaPhase: 'existing' },
+    site: {
+      sizeX: 400,
+      sizeZ: 400,
+      shorelineZ: 300,
+      waterLevelFt: -6,
+      marinaPhase: 'existing',
+      terrain: 'flat',
+    },
   };
 }
 

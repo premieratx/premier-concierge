@@ -53,6 +53,8 @@ export const LAYER_LABELS: Record<ModelLayer, string> = {
   trees: 'Oaks and cedars',
   people: 'People at capacity',
   water: 'Water',
+  contours: 'Contours (10 ft)',
+  terraces: 'Terrace pads',
   grid: 'Grid',
   capacity: 'Capacity labels',
   edges: 'Edge outlines',
@@ -95,7 +97,7 @@ export const LAYER_GROUPS: LayerGroup[] = [
   },
   {
     title: 'Overlays',
-    layers: ['grid', 'capacity', 'edges'],
+    layers: ['contours', 'terraces', 'grid', 'capacity', 'edges'],
   },
 ];
 
@@ -104,8 +106,9 @@ export const ALL_LAYERS: ModelLayer[] = LAYER_GROUPS.flatMap((g) => g.layers);
 function defaultLayers(): Record<ModelLayer, boolean> {
   const out = {} as Record<ModelLayer, boolean>;
   for (const layer of ALL_LAYERS) out[layer] = true;
-  // The grid is a drafting aid, not part of the model.
+  // Drafting aids, not part of the model.
   out.grid = false;
+  out.terraces = false;
   return out;
 }
 

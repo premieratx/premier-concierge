@@ -3,79 +3,15 @@ import { useFrame } from '@react-three/fiber';
 import { useEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import { SNAP_ACROSS_FT } from '../domain/dimensions';
+import { PARCEL, finishedGrade } from '../domain/terrain';
 import type { SiteDefinition } from '../domain/types';
 import type { TimeOfDay } from '../store/useLayoutStore';
-
-const LAND_COLOR = '#4a5340';
-const LAWN_COLOR = '#53613f';
-const BANK_COLOR = '#6c6252';
 
 const WATER_COLOR: Record<TimeOfDay, string> = {
   day: '#1b4059',
   dusk: '#1a2e43',
   night: '#0b1622',
 };
-
-/**
- * Ground cover: a small tiling noise map so the terrain is not one flat sheet
- * of colour. Two octaves is plenty at the distance anyone looks at it from.
- */
-function makeGroundTexture(size = 128): THREE.DataTexture {
-  const data = new Uint8Array(size * size * 4);
-  const noise = (x: number, y: number) =>
-    Math.sin(x * 0.31) * Math.cos(y * 0.27) * 0.5 +
-    Math.sin((x + y) * 0.13 + 2.1) * 0.3 +
-    Math.sin(x * 1.7 + y * 1.3) * 0.2;
-
-  for (let y = 0; y < size; y++) {
-    for (let x = 0; x < size; x++) {
-      const n = 0.5 + noise(x, y) * 0.5;
-      const i = (y * size + x) * 4;
-      // Bias toward the green channel: dry grass over caliche.
-      data[i] = Math.round(150 + n * 70);
-      data[i + 1] = Math.round(170 + n * 60);
-      data[i + 2] = Math.round(135 + n * 55);
-      data[i + 3] = 255;
-    }
-  }
-
-  const texture = new THREE.DataTexture(data, size, size, THREE.RGBAFormat);
-  texture.wrapS = THREE.RepeatWrapping;
-  texture.wrapT = THREE.RepeatWrapping;
-  texture.repeat.set(700, 520);
-  texture.generateMipmaps = true;
-  texture.minFilter = THREE.LinearMipmapLinearFilter;
-  texture.anisotropy = 8;
-  texture.colorSpace = THREE.SRGBColorSpace;
-  texture.needsUpdate = true;
-  return texture;
-}
-
-/**
- * A radial fade, so the mown lawn meets the rough ground on a soft edge
- * instead of a hard rectangle.
- */
-function makeFadeMask(size = 128): THREE.DataTexture {
-  const data = new Uint8Array(size * size * 4);
-  for (let y = 0; y < size; y++) {
-    for (let x = 0; x < size; x++) {
-      const u = (x / (size - 1)) * 2 - 1;
-      const v = (y / (size - 1)) * 2 - 1;
-      const r = Math.min(1, Math.hypot(u, v));
-      const alpha = Math.round(255 * Math.max(0, 1 - Math.pow(r, 3)));
-      const i = (y * size + x) * 4;
-      // three reads an alphaMap from the green channel, not from alpha, so the
-      // mask has to be written as greyscale or every texel comes back opaque.
-      data[i] = alpha;
-      data[i + 1] = alpha;
-      data[i + 2] = alpha;
-      data[i + 3] = 255;
-    }
-  }
-  const texture = new THREE.DataTexture(data, size, size, THREE.RGBAFormat);
-  texture.needsUpdate = true;
-  return texture;
-}
 
 /**
  * A value-noise normal map for the lake surface.
@@ -161,31 +97,86 @@ function Lake({ site, timeOfDay }: { site: SiteDefinition; timeOfDay: TimeOfDay 
 }
 
 /**
- * The bank: a sloped strip from grade down to the water line, so the land
- * does not simply stop in mid-air at the shore.
+ * The hillside itself: a displaced heightfield over the finished grade model.
+ *
+ * Vertex colours come from the slope and the elevation — dry grass where the
+ * ground is gentle, caliche and limestone where it stands up, sand at the
+ * water line — so the bluff on the east and the creek draw on the west read
+ * without any texture work.
  */
-function Bank({ site }: { site: SiteDefinition }) {
-  const geometry = useMemo(() => {
-    const g = new THREE.BufferGeometry();
-    const x0 = -20000;
-    const x1 = 20000;
-    const z0 = site.shorelineZ;
-    const z1 = site.shorelineZ + 12;
-    const y1 = site.waterLevelFt - 1;
-    const verts = [
-      x0, 0, z0, x1, 0, z0, x1, y1, z1,
-      x0, 0, z0, x1, y1, z1, x0, y1, z1,
-    ];
-    g.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
-    g.computeVertexNormals();
-    return g;
-  }, [site.sizeX, site.shorelineZ, site.waterLevelFt]);
+function Hillside() {
+  const { geometry, material } = useMemo(() => {
+    const width = 6000;
+    const depth = 4200;
+    const segX = 300;
+    const segZ = 210;
 
-  return (
-    <mesh geometry={geometry} receiveShadow>
-      <meshStandardMaterial color={BANK_COLOR} roughness={1} side={THREE.DoubleSide} />
-    </mesh>
+    const g = new THREE.PlaneGeometry(width, depth, segX, segZ);
+    g.rotateX(-Math.PI / 2);
+
+    const position = g.attributes.position as THREE.BufferAttribute;
+    const centreZ = PARCEL.minZ + PARCEL.sizeZ / 2;
+    const colors = new Float32Array(position.count * 3);
+
+    const grass = new THREE.Color('#55643d');
+    const dryGrass = new THREE.Color('#6f7549');
+    const rock = new THREE.Color('#a89e86');
+    const sand = new THREE.Color('#9a8a6e');
+    const scratchColor = new THREE.Color();
+
+    /**
+     * Rock shows where the ground stands up, not merely where it falls.
+     *
+     * This hill runs at about one in four on average, so a linear map from
+     * slope to rock painted the whole site as caliche. The band starts where
+     * the ground gets too steep to mow and saturates at something you would
+     * have to scramble up.
+     */
+    const rockiness = (slope: number) => {
+      const t = Math.min(1, Math.max(0, (slope - 0.42) / 0.5));
+      return t * t * (3 - 2 * t);
+    };
+
+    for (let i = 0; i < position.count; i++) {
+      const x = position.getX(i);
+      const z = position.getZ(i) + centreZ;
+      const h = finishedGrade(x, z);
+      position.setY(i, h);
+      position.setZ(i, z);
+
+      // Central difference on the height field gives the slope.
+      const d = 8;
+      const dx = (finishedGrade(x + d, z) - finishedGrade(x - d, z)) / (2 * d);
+      const dz = (finishedGrade(x, z + d) - finishedGrade(x, z - d)) / (2 * d);
+      const steep = rockiness(Math.hypot(dx, dz));
+
+      scratchColor.copy(grass).lerp(dryGrass, Math.min(1, h / 90));
+      scratchColor.lerp(rock, steep);
+      // A beach band either side of the water line.
+      const shore = 1 - Math.min(1, Math.abs(h - 1) / 6);
+      scratchColor.lerp(sand, shore * 0.8);
+
+      colors[i * 3] = scratchColor.r;
+      colors[i * 3 + 1] = scratchColor.g;
+      colors[i * 3 + 2] = scratchColor.b;
+    }
+
+    g.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+    g.computeVertexNormals();
+
+    const m = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 1 });
+    return { geometry: g, material: m };
+  }, []);
+
+  useEffect(
+    () => () => {
+      geometry.dispose();
+      material.dispose();
+    },
+    [geometry, material],
   );
+
+  return <mesh geometry={geometry} material={material} receiveShadow castShadow />;
 }
 
 export interface TerrainProps {
@@ -196,62 +187,23 @@ export interface TerrainProps {
 }
 
 /**
- * Grade, lawn, bank and lake.
+ * The site: hillside, lake, and the drafting grid when it is asked for.
  *
  * The lake is a reflector rather than a flat colour because at dusk the whole
  * point of a waterfront property is the second copy of the castle lying on
  * the water.
  */
 export function Terrain({ site, timeOfDay, showWater, showGrid }: TerrainProps) {
-  const groundMap = useMemo(() => makeGroundTexture(), []);
-  const fadeMask = useMemo(() => makeFadeMask(), []);
-  useEffect(
-    () => () => {
-      groundMap.dispose();
-      fadeMask.dispose();
-    },
-    [groundMap, fadeMask],
-  );
-
-  // Grade runs miles past the site boundary. Fog hides everything beyond a
-  // few thousand feet anyway, but a flat plane's far edge always draws a line
-  // in perspective: the further away it is, the closer that line sits to the
-  // true horizon and the more it reads as one rather than as the edge of the
-  // survey. Two triangles, so the size costs nothing.
-  const landDepth = 30000;
-  const landCentreZ = site.shorelineZ - landDepth / 2;
-
   return (
     <group>
-      <mesh
-        rotation={[-Math.PI / 2, 0, 0]}
-        position={[0, -0.03, landCentreZ]}
-        receiveShadow
-      >
-        <planeGeometry args={[40000, landDepth]} />
-        <meshStandardMaterial color={LAND_COLOR} map={groundMap} roughness={1} />
-      </mesh>
-
-      {/* The party lawn between the gate and the water reads greener. */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.01, 252]} receiveShadow>
-        <planeGeometry args={[880, 240]} />
-        <meshStandardMaterial
-          color={LAWN_COLOR}
-          alphaMap={fadeMask}
-          transparent
-          depthWrite={false}
-          roughness={1}
-        />
-      </mesh>
-
-      <Bank site={site} />
+      <Hillside />
 
       {showWater && <Lake site={site} timeOfDay={timeOfDay} />}
 
       {showGrid && (
         <Grid
-          args={[900, 900]}
-          position={[0, 0.02, 100]}
+          args={[1200, 1200]}
+          position={[0, 74.05, -80]}
           cellSize={SNAP_ACROSS_FT}
           cellThickness={0.55}
           cellColor="#6b7a63"

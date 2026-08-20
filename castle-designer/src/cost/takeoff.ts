@@ -5,9 +5,11 @@ import {
   findAdjacencies,
   findStackJoints,
   layoutBounds,
+  bearsOnGrade,
   stackDepths,
 } from '../domain/geometry';
 import type { Container, ContainerType, ContainerZone, Layout } from '../domain/types';
+import { groundFunctionFor } from '../domain/terrain';
 import { weldingTakeoff } from '../rules/welding';
 
 export function zoneOf(c: Container): ContainerZone {
@@ -78,6 +80,8 @@ function emptyByType(): Record<ContainerType, number> {
  */
 export function takeoff(layout: Layout, zone: ContainerZone = 'castle'): Quantities {
   const containers = layout.containers.filter((c) => zoneOf(c) === zone);
+  const groundAt = groundFunctionFor(layout.site.terrain);
+  const onGrade = (c: (typeof containers)[number]) => bearsOnGrade(c, groundAt);
   const containersByType = emptyByType();
   let grossSqFt = 0;
   let sealedSqFt = 0;
@@ -98,9 +102,9 @@ export function takeoff(layout: Layout, zone: ContainerZone = 'castle'): Quantit
   });
   const stoneFraction = surface.wallSqFt > 0 ? stoneArea / surface.wallSqFt : 0;
 
-  const joints = findStackJoints(containers);
+  const joints = findStackJoints(containers, groundAt);
   const adjacencies = findAdjacencies(containers);
-  const groundContainers = containers.filter((c) => c.position.y === 0).length;
+  const groundContainers = containers.filter(onGrade).length;
 
   const bounds = layoutBounds(containers);
   const footprintSqFt = bounds
@@ -111,7 +115,7 @@ export function takeoff(layout: Layout, zone: ContainerZone = 'castle'): Quantit
     : 0;
 
   const groundFootprintSqFt = containers
-    .filter((c) => c.position.y === 0)
+    .filter(onGrade)
     .reduce((a, c) => {
       const b = boxOf(c);
       return a + (b.max.x - b.min.x) * (b.max.z - b.min.z);
@@ -152,7 +156,7 @@ export function takeoff(layout: Layout, zone: ContainerZone = 'castle'): Quantit
     courtyardSqFt * COURTYARD_HARDSCAPE_FRACTION + deckDecorSqFt + trussRoofSqFt;
 
   const welding = weldingTakeoff(containers);
-  const maxStackDepth = stackDepths(containers).reduce((a, b) => Math.max(a, b), 0);
+  const maxStackDepth = stackDepths(containers, groundAt).reduce((a, b) => Math.max(a, b), 0);
 
   return {
     containersByType,

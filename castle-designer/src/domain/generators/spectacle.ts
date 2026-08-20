@@ -74,6 +74,8 @@ export interface FirePitRingSpec {
   rainbow: boolean;
   /** Hue of the first pit; the rest are spaced evenly around the wheel. */
   startHue: number;
+  /** Ground level the ring sits on, in feet. */
+  y?: number;
 }
 
 export const DEFAULT_FIRE_PIT_RING: FirePitRingSpec = {
@@ -83,6 +85,7 @@ export const DEFAULT_FIRE_PIT_RING: FirePitRingSpec = {
   pitRadiusFt: 5,
   rainbow: true,
   startHue: 0,
+  y: 0,
 };
 
 /**
@@ -100,7 +103,7 @@ export function generateFirePitRing(
       kind: 'firePit' as const,
       position: {
         x: spec.center.x + Math.cos(angle) * spec.ringRadiusFt,
-        y: 0,
+        y: spec.y ?? 0,
         z: spec.center.z + Math.sin(angle) * spec.ringRadiusFt,
       },
       radiusFt: spec.pitRadiusFt,
@@ -177,6 +180,7 @@ export function generateLawnLights(
   center: { x: number; z: number },
   radiusFt: number,
   runs = 12,
+  heightFt = 18,
 ): StringLightsFeature[] {
   return Array.from({ length: runs }, (_, i) => {
     const a0 = (i / runs) * Math.PI * 2;
@@ -186,12 +190,12 @@ export function generateLawnLights(
       kind: 'stringLights' as const,
       from: {
         x: center.x + Math.cos(a0) * radiusFt,
-        y: 18,
+        y: heightFt,
         z: center.z + Math.sin(a0) * radiusFt,
       },
       to: {
         x: center.x + Math.cos(a1) * radiusFt,
-        y: 18,
+        y: heightFt,
         z: center.z + Math.sin(a1) * radiusFt,
       },
       sagFt: 4,
