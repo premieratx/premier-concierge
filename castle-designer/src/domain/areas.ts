@@ -56,6 +56,10 @@ export interface Area {
   use: OccupancyUse;
   /** Where the label hangs in the model. */
   anchor: Vec3;
+  /** The surface people actually stand on: grade, a deck, a stage. */
+  groundY: number;
+  /** Radius to scatter a crowd across, in feet. */
+  spreadFt: number;
   /** Gross area, in square feet. */
   sqFt: number;
   /**
@@ -73,10 +77,17 @@ function occupants(sqFt: number, usableFraction: number, use: OccupancyUse): num
 }
 
 function area(
-  partial: Omit<Area, 'capacity'> & { capacity?: number },
+  partial: Omit<Area, 'capacity' | 'groundY' | 'spreadFt'> & {
+    capacity?: number;
+    groundY?: number;
+    spreadFt?: number;
+  },
 ): Area {
   return {
     ...partial,
+    groundY: partial.groundY ?? 0,
+    // A circle of the same area is close enough to scatter a crowd across.
+    spreadFt: partial.spreadFt ?? Math.sqrt(partial.sqFt / Math.PI),
     capacity:
       partial.capacity ?? occupants(partial.sqFt, partial.usableFraction, partial.use),
   };
@@ -110,6 +121,7 @@ export function propertyAreas(layout: Layout): Area[] {
         anchor: { x: (Math.max(...xs) + Math.min(...xs)) / 2, y: roofY + 8, z: centreZ },
         sqFt: span * lengthFt,
         usableFraction: 0.85,
+        spreadFt: Math.min(span, lengthFt) / 2,
         layer: 'greatHall',
         note: 'Banquet seating under the truss roof, circulation taken out',
       }),
@@ -189,6 +201,8 @@ export function propertyAreas(layout: Layout): Area[] {
         anchor: { x: stage.position.x, y: stage.heightFt + 22, z: stage.position.z },
         sqFt: stage.widthFt * stage.depthFt,
         usableFraction: 0.8,
+        groundY: stage.heightFt,
+        spreadFt: Math.min(stage.widthFt, stage.depthFt) / 2.4,
         layer: 'stages',
         note: 'Performers and crew on the deck',
       }),
@@ -203,6 +217,8 @@ export function propertyAreas(layout: Layout): Area[] {
         anchor: { x: stage.position.x, y: stage.deckHeightFt + 24, z: stage.position.z },
         sqFt: stage.widthFt * stage.depthFt,
         usableFraction: 0.8,
+        groundY: stage.position.y + stage.deckHeightFt,
+        spreadFt: Math.min(stage.widthFt, stage.depthFt) / 2.4,
         layer: 'overwaterStage',
       }),
     );
@@ -270,6 +286,8 @@ export function propertyAreas(layout: Layout): Area[] {
         anchor: { x: main.position.x, y: main.position.y + 16, z: main.position.z },
         sqFt: deckSqFt,
         usableFraction: 1,
+        groundY: main.position.y + 0.4,
+        spreadFt: main.lengthFt / 2.2,
         layer: 'docks',
         note: 'Circulation only — nobody assembles on a finger pier',
       }),
@@ -285,6 +303,8 @@ export function propertyAreas(layout: Layout): Area[] {
         anchor: { x: platform.position.x, y: platform.position.y + 18, z: platform.position.z },
         sqFt: platform.lengthFt * platform.widthFt,
         usableFraction: 0.8,
+        groundY: platform.position.y + 0.4,
+        spreadFt: Math.min(platform.lengthFt, platform.widthFt) / 2.2,
         layer: 'docks',
         note: 'Bars, high-tops and the crowd for the overwater stage',
       }),
@@ -304,6 +324,8 @@ export function propertyAreas(layout: Layout): Area[] {
         anchor: { x: 0, y: 22, z: cz },
         sqFt: patioSqFt * patios.length,
         usableFraction: 0.7,
+        groundY: each.position.y + 3.5,
+        spreadFt: 120,
         layer: 'patios',
         note: `About ${Math.floor((patioSqFt * 0.7) / LOAD_FACTOR_SQFT.assemblyUnconcentrated)} per berth`,
       }),

@@ -220,6 +220,8 @@ export type ModelLayer =
   // Site
   | 'stringLights'
   | 'areaLighting'
+  | 'trees'
+  | 'people'
   | 'water'
   | 'grid'
   | 'capacity'

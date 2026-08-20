@@ -12,6 +12,8 @@ export function Toolbar() {
   const timeOfDay = useLayoutStore((s) => s.timeOfDay);
   const setTimeOfDay = useLayoutStore((s) => s.setTimeOfDay);
   const setMarinaPhase = useLayoutStore((s) => s.setMarinaPhase);
+  const mode = useLayoutStore((s) => s.mode);
+  const setMode = useLayoutStore((s) => s.setMode);
   const replaceLayout = useLayoutStore((s) => s.replaceLayout);
   const undo = useLayoutStore((s) => s.undo);
   const redo = useLayoutStore((s) => s.redo);
@@ -46,9 +48,11 @@ export function Toolbar() {
           Hill Country Yacht Club — container castle
         </h1>
         <p className="text-[11px] text-slate-500">
-          {IS_ARTIFACT
-            ? 'Drag to orbit · scroll to zoom · click a container to inspect it'
-            : 'Parametric property model · 1 world unit = 1 foot'}
+          {mode === 'walk'
+            ? 'Click the model to look around · WASD to move · shift to run · Esc to release the pointer'
+            : IS_ARTIFACT
+              ? 'Drag to orbit · scroll to zoom · click a container to inspect it'
+              : 'Parametric property model · 1 world unit = 1 foot'}
         </p>
       </div>
 
@@ -59,6 +63,20 @@ export function Toolbar() {
         </Button>
         <Button active={phase === 'enhanced'} onClick={() => setMarinaPhase('enhanced')} tone="accent">
           Enhanced
+        </Button>
+      </div>
+
+      <div className="flex items-center gap-1.5">
+        <span className="text-[11px] uppercase tracking-wider text-slate-600">Move</span>
+        <Button active={mode === 'orbit'} onClick={() => setMode('orbit')}>
+          Orbit
+        </Button>
+        <Button
+          active={mode === 'walk'}
+          onClick={() => setMode('walk')}
+          title="Click the model to look around · WASD to move · shift to run · Esc to release"
+        >
+          Walk
         </Button>
       </div>
 

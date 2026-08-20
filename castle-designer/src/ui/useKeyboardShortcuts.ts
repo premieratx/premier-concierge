@@ -15,6 +15,8 @@ export function useKeyboardShortcuts(): void {
       if (target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) return;
 
       const store = useLayoutStore.getState();
+      // WASD and the arrows belong to the walkthrough while it is running.
+      if (store.mode === 'walk') return;
       const meta = e.metaKey || e.ctrlKey;
 
       if (meta && e.key.toLowerCase() === 'z') {

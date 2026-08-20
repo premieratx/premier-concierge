@@ -287,6 +287,22 @@ export const HALL_BANQUET: BanquetSpec = {
 /** The arrival lawn between the gate and the bank. */
 export const LAWN = { x: -380, z: 216, sizeX: 760, sizeZ: 84 };
 
+/**
+ * Footprints the landscape has to stay out of: everything built, the lawn,
+ * the drive, the walk down to the water, and the lodging pads.
+ */
+export const KEEP_CLEAR: Rect[] = [
+  // Castle compound, with room for the towers and the plinth.
+  { x: BAWN.x - 40, z: BAWN.z - 40, sizeX: BAWN.sizeX + 80, sizeZ: BAWN.sizeZ + 80 },
+  // Arrival lawn and the walk to the gangway.
+  { x: LAWN.x, z: LAWN.z - 8, sizeX: LAWN.sizeX, sizeZ: LAWN.sizeZ + 30 },
+  // Lodging.
+  { x: -360, z: -80, sizeX: 240, sizeZ: 340 },
+  { x: 230, z: 30, sizeX: 130, sizeZ: 190 },
+  // Approach drive.
+  { x: -620, z: 226, sizeX: 400, sizeZ: 48 },
+];
+
 export interface PropertyOptions {
   marinaPhase?: MarinaPhase;
   includeLodging?: boolean;

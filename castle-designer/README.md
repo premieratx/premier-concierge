@@ -47,13 +47,34 @@ spends the money on a truss instead, which is bought rather than welded on site.
 The welding meter sits at the top of the cost panel for exactly this reason.
 Cut a hole in the inspector and watch it climb.
 
+## What it looks like
+
+Containers are drawn with procedurally generated corrugation, cargo-door ends
+and visible corner castings — all built in memory, since the published build
+makes no network requests and has nowhere to load an image from. The property
+is planted with live oaks and Ashe junipers, scattered deterministically so the
+same tree lands in the same place on every load. People are sampled from the
+occupancy model at one figure per sixteen occupants, which is the only thing
+that gives the model scale: a forty-foot container reads as a box until
+somebody is standing next to it.
+
+Bloom, a vignette and a procedural room environment finish it. The environment
+matters more than it sounds: metallic materials get almost all their colour
+from what they reflect, and with nothing to reflect every metal in the scene
+renders near black.
+
+**Walk mode** puts you in it at eye height — click to look, WASD to move, shift
+to run. There is no collision, which is deliberate: walking through the curtain
+wall into the great hall is useful in a design tool.
+
 ## Layers and capacity
 
-Thirty-one display layers, grouped: curtain wall, towers, great hall, keep and
+Thirty-three display layers, grouped: curtain wall, towers, great hall, keep and
 gatehouse; crenellation, wall walk, bartizans and plinth; cabins, bunkhouse and
 canvas platforms; docks, slips by tier, over-slip patios, boats and swim toys;
 stages, bars and furniture; fire pits, dragon, dragon fire, party lights and
-area lighting; water, grid, capacity chips and edge outlines.
+area lighting; oaks and cedars, people and water; grid, capacity chips and edge
+outlines.
 
 Layers belong to the model, not the viewer. A generator knows the deck it just
 emitted is the bunkhouse gallery and not a glamping platform, and nothing

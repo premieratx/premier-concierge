@@ -15,6 +15,17 @@ interface Preset {
   rayleigh: number;
   fog: [string, number, number];
   stars: boolean;
+  /**
+   * Whether to run the atmospheric scattering sky.
+   *
+   * The Preetham model it implements is a daylight model. Push the sun toward
+   * the horizon with high turbidity and it does not go dark and orange, it
+   * saturates — the night sky came out pure white, and with bloom on top that
+   * washed the entire frame. Night gets a painted background and stars instead.
+   */
+  sky: boolean;
+  /** Background behind everything, used directly when `sky` is off. */
+  background: string;
 }
 
 /**
@@ -34,10 +45,12 @@ const PRESETS: Record<TimeOfDay, Preset> = {
     hemiSky: '#cfe3ff',
     hemiGround: '#4a4636',
     hemiIntensity: 0.7,
-    turbidity: 4,
-    rayleigh: 1.2,
+    turbidity: 6,
+    rayleigh: 2.4,
     fog: ['#b9cbdd', 1500, 4000],
     stars: false,
+    sky: true,
+    background: '#b9cbdd',
   },
   dusk: {
     sun: [-620, 90, -160],
@@ -52,6 +65,8 @@ const PRESETS: Record<TimeOfDay, Preset> = {
     rayleigh: 3.2,
     fog: ['#8e9aae', 1200, 3400],
     stars: true,
+    sky: true,
+    background: '#8e9aae',
   },
   night: {
     sun: [-420, 260, -520],
@@ -64,8 +79,10 @@ const PRESETS: Record<TimeOfDay, Preset> = {
     hemiIntensity: 0.5,
     turbidity: 12,
     rayleigh: 0.35,
-    fog: ['#1b2942', 1000, 3000],
+    fog: ['#141f36', 1100, 3400],
     stars: true,
+    sky: false,
+    background: '#0d1626',
   },
 };
 
@@ -75,15 +92,18 @@ export function Lighting({ timeOfDay }: { timeOfDay: TimeOfDay }) {
 
   return (
     <>
+      <color attach="background" args={[p.background]} />
       <fog attach="fog" args={[p.fog[0], p.fog[1], p.fog[2]]} />
-      <Sky
-        distance={40000}
-        sunPosition={sun}
-        turbidity={p.turbidity}
-        rayleigh={p.rayleigh}
-        mieCoefficient={0.006}
-        mieDirectionalG={0.85}
-      />
+      {p.sky && (
+        <Sky
+          distance={40000}
+          sunPosition={sun}
+          turbidity={p.turbidity}
+          rayleigh={p.rayleigh}
+          mieCoefficient={0.006}
+          mieDirectionalG={0.85}
+        />
+      )}
       {p.stars && (
         <Stars radius={1600} depth={400} count={timeOfDay === 'night' ? 5000 : 1800} factor={9} fade speed={0.4} />
       )}

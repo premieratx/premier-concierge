@@ -1,9 +1,10 @@
-import { useLayoutEffect, useMemo, useRef } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import type { ThreeEvent } from '@react-three/fiber';
 import { CONTAINER_TYPES, dimsOf } from '../domain/dimensions';
 import { centerOf, rotationRadians } from '../domain/geometry';
 import type { Container, ContainerType } from '../domain/types';
+import { makeContainerSkin } from './containerTextures';
 import { EDGE_COLOR, ROLE_COLOR, SELECTED_COLOR, VIOLATION_COLOR } from './palette';
 
 export interface InstancedContainersProps {
@@ -42,6 +43,12 @@ function TypeInstances({
   const mesh = useRef<THREE.InstancedMesh>(null);
   const subset = useMemo(() => containers.filter((c) => c.type === type), [containers, type]);
   const d = dimsOf(type);
+
+  // One six-material skin per type: corrugated walls, a corrugated roof, and a
+  // cargo-door end. The per-instance colour multiplies through it, so role
+  // colouring and selection still work.
+  const skin = useMemo(() => makeContainerSkin(d.length, d.width), [d.length, d.width]);
+  useEffect(() => () => skin.dispose(), [skin]);
 
   useLayoutEffect(() => {
     const m = mesh.current;
@@ -86,9 +93,70 @@ function TypeInstances({
       castShadow
       receiveShadow
       onClick={handleClick}
+      material={skin.materials}
     >
       <boxGeometry args={[d.length, d.height, d.width]} />
-      <meshStandardMaterial roughness={0.72} metalness={0.12} />
+    </instancedMesh>
+  );
+}
+
+/** Corner castings, in feet. The only rated load path, and the detail that
+ * makes a box read as a container rather than as a shed. */
+const CASTING_SIZE = 0.92;
+
+function CornerCastings({ containers }: { containers: Container[] }) {
+  const mesh = useRef<THREE.InstancedMesh>(null);
+  const count = containers.length * 8;
+
+  const material = useMemo(
+    () => new THREE.MeshStandardMaterial({ color: '#31353b', roughness: 0.55, metalness: 0.7 }),
+    [],
+  );
+  useEffect(() => () => material.dispose(), [material]);
+
+  useLayoutEffect(() => {
+    const m = mesh.current;
+    if (!m) return;
+    let i = 0;
+    const half = CASTING_SIZE / 2;
+    for (const c of containers) {
+      const d = dimsOf(c.type);
+      const centre = centerOf(c);
+      const angle = rotationRadians(c.rotation);
+      const cos = Math.cos(angle);
+      const sin = Math.sin(angle);
+      const hx = d.length / 2 - half;
+      const hy = d.height / 2 - half;
+      const hz = d.width / 2 - half;
+      for (const sx of [-hx, hx])
+        for (const sy of [-hy, hy])
+          for (const sz of [-hz, hz]) {
+            dummy.position.set(
+              centre.x + sx * cos + sz * sin,
+              centre.y + sy,
+              centre.z - sx * sin + sz * cos,
+            );
+            dummy.rotation.set(0, angle, 0);
+            dummy.updateMatrix();
+            m.setMatrixAt(i++, dummy.matrix);
+          }
+    }
+    m.count = i;
+    m.instanceMatrix.needsUpdate = true;
+    m.computeBoundingSphere();
+  }, [containers]);
+
+  if (count === 0) return null;
+
+  return (
+    <instancedMesh
+      ref={mesh}
+      key={count}
+      args={[undefined, undefined, count]}
+      material={material}
+      castShadow
+    >
+      <boxGeometry args={[CASTING_SIZE, CASTING_SIZE, CASTING_SIZE]} />
     </instancedMesh>
   );
 }
@@ -160,6 +228,7 @@ export function InstancedContainers({
           onSelect={onSelect}
         />
       ))}
+      <CornerCastings containers={containers} />
       {showEdges && <MergedEdges containers={containers} />}
     </group>
   );

@@ -16,6 +16,9 @@ import type { PricingStrategy } from '../revenue/slips';
 
 export type TimeOfDay = 'day' | 'dusk' | 'night';
 
+/** Orbit the model from outside, or stand in it and walk. */
+export type ViewMode = 'orbit' | 'walk';
+
 /** Re-exported so panels do not have to reach into the domain for the type. */
 export type LayerKey = ModelLayer;
 
@@ -47,6 +50,8 @@ export const LAYER_LABELS: Record<ModelLayer, string> = {
   dragonFire: 'Dragon fire',
   stringLights: 'Party lights',
   areaLighting: 'Area lighting',
+  trees: 'Oaks and cedars',
+  people: 'People at capacity',
   water: 'Water',
   grid: 'Grid',
   capacity: 'Capacity labels',
@@ -85,8 +90,12 @@ export const LAYER_GROUPS: LayerGroup[] = [
     layers: ['firePits', 'dragon', 'dragonFire', 'stringLights', 'areaLighting'],
   },
   {
-    title: 'Site and overlays',
-    layers: ['water', 'grid', 'capacity', 'edges'],
+    title: 'Landscape and life',
+    layers: ['trees', 'people', 'water'],
+  },
+  {
+    title: 'Overlays',
+    layers: ['grid', 'capacity', 'edges'],
   },
 ];
 
@@ -111,6 +120,9 @@ export interface LayoutState {
   layers: Record<ModelLayer, boolean>;
   pricingStrategy: PricingStrategy;
   cameraPreset: string;
+  mode: ViewMode;
+
+  setMode(mode: ViewMode): void;
 
   setCameraPreset(key: string): void;
   select(id: string | null, additive?: boolean): void;
@@ -190,8 +202,10 @@ export const useLayoutStore = create<LayoutState>((set, get) => {
     layers: defaultLayers(),
     pricingStrategy: 'bundled',
     cameraPreset: 'property',
+    mode: 'orbit',
 
-    setCameraPreset: (cameraPreset) => set({ cameraPreset }),
+    setMode: (mode) => set({ mode }),
+    setCameraPreset: (cameraPreset) => set({ cameraPreset, mode: 'orbit' }),
 
     select: (id, additive = false) =>
       set((state) => {

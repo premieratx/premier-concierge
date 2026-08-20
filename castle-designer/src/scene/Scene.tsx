@@ -6,8 +6,13 @@ import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib';
 import { runAllChecks } from '../rules';
 import { useLayoutStore, type TimeOfDay } from '../store/useLayoutStore';
 import { CAMERA_PRESETS, DEFAULT_PRESET } from './cameraPresets';
+import { KEEP_CLEAR } from '../domain/property';
 import { CapacityLabels } from './CapacityLabels';
 import { DecorMeshes } from './DecorMeshes';
+import { Effects } from './Effects';
+import { People } from './People';
+import { Vegetation } from './Vegetation';
+import { WalkControls } from './WalkControls';
 import { SceneEnvironment } from './Environment';
 import { Dragon } from './Dragon';
 import { FirePits } from './FirePits';
@@ -139,6 +144,8 @@ function PropertyModel() {
         dragons.map((d) => (
           <Dragon key={d.id} feature={d} night={night} showFire={layers.dragonFire} />
         ))}
+      {layers.trees && <Vegetation site={layout.site} exclusions={KEEP_CLEAR} />}
+      {layers.people && <People layout={layout} layers={layers} />}
       {layers.capacity && <CapacityLabels layout={layout} layers={layers} />}
     </group>
   );
@@ -158,12 +165,16 @@ export function Scene() {
   const select = useLayoutStore((s) => s.select);
   const timeOfDay = useLayoutStore((s) => s.timeOfDay);
   const cameraPreset = useLayoutStore((s) => s.cameraPreset);
+  const mode = useLayoutStore((s) => s.mode);
+  const site = useLayoutStore((s) => s.layout.site);
 
   return (
     <Canvas
       shadows
       dpr={[1, 1.75]}
-      gl={{ antialias: true, preserveDrawingBuffer: false }}
+      // ACES maps anything over about 1.0 to white, and an unexposed sky sits
+      // well over it — the daytime sky was rendering as a flat white sheet.
+      gl={{ antialias: true, preserveDrawingBuffer: false, toneMappingExposure: 0.85 }}
       camera={{ position: DEFAULT_PRESET.position, fov: 48, near: 1, far: 60000 }}
       onPointerMissed={() => select(null)}
     >
@@ -171,16 +182,23 @@ export function Scene() {
       <SceneEnvironment intensity={ENVIRONMENT_INTENSITY[timeOfDay]} />
       <Lighting timeOfDay={timeOfDay} />
       <PropertyModel />
-      <OrbitControls
-        makeDefault
-        maxPolarAngle={Math.PI / 2 - 0.015}
-        minDistance={18}
-        maxDistance={2400}
-        enableDamping
-        dampingFactor={0.08}
-        target={DEFAULT_PRESET.target}
-      />
-      <CameraRig presetKey={cameraPreset} />
+      {mode === 'walk' ? (
+        <WalkControls site={site} />
+      ) : (
+        <>
+          <OrbitControls
+            makeDefault
+            maxPolarAngle={Math.PI / 2 - 0.015}
+            minDistance={18}
+            maxDistance={2400}
+            enableDamping
+            dampingFactor={0.08}
+            target={DEFAULT_PRESET.target}
+          />
+          <CameraRig presetKey={cameraPreset} />
+        </>
+      )}
+      <Effects timeOfDay={timeOfDay} />
     </Canvas>
   );
 }
