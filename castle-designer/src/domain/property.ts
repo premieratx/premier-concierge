@@ -5,6 +5,12 @@ import {
   generateAccommodations,
 } from './generators/accommodations';
 import { generateBatter } from './generators/batter';
+import {
+  DEFAULT_ENCEINTE,
+  enceinteFeatures,
+  planEnceinte,
+  torchLine,
+} from './generators/enceinte';
 import { generateBawn } from './generators/bawn';
 import {
   type GeneratorResult,
@@ -223,10 +229,12 @@ export function generateCastle(): CastleResult {
   /* Keep terrace ---------------------------------------------------- */
   parts.push(raise(keep(), KEEP_LEVEL));
 
-  for (const [i, x] of [-160, 140].entries()) {
+  // Pulled forward off the parcel line so they stand clear of the hexagonal
+  // enceinte, whose road face and moat run behind them.
+  for (const [i, x] of [-150, 130].entries()) {
     parts.push(
       raise(
-        generateTower(x, -256, 3, '20ST', {
+        generateTower(x, -236, 3, '20ST', {
           idPrefix: `tower-back-${i}`,
           role: 'tower',
           finish: 'stone',
@@ -268,7 +276,7 @@ export const HALL_BANQUET: BanquetSpec = {
 };
 
 /** The arrival lawn, on its own terrace between the gatehouse and the bank. */
-export const LAWN = { x: -280, z: 64, sizeX: 560, sizeZ: 88 };
+export const LAWN = { x: -140, z: 64, sizeX: 280, sizeZ: 88 };
 
 /** The lawn between the gate and the water: dragon, fire, stages, lights. */
 export function generateLawn(): SiteFeature[] {
@@ -290,7 +298,7 @@ export function generateLawn(): SiteFeature[] {
   // Two rainbow pit clusters flanking the dragon, clear of its footprint.
   features.push(
     ...generateFirePitRing({
-      center: { x: -178, z: 106 },
+      center: { x: -140, z: 106 },
       ringRadiusFt: 28,
       count: 4,
       pitRadiusFt: 5,
@@ -299,7 +307,7 @@ export function generateLawn(): SiteFeature[] {
       y: LAWN_LEVEL,
     }),
     ...generateFirePitRing({
-      center: { x: 178, z: 106 },
+      center: { x: 140, z: 106 },
       ringRadiusFt: 28,
       count: 3,
       pitRadiusFt: 5,
@@ -322,7 +330,7 @@ export function generateLawn(): SiteFeature[] {
       },
       {
         name: 'Fire ring stage',
-        position: { x: -178, y: LAWN_LEVEL, z: 106 },
+        position: { x: -140, y: LAWN_LEVEL, z: 106 },
         rotationY: Math.PI / 2,
         widthFt: 22,
         depthFt: 14,
@@ -331,7 +339,7 @@ export function generateLawn(): SiteFeature[] {
       },
       {
         name: 'Grove stage',
-        position: { x: 178, y: LAWN_LEVEL, z: 106 },
+        position: { x: 140, y: LAWN_LEVEL, z: 106 },
         rotationY: -Math.PI / 2,
         widthFt: 22,
         depthFt: 14,
@@ -341,7 +349,80 @@ export function generateLawn(): SiteFeature[] {
     ]),
   );
 
-  features.push(...generateLawnLights({ x: 0, z: 108 }, 250, 16, LAWN_LEVEL + 18));
+  features.push(...generateLawnLights({ x: 0, z: 108 }, 150, 16, LAWN_LEVEL + 18));
+
+  return features;
+}
+
+/* ------------------------------------------------------------------ *
+ * The outer works.
+ *
+ * A hexagon of wall round the whole compound, a moat outside it, and three
+ * ways in — water, road and drive. The water and road faces are directly
+ * opposite one another and get identical drawbridges, so the castle presents
+ * the same face whether you come up from the lake or down from the road.
+ * ------------------------------------------------------------------ */
+
+export const ENCEINTE = {
+  ...DEFAULT_ENCEINTE,
+  groundAt: finishedGrade,
+};
+
+/**
+ * The enceinte, the moat, the three crossings, the guard on each, and the
+ * torch runs: on the wall head, on the corner drums, on the castle's own
+ * towers, and all the way down the walk to the water.
+ */
+export function generateOuterWorks(): SiteFeature[] {
+  const plan = planEnceinte(ENCEINTE);
+  const features: SiteFeature[] = [...enceinteFeatures(plan)];
+
+  // The castle's own towers, inside the enceinte, each with a torch on top.
+  const innerTowers: { x: number; z: number; y: number }[] = [
+    { x: BAWN.x - D20.length / 2, z: BAWN.z + BAWN.sizeZ - D20.width, y: HALL_LEVEL + D20.height * 3 },
+    { x: BAWN.x + BAWN.sizeX + D20.length / 2, z: BAWN.z + BAWN.sizeZ - D20.width, y: HALL_LEVEL + D20.height * 3 },
+    { x: -150 + D20.length / 2, z: -236, y: KEEP_LEVEL + D20.height * 3 },
+    { x: 130 + D20.length / 2, z: -236, y: KEEP_LEVEL + D20.height * 3 },
+    { x: -60 + D20.length / 2, z: 0, y: GATE_LEVEL + D20.height * 2 },
+    { x: 40 + D20.length / 2, z: 0, y: GATE_LEVEL + D20.height * 2 },
+  ];
+  for (const [i, t] of innerTowers.entries()) {
+    features.push({
+      id: `torch-castle-tower-${i}`,
+      kind: 'torch',
+      position: { x: t.x, y: t.y, z: t.z },
+      heightFt: 4,
+      hue: (i * 51) % 360,
+      rainbow: true,
+      gphKerosene: 0.24,
+      castLight: true,
+      mount: 'tower',
+      label: `Castle tower torch ${i + 1}`,
+    });
+  }
+
+  // The walk from the water gate down to the marina gangway, lit both sides,
+  // and the courtyard walk from the gatehouse up to the hall.
+  features.push(
+    ...torchLine(
+      'torch-shore',
+      { x: 0, z: 200 },
+      { x: -110, z: 196 },
+      64,
+      finishedGrade,
+      'shore',
+      { both: true, startHue: 210 },
+    ),
+    ...torchLine(
+      'torch-court',
+      { x: 0, z: 40 },
+      { x: 0, z: -140 },
+      66,
+      finishedGrade,
+      'walkway',
+      { both: true, startHue: 40 },
+    ),
+  );
 
   return features;
 }
@@ -354,7 +435,7 @@ export const KEEP_CLEAR: Rect[] = [
   { x: -230, z: -286, sizeX: 460, sizeZ: 300 },
   { x: -300, z: -20, sizeX: 600, sizeZ: 200 },
   // Lodging benches.
-  { x: 230, z: -160, sizeX: 230, sizeZ: 260 },
+  { x: 300, z: -160, sizeX: 200, sizeZ: 260 },
   { x: 270, z: 70, sizeX: 200, sizeZ: 150 },
   { x: -500, z: -200, sizeX: 140, sizeZ: 120 },
   // Approach drive off the road.
@@ -446,6 +527,8 @@ export interface PropertyOptions {
   includeLawn?: boolean;
   /** Furniture and site lighting. On by default. */
   includeFurnishings?: boolean;
+  /** Enceinte, moat, bridges, guard and torches. On by default. */
+  includeOuterWorks?: boolean;
 }
 
 /**
@@ -466,6 +549,7 @@ export function generateProperty(options: PropertyOptions = {}): Layout {
           groundAt: naturalGrade,
         });
   const lawn = options.includeLawn === false ? [] : generateLawn();
+  const outerWorks = options.includeOuterWorks === false ? [] : generateOuterWorks();
   const marinaFeatures =
     marinaPhase === 'enhanced'
       ? enhancedMarinaFeatures()
@@ -477,7 +561,7 @@ export function generateProperty(options: PropertyOptions = {}): Layout {
           waterLevelFt: SITE.waterLevelFt,
         }).features;
 
-  const features = [...lawn, ...lodging.features, ...marinaFeatures];
+  const features = [...outerWorks, ...lawn, ...lodging.features, ...marinaFeatures];
 
   const furnishings =
     options.includeFurnishings === false
@@ -516,6 +600,11 @@ export function generateProperty(options: PropertyOptions = {}): Layout {
     decor: [...castle.decor, ...lodging.decor, ...furnishings],
     features,
     notes:
+      'A hexagonal enceinte rings the whole compound, with three ways in: the ' +
+      'water face and the road face are directly opposite and carry identical ' +
+      'counterweighted drawbridges, and the north-east face takes the drive. ' +
+      'The moat is a chain of short level pools weired at every step, because ' +
+      'the ground round the ring falls about sixty feet and water will not. ' +
       'Terraced onto the Cypress Creek parcel: 1,000 by 600 feet, falling about ' +
       '90 feet from the road to the lake. Elevations are read off aerial imagery, ' +
       'not survey data. Castle containers carry zone "castle"; lodging containers ' +

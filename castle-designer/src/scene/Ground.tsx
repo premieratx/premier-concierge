@@ -3,7 +3,8 @@ import { useFrame } from '@react-three/fiber';
 import { useEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import { SNAP_ACROSS_FT } from '../domain/dimensions';
-import { PARCEL, finishedGrade } from '../domain/terrain';
+import { PARCEL } from '../domain/terrain';
+import { siteGrade } from '../domain/siteGrade';
 import type { SiteDefinition } from '../domain/types';
 import type { TimeOfDay } from '../store/useLayoutStore';
 
@@ -140,14 +141,14 @@ function Hillside() {
     for (let i = 0; i < position.count; i++) {
       const x = position.getX(i);
       const z = position.getZ(i) + centreZ;
-      const h = finishedGrade(x, z);
+      const h = siteGrade(x, z);
       position.setY(i, h);
       position.setZ(i, z);
 
       // Central difference on the height field gives the slope.
       const d = 8;
-      const dx = (finishedGrade(x + d, z) - finishedGrade(x - d, z)) / (2 * d);
-      const dz = (finishedGrade(x, z + d) - finishedGrade(x, z - d)) / (2 * d);
+      const dx = (siteGrade(x + d, z) - siteGrade(x - d, z)) / (2 * d);
+      const dz = (siteGrade(x, z + d) - siteGrade(x, z - d)) / (2 * d);
       const steep = rockiness(Math.hypot(dx, dz));
 
       scratchColor.copy(grass).lerp(dryGrass, Math.min(1, h / 90));

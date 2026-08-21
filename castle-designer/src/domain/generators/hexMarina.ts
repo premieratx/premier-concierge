@@ -1,4 +1,4 @@
-import type { SiteFeature, SlipFeature, Vec3 } from '../types';
+import type { Point2, SiteFeature, SlipFeature, Vec3 } from '../types';
 import { gid, headingOf } from './common';
 
 /**
@@ -83,10 +83,7 @@ export const DEFAULT_HEX_MARINA: HexMarinaSpec = {
   premiumSatellites: [0, 1, 2],
 };
 
-export interface Point2 {
-  x: number;
-  z: number;
-}
+export type { Point2 };
 
 /** Vertices of a hexagon, counter-clockwise from the given rotation. */
 export function hexVertices(centre: Point2, radius: number, rotation: number): Point2[] {

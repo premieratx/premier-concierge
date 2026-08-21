@@ -40,6 +40,27 @@ export const CAMERA_PRESETS: CameraPreset[] = [
     hint: 'The compound, the great hall and the towers',
   },
   {
+    key: 'watergate',
+    label: 'Water gate',
+    position: [84, 82, 268],
+    target: [0, 44, 150],
+    hint: 'The lake drawbridge, its counterweight and the guard on the bank',
+  },
+  {
+    key: 'roadgate',
+    label: 'Road gate',
+    position: [-96, 132, -372],
+    target: [0, 92, -250],
+    hint: 'The same gate again from the road — the back matches the front',
+  },
+  {
+    key: 'moat',
+    label: 'Moat',
+    position: [-455, 96, 88],
+    target: [-300, 52, -20],
+    hint: 'Six level basins stepping down the hill, weired at every corner',
+  },
+  {
     key: 'dragon',
     label: 'Dragon',
     position: [-78, 62, 196],
@@ -56,9 +77,9 @@ export const CAMERA_PRESETS: CameraPreset[] = [
   {
     key: 'premier',
     label: 'Dock hexagon',
-    position: [-120, 78, 190],
-    target: [-120, 14, 280],
-    hint: 'One module: berths, entrances, roof deck and the jump platform',
+    position: [-120, 116, 168],
+    target: [-120, 8, 296],
+    hint: 'One module: outboard berths, the swim lagoon and the roof deck',
   },
   {
     key: 'lodging',

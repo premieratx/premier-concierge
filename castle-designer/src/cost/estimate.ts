@@ -266,6 +266,78 @@ export function estimateSite(layout: Layout): SiteEstimate {
     lines.push(line('Stages', 'Power and audio rough-in', stages.length, 'ea', R.stage.servicesEach));
   }
 
+  /* Outer works ---------------------------------------------------- */
+  const enceintes = featuresOfKind(layout.features, 'enceinte');
+  const moats = featuresOfKind(layout.features, 'moat');
+  const bridges = featuresOfKind(layout.features, 'bridge');
+  const torches = featuresOfKind(layout.features, 'torch');
+  const knights = featuresOfKind(layout.features, 'knight');
+  const W = R.outerWorks;
+
+  for (const wall of enceintes) {
+    const openFt = wall.gates.reduce((a, g) => a + g.widthFt, 0);
+    const runFt = wall.perimeterFt - openFt;
+    lines.push(
+      line('Outer works', 'Enceinte wall', runFt, 'lf', W.wallPerLf),
+      line('Outer works', 'Stone facing, both sides', wall.faceSqFt, 'sf', W.wallFacingPerSqFt),
+      line('Outer works', 'Wall walk and crenellation', runFt, 'lf', W.wallWalkPerLf),
+      line('Outer works', 'Corner drums', wall.vertices.length, 'ea', W.cornerDrumEach),
+      line('Outer works', 'Gatehouses', wall.gates.length, 'ea', W.gatehouseEach),
+    );
+  }
+
+  if (moats.length > 0) {
+    const cutCuYd = moats.reduce((a, m) => a + m.cutCuYd, 0);
+    const waterSqFt = moats.reduce((a, m) => a + m.waterSqFt, 0);
+    const headFt = moats.reduce((a, m) => a + m.weirHeightFt, 0);
+    lines.push(
+      line('Outer works', 'Moat excavation', cutCuYd, 'cy', W.moatCutPerCy),
+      line('Outer works', 'Moat liner', waterSqFt, 'sf', W.moatLinerPerSqFt),
+      // Half of every run on this hill is wall rather than trench.
+      line(
+        'Outer works',
+        'Moat bank walls',
+        moats.reduce((a, m) => a + m.bankSqFt, 0),
+        'sf',
+        R.earthwork.retainingWallPerSqFt,
+      ),
+      // The weirs are what a hillside costs. On flat ground this line is zero.
+      line('Outer works', 'Basin weirs', headFt, 'ft head', W.weirPerFtOfHead),
+      line('Outer works', 'Moat recirculation', 1, 'ls', W.moatRecirculationLumpSum),
+    );
+  }
+
+  for (const bridge of bridges) {
+    const spanFt = Math.hypot(bridge.to.x - bridge.from.x, bridge.to.z - bridge.from.z);
+    lines.push(
+      line('Outer works', `${bridge.label ?? 'Bridge'} deck`, spanFt * bridge.widthFt, 'sf', W.timberBridgePerSqFt),
+    );
+    if (bridge.drawbridge) {
+      lines.push(
+        line('Outer works', `${bridge.label ?? 'Drawbridge'} mechanism`, 1, 'ea', W.drawbridgeMechanismEach),
+        line('Outer works', `${bridge.label ?? 'Drawbridge'} sandbags`, bridge.sandbagCount, 'ea', W.sandbagEach),
+      );
+    }
+  }
+
+  if (torches.length > 0) {
+    lines.push(
+      line('Outer works', 'Kerosene torches', torches.length, 'ea', W.torchEach),
+      line(
+        'Outer works',
+        'Rainbow wicks',
+        torches.filter((t) => t.rainbow).length,
+        'ea',
+        W.rainbowWickEach,
+      ),
+      line('Outer works', 'Kerosene plant and ring main', 1, 'ls', W.kerosenePlantLumpSum),
+    );
+  }
+
+  if (knights.length > 0) {
+    lines.push(line('Outer works', 'Guard kit', knights.length, 'ea', W.knightKitEach));
+  }
+
   /* Hexagonal marina ---------------------------------------------- */
   const hexDocks = featuresOfKind(layout.features, 'hexDock');
   if (hexDocks.length > 0) {

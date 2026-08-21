@@ -23,6 +23,11 @@ export type ViewMode = 'orbit' | 'walk';
 export type LayerKey = ModelLayer;
 
 export const LAYER_LABELS: Record<ModelLayer, string> = {
+  outerWall: 'Outer enceinte',
+  moat: 'Moat',
+  bridges: 'Bridges and drawbridges',
+  knights: 'Knights on guard',
+  torches: 'Kerosene torches',
   curtainWall: 'Curtain wall',
   towers: 'Towers',
   greatHall: 'Great hall',
@@ -71,11 +76,15 @@ export interface LayerGroup {
 export const LAYER_GROUPS: LayerGroup[] = [
   {
     title: 'Castle',
-    layers: ['curtainWall', 'towers', 'greatHall', 'keep', 'gate'],
+    layers: ['outerWall', 'curtainWall', 'towers', 'greatHall', 'keep', 'gate'],
   },
   {
     title: 'Castle trim',
     layers: ['crenellation', 'wallWalk', 'bartizans', 'batter'],
+  },
+  {
+    title: 'Outer works',
+    layers: ['moat', 'bridges', 'knights'],
   },
   {
     title: 'Accommodations',
@@ -100,7 +109,7 @@ export const LAYER_GROUPS: LayerGroup[] = [
   },
   {
     title: 'Fire and light',
-    layers: ['firePits', 'dragon', 'dragonFire', 'stringLights', 'areaLighting'],
+    layers: ['firePits', 'torches', 'dragon', 'dragonFire', 'stringLights', 'areaLighting'],
   },
   {
     title: 'Landscape and life',
@@ -183,9 +192,11 @@ export function cloneLayout(layout: Layout): Layout {
       size: { ...d.size },
     })),
     features: layout.features.map((f) =>
-      f.kind === 'stringLights' || f.kind === 'walkway'
+      f.kind === 'stringLights' || f.kind === 'walkway' || f.kind === 'bridge'
         ? { ...f, from: { ...f.from }, to: { ...f.to } }
-        : { ...f, position: { ...f.position } },
+        : f.kind === 'enceinte' || f.kind === 'moat'
+          ? { ...f }
+          : { ...f, position: { ...f.position } },
     ),
   };
 }

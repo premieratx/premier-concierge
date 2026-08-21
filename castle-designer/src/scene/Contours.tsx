@@ -1,11 +1,7 @@
 import { useMemo } from 'react';
 import * as THREE from 'three';
-import {
-  CONTOUR_INTERVAL_FT,
-  PARCEL,
-  TERRACES,
-  finishedGrade,
-} from '../domain/terrain';
+import { CONTOUR_INTERVAL_FT, PARCEL, TERRACES } from '../domain/terrain';
+import { siteGrade } from '../domain/siteGrade';
 
 /**
  * Elevation contours, pulled straight off the height model by marching
@@ -27,7 +23,7 @@ function buildContours(step: number): THREE.BufferGeometry {
   const heights = new Float32Array((nx + 1) * (nz + 1));
   for (let i = 0; i <= nx; i++) {
     for (let j = 0; j <= nz; j++) {
-      heights[i * (nz + 1) + j] = finishedGrade(
+      heights[i * (nz + 1) + j] = siteGrade(
         PARCEL.minX + i * step,
         PARCEL.minZ + j * step,
       );

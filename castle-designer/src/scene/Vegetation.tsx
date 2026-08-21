@@ -1,7 +1,8 @@
 import { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import type { Rect } from '../domain/generators/common';
-import { PARCEL, finishedGrade, shorelineZAt } from '../domain/terrain';
+import { PARCEL, shorelineZAt } from '../domain/terrain';
+import { inMoat, siteGrade } from '../domain/siteGrade';
 
 const dummy = new THREE.Object3D();
 const scratch = new THREE.Color();
@@ -62,12 +63,14 @@ function scatter(exclusions: Rect[], count: number): Plant[] {
     const shore = shorelineZAt(x);
     const z = PARCEL.minZ - marginZ + random() * (shore + marginZ - PARCEL.minZ - 12);
     if (exclusions.some((rect) => inside(rect, x, z))) continue;
+    // Nothing takes root in the trench.
+    if (inMoat(x, z)) continue;
 
     // Thin the planting out as it approaches the water, the way a bank does.
     const nearShore = 1 - Math.max(0, (z - (shore - 130)) / 130);
     if (random() > 0.32 + 0.68 * nearShore) continue;
 
-    const y = finishedGrade(x, z);
+    const y = siteGrade(x, z);
     // Nothing grows below the waterline.
     if (y < 2) continue;
 

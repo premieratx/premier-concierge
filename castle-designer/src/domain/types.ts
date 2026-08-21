@@ -202,6 +202,11 @@ export type DecorKind =
  */
 export type ModelLayer =
   // Castle
+  | 'outerWall'
+  | 'moat'
+  | 'bridges'
+  | 'knights'
+  | 'torches'
   | 'curtainWall'
   | 'towers'
   | 'greatHall'
@@ -511,6 +516,155 @@ export interface AccommodationFeature {
   name: string;
 }
 
+
+/* ------------------------------------------------------------------ *
+ * The outer works: enceinte, moat, bridges, torches, guard.
+ * ------------------------------------------------------------------ */
+
+export interface Point2 {
+  x: number;
+  z: number;
+}
+
+/** A way through the enceinte, on one of its six faces. */
+export interface EnceinteGate {
+  id: string;
+  /** Which face, by edge index. */
+  edgeIndex: number;
+  /** Middle of the opening, on the wall line. */
+  centre: Point2;
+  /** Unit vector pointing out of the castle through this gate. */
+  outward: Point2;
+  /** Heading for anything standing in the opening. */
+  rotationY: number;
+  widthFt: number;
+  /** Grade at the sill. */
+  sillY: number;
+  drawbridge: boolean;
+  label: string;
+}
+
+/**
+ * The outer enceinte: a hexagon of wall around the whole castle, with a drum
+ * tower on every corner and three ways in.
+ */
+export interface EnceinteFeature {
+  id: string;
+  kind: 'enceinte';
+  /** Corners of the wall line, counter-clockwise. */
+  vertices: Point2[];
+  /** Grade at each corner, in the same order. */
+  vertexY: number[];
+  wallHeightFt: number;
+  wallThicknessFt: number;
+  merlonEveryFt: number;
+  towerRadiusFt: number;
+  towerHeightFt: number;
+  gates: EnceinteGate[];
+  /** Length of wall on the ground, in feet. */
+  perimeterFt: number;
+  /** Both faces of the wall, in square feet — what gets clad. */
+  faceSqFt: number;
+  label?: string;
+}
+
+/**
+ * One basin of the moat.
+ *
+ * The moat is six basins rather than one ring because the ground falls fifty
+ * feet from the road corner to the lake corner. Water does not do that. Each
+ * run is level, and the corners between them are weirs.
+ */
+export interface MoatFeature {
+  id: string;
+  kind: 'moat';
+  /** Basin in plan, outer bank then inner bank. */
+  outer: Point2[];
+  inner: Point2[];
+  /** Water surface elevation. */
+  waterY: number;
+  /** Bed of the basin. */
+  bedY: number;
+  /** Top of the bank that holds the water in. */
+  bankTopY: number;
+  /** How far the bank is built up on the castle side and the field side. */
+  innerBankHeightFt: number;
+  outerBankHeightFt: number;
+  /** Face area of built bank, in square feet. */
+  bankSqFt: number;
+  widthFt: number;
+  /** Surface area of water, in square feet. */
+  waterSqFt: number;
+  /** Excavation, in cubic yards. */
+  cutCuYd: number;
+  /** Weir wall at the low end of this basin, in feet of retained head. */
+  weirHeightFt: number;
+  label?: string;
+}
+
+/** A crossing of the moat: a fixed timber bridge, or a drawbridge. */
+export interface BridgeFeature {
+  id: string;
+  kind: 'bridge';
+  /** Outer bank end. */
+  from: Vec3;
+  /** Gate sill end, which is the hinge on a drawbridge. */
+  to: Vec3;
+  widthFt: number;
+  drawbridge: boolean;
+  /**
+   * Where the leaf sits, 0 down and 1 vertical. The model animates this; the
+   * number here is where it starts.
+   */
+  raised: number;
+  /** Timber leaf weight, in pounds. */
+  leafWeightLb: number;
+  /** Radius the counterweight hangs at, in feet. */
+  counterweightArmFt: number;
+  /** Sandbags in the drop crate. */
+  sandbagCount: number;
+  sandbagWeightLb: number;
+  /** Height of the gaff the lifting chains run over. */
+  gaffHeightFt: number;
+  label?: string;
+}
+
+/**
+ * A kerosene torch.
+ *
+ * Rainbow ones burn a mineral-salt wick in the kerosene, so the colour is in
+ * the flame rather than in a light pointed at it.
+ */
+export interface TorchFeature {
+  id: string;
+  kind: 'torch';
+  position: Vec3;
+  /** Post height to the bowl, in feet. */
+  heightFt: number;
+  hue: number;
+  rainbow: boolean;
+  /** Kerosene burn, in gallons an hour. */
+  gphKerosene: number;
+  /** Whether this one throws a light, or is only a flame. */
+  castLight: boolean;
+  mount: 'tower' | 'wall' | 'gate' | 'bridge' | 'walkway' | 'shore';
+  label?: string;
+}
+
+/** A knight on guard, standing outside a bridge head. */
+export interface KnightFeature {
+  id: string;
+  kind: 'knight';
+  position: Vec3;
+  rotationY: number;
+  heightFt: number;
+  /** Livery hue, which is also the shield. */
+  hue: number;
+  /** Which crossing this one is posted on. */
+  post: string;
+  label?: string;
+}
+
 export type SiteFeature =
   | HexDockFeature
   | WalkwayFeature
@@ -522,7 +676,12 @@ export type SiteFeature =
   | OverwaterStageFeature
   | PatioBarFeature
   | StringLightsFeature
-  | AccommodationFeature;
+  | AccommodationFeature
+  | EnceinteFeature
+  | MoatFeature
+  | BridgeFeature
+  | TorchFeature
+  | KnightFeature;
 
 /** Narrowing helper so panels can filter a mixed feature array by kind. */
 export function featuresOfKind<K extends SiteFeature['kind']>(

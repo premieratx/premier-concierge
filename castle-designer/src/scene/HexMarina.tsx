@@ -128,19 +128,21 @@ function useMarinaMaterials() {
       rope: new THREE.MeshStandardMaterial({ color: '#c9b48a', roughness: 1 }),
       bar: new THREE.MeshStandardMaterial({ color: '#5a3f2c', roughness: 0.7 }),
       // The lagoon: sheltered water, so calmer and greener than the lake.
+      // Kept thin enough to see the net through: the net is the reason
+      // anybody will let their children in here.
       lagoon: new THREE.MeshStandardMaterial({
         color: '#2f7f92',
         roughness: 0.08,
         metalness: 0.15,
         transparent: true,
-        opacity: 0.72,
+        opacity: 0.52,
       }),
       net: new THREE.MeshStandardMaterial({
         map: net,
         alphaMap: net,
         color: '#dbe7ec',
         transparent: true,
-        opacity: 0.85,
+        opacity: 0.95,
         depthWrite: false,
         side: THREE.DoubleSide,
         roughness: 1,

@@ -196,7 +196,9 @@ export interface AccommodationsSpec {
  * instead of forming a row.
  */
 export const DEFAULT_ACCOMMODATIONS: AccommodationsSpec = {
-  cabinRowsX: [264, 336, 408],
+  // Pushed east of the enceinte: the wall reaches 290 feet out on the cabin
+  // bench, and a cabin straddling a curtain wall is nobody's idea of lodging.
+  cabinRowsX: [316, 388, 460],
   cabinRowZ: [-160, -80, 0],
   bunkhouseAt: { x: 240, z: -240 },
   bunkhouseBays: 3,

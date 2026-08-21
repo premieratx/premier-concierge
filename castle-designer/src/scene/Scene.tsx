@@ -12,6 +12,7 @@ import { Contours, TerraceOutlines } from './Contours';
 import { DecorMeshes } from './DecorMeshes';
 import { Effects } from './Effects';
 import { HexMarina } from './HexMarina';
+import { OuterWorks } from './OuterWorks';
 import { People } from './People';
 import { Vegetation } from './Vegetation';
 import { WalkControls } from './WalkControls';
@@ -138,6 +139,7 @@ function PropertyModel() {
       />
 
       <DecorMeshes decor={visibleDecor} />
+      <OuterWorks layout={layout} layers={layers} night={night} />
       <Marina layout={layout} layers={layers} />
       <HexMarina layout={layout} layers={layers} />
       <Stages layout={layout} night={night} layers={layers} />

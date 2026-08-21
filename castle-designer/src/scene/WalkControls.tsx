@@ -2,7 +2,8 @@ import { PointerLockControls } from '@react-three/drei';
 import { useFrame, useThree } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { finishedGrade, shorelineZAt } from '../domain/terrain';
+import { shorelineZAt } from '../domain/terrain';
+import { siteGrade } from '../domain/siteGrade';
 import type { SiteDefinition } from '../domain/types';
 
 /** Eye height, in feet. */
@@ -37,7 +38,7 @@ export function WalkControls({ site }: { site: SiteDefinition }) {
 
   useEffect(() => {
     const start = WALK_START.clone();
-    start.y = finishedGrade(start.x, start.z) + EYE_HEIGHT;
+    start.y = siteGrade(start.x, start.z) + EYE_HEIGHT;
     camera.position.copy(start);
     camera.lookAt(0, start.y - 12, 400);
   }, [camera]);
@@ -82,7 +83,7 @@ export function WalkControls({ site }: { site: SiteDefinition }) {
     // rather than in the lake.
     const { x, z } = camera.position;
     const floor =
-      z > shorelineZAt(x) ? site.waterLevelFt + 1.9 : finishedGrade(x, z);
+      z > shorelineZAt(x) ? site.waterLevelFt + 1.9 : siteGrade(x, z);
     camera.position.y = floor + EYE_HEIGHT;
   });
 

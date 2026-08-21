@@ -148,6 +148,52 @@ export const SITE_RATES = {
     mooringPileEach: 6800,
     pilesPerHexagon: 6,
   },
+  /**
+   * The outer works: enceinte, moat, crossings, guard and torches.
+   *
+   * The moat is the number to look at. A ring of water round a castle on flat
+   * ground is a trench and a liner. On a hillside that falls sixty feet across
+   * the ring it is six separate basins, five weirs between them, and a pump
+   * that lifts the whole thing back up to the top basin — and the pump is not
+   * optional, because without it the top basin is empty by August.
+   */
+  outerWorks: {
+    /** Gabion core on a strip footing, per foot of wall run. */
+    wallPerLf: 620,
+    /** Stone facing, both sides, per square foot of face. */
+    wallFacingPerSqFt: 24,
+    /** Wall walk, parapet and crenellation, per foot of run. */
+    wallWalkPerLf: 155,
+    /** One corner drum, thirty feet to the parapet. */
+    cornerDrumEach: 148000,
+    /** Gate piers, arch, portcullis frame and the winch loft over it. */
+    gatehouseEach: 96000,
+    /** Fixed timber bridge, deck and trestles, per square foot. */
+    timberBridgePerSqFt: 78,
+    /**
+     * Drawbridge mechanism: oak leaf on gudgeons, the gaff, the chain, the
+     * counterweight crate and its guide frame.
+     */
+    drawbridgeMechanismEach: 62000,
+    /** Sandbags, filled and stacked into the crate. */
+    sandbagEach: 6,
+    /** Moat excavation, shaped and compacted, per cubic yard. */
+    moatCutPerCy: 11,
+    /** Clay core and geomembrane under the wetted area, per square foot. */
+    moatLinerPerSqFt: 9,
+    /** Weir between two basins, per foot of head it holds. */
+    weirPerFtOfHead: 3400,
+    /** Wet well, pumps and the return main back up to the top basin. */
+    moatRecirculationLumpSum: 186000,
+    /** Torch and post, plumbed to the kerosene ring main. */
+    torchEach: 2400,
+    /** Kerosene tank, ring main, pumps and the fire-safety interlock. */
+    kerosenePlantLumpSum: 78000,
+    /** Mineral-salt colour cartridge and its holder, per rainbow torch. */
+    rainbowWickEach: 340,
+    /** Armour, arms and the stand for one guard. */
+    knightKitEach: 3800,
+  },
   lighting: {
     /** Commercial-grade catenary festoon, poles and drivers included. */
     stringLightsPerLf: 14,
